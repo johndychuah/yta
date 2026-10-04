@@ -9,13 +9,12 @@ export function ServicesHeroSection() {
         </p>
 
         <h1 className="mx-auto mt-6 max-w-[60rem] text-[clamp(2rem,2.15vw,2.65rem)] font-semibold leading-[1.35] tracking-normal text-[#03101c]">
-          Practical support for clearer reporting, stronger finance operations,
-          major transactions, and periods of business change.
+          Audit, advisory and restructuring for Malaysian businesses
         </h1>
 
         <p className="mx-auto mt-6 max-w-[48rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#4b4d5c]">
-          Start with the outcome you need. Each service page explains the
-          situations it is designed for and the work an engagement can cover.
+          From statutory audits to IPOs and turnarounds, every engagement is
+          led by a partner or director.
         </p>
 
         <div className="relative mt-[clamp(2.5rem,4vw,3.5rem)] h-[clamp(13rem,35vw,31.75rem)] overflow-hidden rounded-[8px]">

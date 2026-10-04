@@ -279,8 +279,8 @@ function DecisionGuide({ service }: { service: ServiceDetail }) {
       </div>
 
       <p className="mt-8 border-t border-[#03101c]/12 pt-6 text-[0.86rem] font-medium leading-[1.6] text-[#596575]">
-        The appropriate scope depends on your business, reporting needs, and
-        circumstances. Contact YTA to discuss the support required.
+        The right scope depends on your business and what you need it for.
+        Talk to us and we will recommend an approach before any work begins.
       </p>
     </section>
   );
@@ -307,6 +307,9 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
           <h1 className="mt-4 text-[clamp(2rem,2vw,2.5rem)] font-medium leading-tight tracking-normal">
             {service.title}
           </h1>
+          <p className="mt-5 max-w-[40rem] text-[clamp(0.98rem,0.9vw,1.08rem)] font-medium leading-[1.6] tracking-[0.02em] text-white/85">
+            {service.summary}
+          </p>
         </div>
       </section>
 
@@ -340,7 +343,7 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
 
             <div className="mt-8 rounded-[6px] bg-[#091c2f] p-6 text-white">
               <p className="max-w-[12rem] text-[0.86rem] font-semibold leading-[1.55]">
-                Looking to scale your business with expert advice?
+                {service.ctaTitle}
               </p>
               <div className="my-5 h-px bg-white/25" />
               <a

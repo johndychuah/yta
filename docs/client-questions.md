@@ -23,7 +23,19 @@ A running list collected during the website rebuild. Tick off each item once the
 ## Services
 - [ ] Is insolvency, receivership and liquidation still offered? Should it have its own page or stay under Restructuring?
 - [ ] Is Accounting & Payroll Outsourcing a genuine service? It was not on the old site.
-- [ ] Should tax services (compliance and advisory) be listed, given Peter Tang & Associates' tax background and Taxand?
+- [ ] Tax Advisory & Compliance has been **added** as a fifth service (new page /services/tax-advisory, plus Home and Contact form), based on Peter Tang & Associates' tax background and Taxand Malaysia. Please confirm it's offered, and check the scope: Form C/CP204 compliance, incentives (Pioneer Status, ITA, RA), LHDN tax audits, M&A tax, RPGT/stamp duty, personal and expatriate tax. Anything to add or remove (e.g. SST, transfer pricing, e-Invoicing)?
+- [ ] Which entity delivers the tax work, Peter Tang & Associates or YT Associates?
+- [ ] **China-Malaysia Desk** has been added as a sixth service (page /services/china-malaysia-desk, plus Home and Contact form), modelled on Wezmart's China Desk but limited to what an audit and tax firm offers. Please confirm:
+  - Do you actively serve Chinese investors, and is there Mandarin-speaking support? (The page promises "support in Mandarin".)
+  - Scope: structuring, set-up coordination with company secretarial/legal partners, MIDA incentives, withholding tax, transfer pricing, accounting, payroll, audit. Anything to add or remove?
+  - The page also lists **work permits (Employment Pass), import and export licences, halal certification, trademark registration (MyIPO), and wealth management**, following Wezmart. Do you offer each of these in-house, through partners, or not at all? Any you don't offer will be removed.
+  - Wealth management is worded as "introductions to licensed partners", since investment advice needs a Securities Commission licence. Is that accurate, and who are the partners?
+  - Should this page also have a Chinese-language version, and a WeChat contact?
+- [ ] Insolvency: the Restructuring page now includes a "Receivership & Liquidation" section (members' and creditors' voluntary winding-up, receivership, court winding-up). Is that accurate? Is any partner an approved liquidator / insolvency practitioner? Do you also handle Corporate Voluntary Arrangements or Judicial Management?
+- [ ] The service was renamed "Restructuring & Insolvency" to match the Home page. Keep the URL /services/restructuring-advisory, or change it to /services/restructuring-insolvency?
+- [ ] Corporate Advisory: the old site said "we have successfully guided multiple businesses" through IPOs. We removed it for now. Can we restore it with a number or named listings?
+- [ ] Accounting & Payroll: the old copy said "our associate firm" provides this. Which entity actually delivers it (YT Associates, Peter Tang & Associates, or a separate firm)?
+- [ ] Audit: please confirm the frameworks you audit to (MFRS, MPERS, IFRS) and that you act as reporting accountant for IPOs.
 
 ## Contact and operations
 - [ ] Is info@yta.com.my the correct public email?

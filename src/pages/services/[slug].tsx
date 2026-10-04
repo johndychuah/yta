@@ -17,8 +17,8 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
   return (
     <Layout>
       <SEO
-        title={service.title}
-        description={`${service.title} services by YT Associates and Peter Tang & Associates.`}
+        title={service.seoTitle}
+        description={service.seoDescription}
       />
       <ServiceDetailTemplate service={service} />
     </Layout>

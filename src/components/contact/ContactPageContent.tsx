@@ -180,7 +180,9 @@ export function ContactPageContent() {
                   </option>
                   <option>Audit & Assurance</option>
                   <option>Corporate Advisory</option>
-                  <option>Restructuring Advisory</option>
+                  <option>Restructuring & Insolvency</option>
+                  <option>Tax Advisory & Compliance</option>
+                  <option>China-Malaysia Desk</option>
                   <option>Accounting & Payroll Outsourcing</option>
                   <option>General enquiry</option>
                 </select>

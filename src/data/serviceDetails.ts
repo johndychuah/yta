@@ -2,6 +2,8 @@ export type ServiceSlug =
   | "audit-assurance"
   | "corporate-advisory"
   | "restructuring-advisory"
+  | "tax-advisory"
+  | "china-malaysia-desk"
   | "accounting-payroll-outsourcing";
 
 type DetailSection = {
@@ -51,6 +53,10 @@ export type ServiceDetail = {
   title: string;
   navTitle: string;
   eyebrow: string;
+  summary: string;
+  seoTitle: string;
+  seoDescription: string;
+  ctaTitle: string;
   heroImage: string;
   intro: string[];
   decisionGuide: {
@@ -73,9 +79,19 @@ export const serviceNavItems: { title: string; href: string; slug: ServiceSlug }
       slug: "corporate-advisory",
     },
     {
-      title: "Restructuring Advisory",
+      title: "Restructuring & Insolvency",
       href: "/services/restructuring-advisory",
       slug: "restructuring-advisory",
+    },
+    {
+      title: "Tax Advisory & Compliance",
+      href: "/services/tax-advisory",
+      slug: "tax-advisory",
+    },
+    {
+      title: "China-Malaysia Desk",
+      href: "/services/china-malaysia-desk",
+      slug: "china-malaysia-desk",
     },
     {
       title: "Accounting & Payroll Outsourcing",
@@ -86,108 +102,107 @@ export const serviceNavItems: { title: string; href: string; slug: ServiceSlug }
 
 const auditSections: DetailSection[] = [
   {
-    title: "Statutory and International Standard Audits",
+    title: "Statutory Audits",
     points: [
-      "Ensuring compliance with Malaysian and international financial reporting standards.",
-      "Conducting independent audits to verify financial accuracy and reliability.",
-      "Providing transparent reports to regulatory authorities, investors, and stakeholders.",
+      "Annual audits under the Companies Act 2016, to MFRS, MPERS or IFRS as applicable.",
+      "An independent opinion that shareholders, lenders, and regulators can rely on.",
+      "A management letter highlighting control weaknesses and practical improvements.",
     ],
   },
   {
-    title: "Limited Review Engagement",
+    title: "Review Engagements",
     points: [
-      "Conducting limited-scope reviews to provide financial assurance without a full audit.",
-      "Suitable for businesses that require an independent review for internal management or external stakeholders.",
+      "Limited assurance on your financial statements, at a lower cost than a full audit.",
+      "Useful when a lender, investor, or parent company needs independent comfort rather than an audit opinion.",
     ],
   },
   {
-    title: "Review of Accounting Systems and Internal Controls",
+    title: "Internal Control Reviews",
     points: [
-      "Assessing the effectiveness of your accounting processes and internal controls.",
-      "Identifying weaknesses and providing recommendations to improve operational efficiency.",
-      "Enhancing risk management by ensuring strong internal controls are in place.",
+      "An assessment of how well your accounting processes and controls work in practice.",
+      "Clear findings on weaknesses, ranked by risk.",
+      "Practical recommendations your team can put in place.",
     ],
   },
   {
-    title: "Conversion of Accounting Frameworks",
+    title: "Accounting Framework Conversion",
     points: [
-      "Assisting companies in transitioning between different accounting frameworks.",
-      "Ensuring smooth adoption of new financial reporting standards with minimal disruptions.",
+      "Support moving between frameworks, such as from MPERS to MFRS ahead of a listing.",
+      "Restated comparatives and disclosures, with minimal disruption to your reporting.",
     ],
   },
   {
     title: "Financial Reporting",
     points: [
-      "Assisting businesses in preparing accurate and compliant financial statements.",
-      "Providing advisory on accounting treatments and disclosure requirements.",
+      "Preparation and review of financial statements that meet the applicable standards.",
+      "Advice on complex accounting treatments and disclosure requirements.",
     ],
   },
   {
     title: "Forensic Accounting",
     points: [
-      "Investigating fraud, financial irregularities, and misappropriations.",
-      "Providing expert financial analysis for litigation and dispute resolution.",
-      "Identifying weaknesses in internal controls and fraud prevention measures.",
+      "Investigation of suspected fraud, misappropriation, and financial irregularities.",
+      "Expert financial analysis to support litigation and dispute resolution.",
+      "Recommendations to close the control gaps that allowed the issue to happen.",
     ],
   },
   {
     title: "Reporting Accountant Services",
     points: [
-      "Assisting companies in preparing and reviewing financial reports for regulatory submissions.",
-      "Preparing financial statements for Initial Public Offerings (IPOs), mergers, acquisitions, and corporate restructuring.",
+      "Accountants' reports for IPO prospectuses, acquisitions, and corporate restructurings.",
+      "Review of the financial information included in regulatory submissions.",
     ],
   },
   {
     title: "Agreed-Upon Procedures (AUP)",
     points: [
-      "Performing specific financial tests and procedures based on client needs.",
-      "Providing a customized review for areas such as revenue recognition, expense verification, and compliance checks.",
-      "Delivering objective findings without issuing a formal audit opinion.",
+      "Specific procedures you define, such as verifying revenue, expenses, or compliance with a contract.",
+      "Factual findings reported without an audit opinion, keeping the work focused and cost-effective.",
     ],
   },
 ];
 
 const corporateMnaSections: DetailSection[] = [
   {
-    title: "Assist in the preparation of an Information Memorandum (IM)",
+    title: "Information Memorandum (IM)",
     points: [
-      "Developing a detailed document outlining the company's financial performance, growth potential, industry positioning, and investment highlights to attract potential buyers or investors.",
+      "A clear document presenting your company's performance, growth potential, and investment highlights to buyers or investors.",
     ],
   },
   {
     title: "Financial Forecasting & Projections",
     points: [
-      "Creating financial models to estimate future revenue, profitability, and cash flow under different scenarios, helping stakeholders make informed decisions.",
+      "Models of revenue, profit, and cash flow under different scenarios, so decisions rest on realistic numbers.",
     ],
   },
   {
     title: "Financial Due Diligence",
     points: [
-      "Conducting a thorough review of financial records, assessing risks, and verifying key financial metrics to ensure the transaction is based on accurate data.",
+      "A thorough review of the target's financial records, risks, and key metrics before you commit.",
     ],
   },
   {
     title: "Tax Due Diligence",
     points: [
-      "Evaluating tax liabilities, incentives, and compliance status to minimize risks and optimize post-transaction tax structures.",
+      "A review of tax exposures, incentives, and compliance, with advice on how to structure the business after the deal.",
     ],
   },
   {
     title: "Negotiation Support",
     points: [
-      "Acting as intermediaries to facilitate negotiations between buyers and sellers, ensuring favorable terms and alignment of interests.",
+      "Support at the negotiating table, helping you reach terms that protect your interests.",
     ],
   },
   {
     title: "Transaction Execution",
     points: [
-      "Managing all aspects of the deal, from documentation and regulatory approvals to final settlement and integration planning.",
+      "Coordination of documentation, regulatory approvals, and completion, so the deal closes on time.",
     ],
   },
   {
-    title: "Post-M&A Integration Strategy",
+    title: "Post-Deal Integration",
     points: [
-      "Providing guidance on merging operations, aligning corporate cultures, and optimizing synergies to ensure a smooth transition post-acquisition.",
+      "Guidance on combining operations, finance teams, and reporting so the expected benefits are realised.",
     ],
   },
 ];
@@ -196,25 +211,144 @@ const restructuringSections: DetailSection[] = [
   {
     title: "Independent Business Review (IBR)",
     points: [
-      "Conducting an in-depth financial and operational assessment of the company.",
-      "Identifying key problem areas affecting business performance.",
-      "Recommending corrective actions to enhance sustainability.",
+      "An in-depth review of the company's financial and operational position.",
+      "Clear identification of the issues driving poor performance.",
+      "Recommended actions for management, lenders, and shareholders.",
     ],
   },
   {
     title: "Restructuring & Turnaround Planning",
     points: [
-      "Collaborating with company management to design a feasible restructuring roadmap.",
-      "Implementing financial and operational reforms to improve business viability.",
-      "Developing sustainable growth strategies for long-term success.",
+      "A practical, achievable turnaround plan developed with management.",
+      "Support putting financial and operational changes into effect.",
+      "A path back to stable, sustainable growth.",
     ],
   },
   {
     title: "Debt Advisory & Refinancing Support",
     points: [
-      "Assisting companies in restructuring their existing debt obligations.",
-      "Negotiating with creditors and financial institutions for debt refinancing and extension of repayment terms.",
-      "Identifying alternative capital sources, including new investors and financing options.",
+      "Advice on restructuring existing debt into manageable terms.",
+      "Negotiation with creditors and banks on refinancing and extended repayment.",
+      "Identifying new sources of capital, including investors and alternative financing.",
+    ],
+  },
+  {
+    title: "Receivership & Liquidation",
+    points: [
+      "Support with members' and creditors' voluntary winding-up.",
+      "Assistance with receivership and court-ordered winding-up processes.",
+      "Clear communication with creditors, employees, and shareholders throughout.",
+    ],
+  },
+];
+
+const taxSections: DetailSection[] = [
+  {
+    title: "Corporate Tax Compliance",
+    points: [
+      "Preparation and filing of annual corporate tax returns (Form C).",
+      "Tax estimates (CP204) and revisions, to avoid underestimation penalties.",
+      "Tax computations reviewed by a Chartered Tax Adviser.",
+    ],
+  },
+  {
+    title: "Tax Planning & Advisory",
+    points: [
+      "Structuring your business and transactions in a tax-efficient way.",
+      "Advice on incentives such as Pioneer Status, Investment Tax Allowance, and Reinvestment Allowance.",
+      "Clear explanations of how new tax rules affect your business.",
+    ],
+  },
+  {
+    title: "Tax Audits & Investigations",
+    points: [
+      "Preparation for LHDN tax audits and desk reviews.",
+      "Representation and correspondence with LHDN on your behalf.",
+      "Negotiating fair settlements where adjustments are raised.",
+    ],
+  },
+  {
+    title: "Transaction & M&A Tax",
+    points: [
+      "Tax due diligence on acquisition targets.",
+      "Tax structuring for mergers, acquisitions, restructurings, and listings.",
+      "Real Property Gains Tax (RPGT) and stamp duty advice on asset transfers.",
+    ],
+  },
+  {
+    title: "Personal & Expatriate Tax",
+    points: [
+      "Personal tax returns for business owners, directors, and expatriates.",
+      "Advice on residence status and double taxation agreements.",
+    ],
+  },
+];
+
+const chinaDeskSections: DetailSection[] = [
+  {
+    title: "Market Entry & Structuring",
+    points: [
+      "Advice on the right vehicle for Malaysia: a Sdn Bhd, a branch, or a representative office.",
+      "Holding structures that make use of the Malaysia–China double taxation agreement.",
+      "A clear view of the ongoing reporting and tax obligations before you commit.",
+    ],
+  },
+  {
+    title: "Company Set-Up Coordination",
+    points: [
+      "Coordination of incorporation with SSM and opening of corporate bank accounts.",
+      "A single point of contact while we work with company secretarial and legal partners.",
+    ],
+  },
+  {
+    title: "Tax & Incentives",
+    points: [
+      "Guidance on incentives available through MIDA, such as Pioneer Status and Investment Tax Allowance.",
+      "Withholding tax on payments to China, including service fees, royalties, and interest.",
+      "Transfer pricing documentation for transactions with your parent or related companies.",
+    ],
+  },
+  {
+    title: "Accounting, Payroll & Audit",
+    points: [
+      "Bookkeeping and monthly reporting packs for your parent company in China.",
+      "Payroll for local and expatriate staff, with EPF, SOCSO, EIS, and PCB handled.",
+      "Annual statutory audits under the Companies Act 2016.",
+    ],
+  },
+  {
+    title: "Work Permits & Expatriate Staff",
+    points: [
+      "Support with Employment Pass and other work permit applications for staff relocating from China.",
+      "Expatriate payroll and personal tax, including residence status and treaty relief.",
+    ],
+  },
+  {
+    title: "Licences & Certifications",
+    points: [
+      "Import and export licence applications for trading and manufacturing businesses.",
+      "Halal certification support for food, cosmetics, and consumer products entering the Malaysian and wider Muslim markets.",
+    ],
+  },
+  {
+    title: "Trademark & Brand Protection",
+    points: [
+      "Trademark searches and registration with MyIPO, so your brand is protected in Malaysia before you launch.",
+      "Coordination of wider intellectual property protection across Southeast Asia.",
+    ],
+  },
+  {
+    title: "Wealth Management",
+    points: [
+      "Introductions to licensed wealth management and investment partners for business owners and expatriate executives.",
+      "Coordinated advice so that personal investments, tax, and business structures work together.",
+    ],
+  },
+  {
+    title: "Ongoing Compliance",
+    points: [
+      "One compliance calendar covering tax filings, audit deadlines, licence renewals, and annual returns.",
+      "Plain-language updates when Malaysian rules change.",
     ],
   },
 ];
@@ -223,26 +357,26 @@ const accountingSections: DetailSection[] = [
   {
     title: "Bookkeeping & Financial Reporting",
     points: [
-      "Recording all financial transactions systematically.",
-      "Maintaining general ledgers, accounts payable, and accounts receivable.",
-      "Preparing monthly, quarterly, and annual financial statements.",
-      "Ensuring compliance with Malaysian Financial Reporting Standards (MFRS) or other applicable accounting frameworks.",
+      "Day-to-day recording of all financial transactions.",
+      "Maintenance of the general ledger, payables, and receivables.",
+      "Monthly, quarterly, and annual financial statements.",
+      "Accounts prepared under MFRS or MPERS, as applicable.",
     ],
   },
   {
-    title: "Cash Flow & Budget Management",
+    title: "Cash Flow & Budgeting",
     points: [
-      "Monitoring cash inflows and outflows to ensure adequate liquidity.",
-      "Preparing cash flow forecasts to support business decision-making.",
-      "Advising on cost control and budgeting for financial sustainability.",
+      "Monitoring of cash inflows and outflows to keep the business liquid.",
+      "Cash-flow forecasts to support management decisions.",
+      "Practical advice on budgeting and cost control.",
     ],
   },
   {
     title: "Audit Preparation & Support",
     points: [
-      "Assisting in audit preparation and liaison with external auditors.",
-      "Ensuring audit readiness with accurate and well-organized financial records.",
-      "Addressing any audit queries or adjustments required for compliance.",
+      "Well-organised records and schedules ready for your auditor.",
+      "Liaison with the external auditor during fieldwork.",
+      "Prompt handling of audit queries and adjustments.",
     ],
   },
 ];
@@ -251,51 +385,51 @@ const payrollSections: DetailSection[] = [
   {
     title: "Salary Calculation & Processing",
     points: [
-      "Monthly payroll processing for employees, including basic salary, allowances, deductions, and overtime.",
-      "Generation of pay slips for employees.",
-      "Handling multi-currency payroll for international employees or expatriates.",
+      "Monthly payroll covering salary, allowances, overtime, and deductions.",
+      "Payslips for every employee.",
+      "Multi-currency payroll for international staff and expatriates.",
     ],
   },
   {
     title: "Statutory Contributions & Compliance",
     points: [
-      "Employees Provident Fund (EPF) - calculating and remitting contributions.",
-      "Social Security Organization (SOCSO/PERKESO) - managing contributions for employee insurance.",
-      "Employment Insurance System (EIS) - processing employer and employee EIS contributions.",
-      "Income Tax (PCB/MTD) submission - monthly tax deduction and submission to LHDN.",
-      "HRDF levy - ensuring eligible employers contribute correctly.",
+      "EPF (KWSP): calculation and remittance of contributions.",
+      "SOCSO (PERKESO): employee social security contributions.",
+      "EIS: employer and employee Employment Insurance System contributions.",
+      "PCB/MTD: monthly tax deductions submitted to LHDN.",
+      "HRD Corp levy: correct contributions for eligible employers.",
     ],
   },
   {
-    title: "Employee Leave & Benefits Administration",
+    title: "Leave & Benefits Administration",
     points: [
-      "Tracking employee leave balances.",
-      "Administering staff bonuses, commissions, and incentives.",
-      "Managing claims and reimbursements for expenses, medical benefits, and travel allowances.",
+      "Tracking of employee leave balances.",
+      "Bonuses, commissions, and incentive payments.",
+      "Expense, medical, and travel claims and reimbursements.",
     ],
   },
   {
     title: "Payroll Reports & Reconciliation",
     points: [
-      "Providing customized payroll reports for management review.",
-      "Preparing payroll cost analysis for financial reporting.",
-      "Ensuring reconciliation between payroll records, tax filings, and accounting ledgers.",
+      "Payroll reports tailored to management's needs.",
+      "Payroll cost analysis for financial reporting.",
+      "Reconciliation of payroll records, tax filings, and the general ledger.",
     ],
   },
   {
-    title: "Employee Records & Confidentiality Management",
+    title: "Employee Records & Confidentiality",
     points: [
-      "Maintaining up-to-date employee payroll records.",
-      "Ensuring strict confidentiality in handling sensitive payroll information.",
-      "Adhering to Personal Data Protection Act (PDPA) compliance in payroll processing.",
+      "Up-to-date payroll records for every employee.",
+      "Strict confidentiality for sensitive salary information.",
+      "Personal data handled in line with the Personal Data Protection Act 2010 (PDPA).",
     ],
   },
   {
     title: "Expatriate Payroll & Taxation",
     points: [
-      "Assistance with expatriate tax filing and compliance with LHDN regulations.",
-      "Managing work permit and visa-related payroll deductions.",
-      "Ensuring compliance with double taxation agreements (DTA) where applicable.",
+      "Expatriate tax filing and compliance with LHDN requirements.",
+      "Payroll deductions related to work permits and visas.",
+      "Application of double taxation agreements (DTA) where relevant.",
     ],
   },
 ];
@@ -305,23 +439,30 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     slug: "audit-assurance",
     title: "Audit & Assurance",
     navTitle: "Audit & Assurance",
-    eyebrow: "Service Details",
+    eyebrow: "Our Services",
+    summary:
+      "Statutory audits, reviews, and specialist assurance, led by a partner from planning to sign-off.",
+    seoTitle: "Statutory Audit & Assurance Services in Kuala Lumpur",
+    seoDescription:
+      "Partner-led statutory audits, review engagements, internal control reviews, forensic accounting, and reporting accountant services for Malaysian companies.",
+    ctaTitle: "Need an auditor for this year's accounts?",
     heroImage: "/accounting-documents.png",
     intro: [
-      "YT Associates provides audit and assurance support for multinational corporations, government-linked companies, SMEs, and family-owned businesses.",
-      "Our work focuses on the financial information and underlying transactions most relevant to reporting, helping businesses identify errors, unusual items, and areas of risk that require attention.",
+      "Every Malaysian company must have its financial statements audited each year under the Companies Act 2016, unless it qualifies for an audit exemption. Our audits are planned and led by a partner or director, focus on the areas of real risk in your business, and finish with a clear report on what we found and what to improve.",
+      "We audit subsidiaries of multinationals, government-linked companies, SMEs, and family-owned groups. Where a full audit is not what you need, we offer reviews and specialist assurance work instead.",
     ],
     decisionGuide: {
       situations: [
-        "Your company requires a statutory or international-standard audit.",
-        "Management or stakeholders need a limited review or agreed-upon procedures engagement.",
-        "You need an independent review of financial reporting, accounting systems, or internal controls.",
+        "Your company needs its annual statutory audit, or wants to change auditor.",
+        "A lender, investor, or parent company has asked for a review or agreed-upon procedures.",
+        "You suspect fraud, or want an independent check on your controls.",
+        "You are preparing for an IPO and need a reporting accountant.",
       ],
       scope: [
-        "Statutory and international-standard audits",
+        "Statutory audits and review engagements",
         "Financial reporting and reporting accountant work",
         "Forensic accounting and agreed-upon procedures",
-        "Accounting framework conversion and internal-control reviews",
+        "Accounting framework conversion and internal control reviews",
       ],
     },
     contentBlocks: [
@@ -333,9 +474,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       },
       {
         type: "text",
-        paragraphs: [
-          "At YT Associate, we offer a wide range of audit and assurance services to meet the needs of various industries:",
-        ],
+        paragraphs: ["Our audit and assurance services include:"],
       },
       { type: "section-list", sections: auditSections, icon: "check" },
       { type: "industry" },
@@ -343,7 +482,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         type: "text",
         strong: true,
         paragraphs: [
-          "Whether you need a statutory audit, forensic accounting, financial reporting support, or an internal-control review, our team can discuss an engagement suited to the requirement.",
+          "Not sure whether you need an audit, a review, or agreed-upon procedures? Tell us who is asking for it and why, and we will recommend the right engagement.",
         ],
       },
     ],
@@ -352,22 +491,29 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     slug: "corporate-advisory",
     title: "Corporate Advisory",
     navTitle: "Corporate Advisory",
-    eyebrow: "Service Details",
+    eyebrow: "Our Services",
+    summary:
+      "IPO readiness, M&A, due diligence, and valuations for growing and family-owned businesses.",
+    seoTitle: "IPO & Corporate Advisory Services in Malaysia",
+    seoDescription:
+      "IPO preparation for Bursa Malaysia, M&A advisory, financial and tax due diligence, forecasting, and valuations for SMEs and family-owned businesses.",
+    ctaTitle: "Planning an IPO or a transaction?",
     heroImage: "/accounting-documents.png",
     intro: [
-      "Our Corporate Advisory team specializes in helping Small and Medium Enterprises (SMEs) and family-owned businesses transition into publicly listed companies on Bursa Malaysia Securities Berhad through the Initial Public Offering (IPO) process. Over the years, we have successfully guided multiple businesses in achieving their listing objectives, enabling them to access capital markets for expansion and growth.",
+      "Listing on Bursa Malaysia, or buying or selling a business, is a defining moment for any owner. We help SMEs and family-owned businesses prepare for an IPO, then act as their in-house financial adviser through the listing, working alongside the investment bank, lawyers, and other advisers.",
+      "We also advise buyers and sellers on mergers and acquisitions, from the first valuation through to completion and integration.",
     ],
     decisionGuide: {
       situations: [
         "Your SME or family-owned business is preparing for an IPO.",
         "You are considering buying, selling, or merging a business.",
-        "You need financial due diligence, valuation, forecasting, or transaction support.",
+        "You need financial due diligence, a valuation, forecasts, or transaction support.",
       ],
       scope: [
-        "IPO preparation and coordination with transaction stakeholders",
+        "IPO preparation and coordination with the other advisers",
         "Information memoranda, forecasts, and financial projections",
         "Financial and tax due diligence",
-        "Deal structuring, negotiation, execution, and post-transaction integration support",
+        "Negotiation, execution, and post-deal integration support",
       ],
     },
     contentBlocks: [
@@ -378,18 +524,17 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       },
       {
         type: "section-list",
-        heading: "Comprehensive IPO Support",
+        heading: "Support through the IPO journey",
         icon: "circle",
         sections: [
           {
-            title: "We play a crucial role throughout the IPO journey, working closely with key stakeholders such as:",
+            title: "We work closely with every adviser involved in your listing:",
             points: [
-              "Investment Banks - structuring and underwriting the IPO to ensure successful fund-raising.",
-              "Due Diligence Lawyers - ensuring legal compliance and regulatory adherence.",
-              "Market Research Consultants - providing insights into market trends and investor sentiment.",
-              "Issuing Houses & Share Registrars - managing share issuance, investor subscriptions, and regulatory filings.",
-              "Accounting and tax guidance to ensure financial statements align with regulatory requirements.",
-              "Corporate secretarial services to facilitate smooth compliance with listing regulations.",
+              "Investment banks, on structuring and underwriting the offer.",
+              "Due diligence lawyers, on legal and regulatory compliance.",
+              "Independent market researchers, on the industry overview in your prospectus.",
+              "Issuing houses and share registrars, on share issuance and subscriptions.",
+              "Company secretaries, on compliance with the listing requirements.",
             ],
           },
         ],
@@ -402,9 +547,9 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       {
         type: "text",
         paragraphs: [
-          "In these engagements, we typically act as an in-house financial advisor, ensuring the company navigates the complexities of the IPO process efficiently.",
-          "Post-listing, we continue to support many of our clients as corporate advisors, assisting them in meeting compliance requirements, optimizing financial strategies, and executing corporate actions that enhance shareholder value.",
-          "We also provide comprehensive M&A advisory services, assisting clients on both the buy-side and sell-side of transactions. Whether a company is seeking to acquire another business, merge with a strategic partner, or divest its assets, our expertise ensures smooth execution at every stage of the transaction.",
+          "Throughout the process, we act as your in-house financial adviser: guiding your accounting and tax position, keeping the timetable on track, and making sure the numbers are consistent across every document.",
+          "After listing, many clients keep us on as corporate advisers for ongoing compliance, financial strategy, and corporate exercises that build shareholder value.",
+          "On mergers and acquisitions, we act for both buyers and sellers, whether you are acquiring a business, merging with a strategic partner, or divesting assets.",
         ],
       },
       {
@@ -417,31 +562,39 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         type: "text",
         strong: true,
         paragraphs: [
-          "With our in-depth expertise, we help businesses navigate the complexities of corporate finance, ensuring they achieve their strategic goals while minimizing financial and operational risks.",
+          "Planning a listing or a transaction? Speak to us early. The sooner your numbers are ready, the smoother the process will be.",
         ],
       },
     ],
   },
   "restructuring-advisory": {
     slug: "restructuring-advisory",
-    title: "Restructuring Advisory",
-    navTitle: "Restructuring Advisory",
-    eyebrow: "Service Details",
+    title: "Restructuring & Insolvency",
+    navTitle: "Restructuring & Insolvency",
+    eyebrow: "Our Services",
+    summary:
+      "Independent reviews, turnaround plans, debt advisory, and insolvency support for businesses under financial pressure.",
+    seoTitle: "Corporate Restructuring & Insolvency Advisory in Malaysia",
+    seoDescription:
+      "Independent business reviews, turnaround planning, debt advisory and refinancing, and receivership and liquidation support for Malaysian companies.",
+    ctaTitle: "Under financial pressure? Talk to us early.",
     heroImage: "/accounting-documents.png",
     intro: [
-      "Our firm provides a comprehensive range of corporate restructuring, helping businesses navigate financial distress and ensuring the best possible outcomes for stakeholders. We specialize in assisting companies facing operational, financial, and legal challenges by offering strategic guidance, financial oversight, and professional execution of restructuring procedures.",
+      "When cash flow tightens or lenders start asking questions, early and independent advice keeps more options open. We work with management, lenders, and shareholders to understand what has gone wrong, what can be saved, and the most practical way forward.",
+      "Where recovery is not possible, we support an orderly receivership or winding-up that protects the interests of everyone involved.",
     ],
     decisionGuide: {
       situations: [
         "Cash flow, debt commitments, or declining performance are putting pressure on the business.",
         "Management or lenders need an independent view of financial and operational performance.",
         "The company needs a practical turnaround, refinancing, or restructuring plan.",
+        "A receivership or winding-up is being considered.",
       ],
       scope: [
         "Independent business reviews",
         "Restructuring and turnaround planning",
         "Debt advisory and refinancing support",
-        "Identification of operational and financial actions for management consideration",
+        "Receivership and liquidation support",
       ],
     },
     contentBlocks: [
@@ -449,24 +602,124 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         type: "image",
         src: "/about-story-meeting.png",
         alt: "Corporate restructuring advisory meeting",
-        overlay: "Corporate Restructuring Advisory",
-      },
-      {
-        type: "text",
-        paragraphs: [
-          "Our firm provides a comprehensive range of corporate restructuring, helping businesses navigate financial distress and ensuring the best possible outcomes for stakeholders. We specialize in assisting companies facing operational, financial, and legal challenges by offering strategic guidance, financial oversight, and professional execution of restructuring procedures.",
-        ],
+        overlay: "Restructuring & Insolvency",
       },
       {
         type: "section-list",
-        heading: "Our key Corporate Restructuring services include:",
+        heading: "Our restructuring and insolvency services include:",
         sections: restructuringSections,
       },
       {
         type: "text",
         strong: true,
         paragraphs: [
-          "Customizable Solutions - tailored services to meet the specific needs of SMEs, large corporations, and multinational companies.",
+          "Every situation is different. We tailor our approach to SMEs, large corporations, and multinationals, and every conversation is treated in confidence.",
+        ],
+      },
+    ],
+  },
+  "tax-advisory": {
+    slug: "tax-advisory",
+    title: "Tax Advisory & Compliance",
+    navTitle: "Tax Advisory & Compliance",
+    eyebrow: "Our Services",
+    summary:
+      "Tax compliance, planning, and LHDN support led by a Chartered Tax Adviser, backed by the Taxand global network.",
+    seoTitle: "Corporate Tax Advisory & Compliance in Malaysia",
+    seoDescription:
+      "Corporate and personal tax compliance, tax planning, incentives, LHDN tax audits, and M&A tax structuring led by a Chartered Tax Adviser in Kuala Lumpur.",
+    ctaTitle: "Have a tax question or an LHDN query?",
+    heroImage: "/accounting-documents.png",
+    intro: [
+      "Tax affects every decision a business makes, from day-to-day pricing to buying a company. Peter Tang & Associates has advised on Malaysian tax since 1992, and the practice is led by a Chartered Tax Adviser and approved tax agent.",
+      "As the Malaysian member of Taxand, a global network of independent tax advisers, we can also coordinate advice for clients with operations or investors overseas.",
+    ],
+    decisionGuide: {
+      situations: [
+        "You need your corporate or personal tax returns prepared and filed correctly.",
+        "LHDN has opened a tax audit or raised queries on your returns.",
+        "You are planning an expansion, restructuring, or transaction and want to understand the tax impact.",
+        "You want to know which tax incentives your business qualifies for.",
+      ],
+      scope: [
+        "Corporate and personal tax compliance",
+        "Tax planning and incentive applications",
+        "LHDN tax audits and investigations",
+        "Tax due diligence and transaction structuring",
+      ],
+    },
+    contentBlocks: [
+      {
+        type: "image",
+        src: "/who-financial-strategy.png",
+        alt: "Tax advisers reviewing a financial strategy",
+        overlay: "Tax",
+      },
+      {
+        type: "section-list",
+        heading: "Our tax services include:",
+        sections: taxSections,
+        icon: "check",
+      },
+      {
+        type: "text",
+        strong: true,
+        paragraphs: [
+          "Good tax advice starts before the transaction, not after the assessment. Talk to us early and we will help you plan with confidence.",
+        ],
+      },
+    ],
+  },
+  "china-malaysia-desk": {
+    slug: "china-malaysia-desk",
+    title: "China-Malaysia Desk",
+    navTitle: "China-Malaysia Desk",
+    eyebrow: "Our Services",
+    summary:
+      "One team to help Chinese companies set up, stay compliant, and grow in Malaysia, with support in Mandarin.",
+    seoTitle: "China-Malaysia Desk: Set Up and Grow Your Business in Malaysia",
+    seoDescription:
+      "Market entry, company set-up, tax and incentives, accounting, payroll, audit, work permits, licences, halal certification, and trademarks for Chinese companies investing in Malaysia.",
+    ctaTitle: "Planning to invest in Malaysia from China?",
+    heroImage: "/hero-kl-skyline.png",
+    intro: [
+      "Malaysia is one of the most popular destinations for Chinese companies expanding into Southeast Asia. Getting the structure, tax, and compliance right from the start saves time, cost, and difficult conversations later.",
+      "Our China-Malaysia Desk gives Chinese investors one team for the full journey, from choosing a structure and obtaining licences to the first statutory audit, with communication in Mandarin and reporting your head office understands.",
+    ],
+    decisionGuide: {
+      situations: [
+        "Your company in China is planning to set up a subsidiary, branch, or office in Malaysia.",
+        "You already operate in Malaysia and need reliable accounting, tax, and audit support.",
+        "Your head office needs regular reporting on the Malaysian business.",
+        "You want to understand the incentives and tax treaty benefits available.",
+        "You need work permits, import and export licences, halal certification, or trademark protection.",
+      ],
+      scope: [
+        "Market entry advice and structuring",
+        "Company set-up and bank account coordination",
+        "Tax, incentives, and transfer pricing",
+        "Accounting, payroll, audit, and ongoing compliance",
+        "Work permits, licences, halal certification, and trademarks",
+        "Introductions to wealth management partners",
+      ],
+    },
+    contentBlocks: [
+      {
+        type: "image",
+        src: "/china-malaysia-desk.svg",
+        alt: "Illustration of the Shanghai and Kuala Lumpur skylines linked by a trade route",
+      },
+      {
+        type: "section-list",
+        heading: "How our China-Malaysia Desk supports you:",
+        sections: chinaDeskSections,
+        icon: "check",
+      },
+      {
+        type: "text",
+        strong: true,
+        paragraphs: [
+          "Whether you are exploring Malaysia for the first time or already have a team on the ground, talk to us and we will map out what you need, in the order you need it.",
         ],
       },
     ],
@@ -475,16 +728,22 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     slug: "accounting-payroll-outsourcing",
     title: "Accounting & Payroll Outsourcing Services",
     navTitle: "Accounting & Payroll Outsourcing",
-    eyebrow: "Service Details",
+    eyebrow: "Our Services",
+    summary:
+      "Bookkeeping, reporting, and payroll handled for you, with records ready for your year-end audit.",
+    seoTitle: "Accounting & Payroll Outsourcing in Kuala Lumpur",
+    seoDescription:
+      "Outsourced bookkeeping, financial reporting, cash-flow support, payroll processing, and EPF, SOCSO, EIS and PCB submissions for Malaysian businesses.",
+    ctaTitle: "Want your books and payroll off your plate?",
     heroImage: "/accounting-documents.png",
     intro: [
-      "Our associate firm provides a comprehensive Accounting and Payroll Outsourcing services to help businesses streamline their financial operations, reduce administrative burdens, and maintain compliance with regulatory requirements.",
-      "The service supports your company's financial records and payroll processing so that management can focus on core business activities and growth priorities.",
+      "Our Accounting and Payroll Outsourcing service takes care of your bookkeeping, reporting, and payroll, so your management team can focus on running the business.",
+      "You get accurate monthly records, payroll that meets every statutory deadline, and accounts that are ready when the auditor arrives.",
     ],
     decisionGuide: {
       situations: [
         "Your team needs reliable bookkeeping and regular financial reporting.",
-        "Payroll calculations, employee records, and recurring submissions take time away from core operations.",
+        "Payroll calculations, employee records, and monthly submissions take time away from core operations.",
         "Management needs clearer cash-flow information or better-prepared records for the year-end audit.",
       ],
       scope: [
@@ -499,17 +758,17 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         type: "image",
         src: "/why-choose-laptop-dashboard.png",
         alt: "Accounting outsourcing services dashboard",
-        overlay: "Accounting Outsourcing Services",
+        overlay: "Accounting Outsourcing",
       },
       {
         type: "text",
         paragraphs: [
-          "Our Accounting Outsourcing services provide companies with expert financial management while ensuring compliance with accounting standards and tax regulations.",
+          "We keep your books accurate and up to date, in line with accounting standards and tax regulations.",
         ],
       },
       {
         type: "section-list",
-        heading: "Our Accounting Services Include:",
+        heading: "Our accounting services include:",
         sections: accountingSections,
         icon: "circle",
       },
@@ -517,26 +776,26 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         type: "text",
         strong: true,
         paragraphs: [
-          "By outsourcing accounting functions to YTA, businesses can improve financial accuracy, reduce operational costs, and ensure timely regulatory compliance.",
+          "Outsourcing your accounting to us improves accuracy, reduces overheads, and keeps your filings on time.",
         ],
       },
       {
         type: "image",
         src: "/accounting-documents.png",
         alt: "Payroll outsourcing services documents",
-        overlay: "Payroll Outsourcing Services",
+        overlay: "Payroll Outsourcing",
       },
       {
         type: "heading",
         title: "Payroll Outsourcing Services",
         intro: [
-          "Payroll processing is a critical but complex function that requires accuracy, confidentiality, and compliance with labour laws.",
-          "Our firm provides fully managed payroll solutions tailored to the unique needs of businesses, ensuring timely salary disbursement, statutory contributions, and compliance with Malaysian employment regulations.",
+          "Payroll has to be accurate, confidential, and on time, every month.",
+          "We run your payroll end to end, from salary calculations to statutory contributions, in line with Malaysian employment and tax regulations.",
         ],
       },
       {
         type: "section-list",
-        heading: "Our Payroll Services Include:",
+        heading: "Our payroll services include:",
         sections: payrollSections,
         icon: "circle",
       },
