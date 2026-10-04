@@ -19,12 +19,20 @@ export function HomeCtaSection() {
         </div>
 
         <h2 className="mt-8 text-[clamp(2rem,1.95vw,2.35rem)] font-medium leading-[1.34] tracking-normal text-white">
-          Discuss the right support for your next step
+          Talk to a partner about your audit, transaction, or business challenge
         </h2>
+
+        <p className="mt-5 text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.65] text-white/75">
+          Call us on{" "}
+          <a href="tel:+60327284819" className="font-semibold text-white underline-offset-4 hover:underline">
+            +603 2728 4819
+          </a>{" "}
+          or send an enquiry, and we will respond within one working day.
+        </p>
 
         <Link
           href="/contact"
-          className="mt-10 inline-flex h-[53px] min-w-[259px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[clamp(0.8rem,0.72vw,0.87rem)] font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174]"
+          className="mt-8 inline-flex h-[53px] min-w-[259px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[clamp(0.8rem,0.72vw,0.87rem)] font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174]"
         >
           <span>Get in Touch Today</span>
           <span aria-hidden="true">↗</span>

@@ -4,33 +4,33 @@ import { useState } from "react";
 
 const services = [
   {
-    title: "Audit and Assurance",
-    body: "We provide independent, risk-focused audit and assurance services designed to enhance the credibility, transparency, and reliability of financial statements, while ensuring compliance with applicable regulatory and reporting standards.",
-    helpfulWhen: "You need a statutory audit, financial reporting support, agreed-upon procedures, or an independent review of controls.",
+    title: "Audit & Assurance",
+    body: "An audit should do more than meet a statutory requirement. Our risk-focused approach, supported by data analytics, concentrates on the areas that matter most to your financial statements and highlights control weaknesses along the way, so you receive practical recommendations alongside our opinion.",
+    helpfulWhen: "You need a statutory or international-standard audit, a limited review, agreed-upon procedures, forensic work, or an independent review of internal controls.",
     href: "/services/audit-assurance",
     image: "/accounting-documents.png",
     imageAlt: "Accounting documents, financial reports, calculator, and pen on a desk",
   },
   {
-    title: "Corporate Advisory Services",
-    body: "Our corporate advisory services support businesses in strategic planning, corporate finance, mergers and acquisitions, due diligence, and capital structuring to drive sustainable growth and long-term value.",
-    helpfulWhen: "You are preparing for an IPO, evaluating a transaction, raising funds, or need financial due diligence and forecasting.",
+    title: "Corporate Advisory",
+    body: "We have guided SMEs and family-owned businesses through listings on Bursa Malaysia, acting as an in-house financial adviser from preparation to post-listing. On transactions, we support buyers and sellers with due diligence, valuations, forecasts, and deal structuring, working alongside your bankers and lawyers.",
+    helpfulWhen: "You are preparing for an IPO, buying or selling a business, raising funds, or need financial and tax due diligence or a valuation.",
     href: "/services/corporate-advisory",
     image: "/accounting-advisory-review.png",
     imageAlt: "Advisors reviewing financial charts and audit papers",
   },
   {
-    title: "Restructuring Advisory",
-    body: "We assist companies facing financial or operational challenges through independent business reviews, restructuring strategies, insolvency advisory, and recovery planning to restore stability and business viability.",
-    helpfulWhen: "Cash flow, debt commitments, or declining performance require an independent review and a practical turnaround plan.",
+    title: "Restructuring & Insolvency",
+    body: "When a business comes under financial pressure, early and independent advice protects options. We carry out independent business reviews, prepare turnaround plans, and advise on debt and refinancing. Where recovery is not possible, we support receivership and liquidation processes.",
+    helpfulWhen: "Cash flow is tight, lenders are asking for an independent review, debt needs restructuring, or a receivership or winding-up is being considered.",
     href: "/services/restructuring-advisory",
     image: "/accounting-documents.png",
     imageAlt: "Financial statements and calculator on an accounting desk",
   },
   {
-    title: "Accounting & Payroll Outsourcing Services",
-    body: "We offer reliable accounting and payroll outsourcing solutions, enabling businesses to streamline financial operations, ensure compliance, and focus on core business activities with confidence.",
-    helpfulWhen: "You need dependable bookkeeping, management reporting, payroll processing, cash-flow support, or better audit readiness.",
+    title: "Accounting & Payroll Outsourcing",
+    body: "Accurate records are the foundation of good decisions and a smooth audit. We keep your books to MFRS, prepare monthly management reports and cash-flow budgets, and run payroll with EPF, SOCSO, EIS, PCB, and HRDF handled correctly and on time.",
+    helpfulWhen: "You need dependable bookkeeping, management reports, payroll processing, or want your records audit-ready at year end.",
     href: "/services/accounting-payroll-outsourcing",
     image: "/accounting-documents.png",
     imageAlt: "Accounting reports and financial charts on a desk",
@@ -45,15 +45,15 @@ export function ServicesAccordionSection() {
       <div className="mx-auto max-w-[1138px]">
         <div className="text-center">
           <p className="text-[clamp(0.7rem,0.72vw,0.85rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">
-            Find the right support
+            Our services
           </p>
           <h2 className="mx-auto mt-4 max-w-[36rem] text-[clamp(2rem,2vw,2.32rem)] font-medium leading-[1.35] tracking-normal text-[#03101c]">
             Start with the business challenge you need to solve
           </h2>
           <p className="mx-auto mt-5 max-w-[42rem] text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.65] tracking-[0.03em] text-[#4b4d5c]">
-            Each engagement is shaped around your reporting requirements,
-            transaction, or operational priorities. Use the prompts below to
-            identify the most relevant YTA service.
+            Each engagement is scoped around your reporting requirements,
+            transaction, or business situation. Select a service to see how we
+            can help.
           </p>
         </div>
 

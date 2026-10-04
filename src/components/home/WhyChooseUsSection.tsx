@@ -1,18 +1,18 @@
 const reasons = [
   {
-    title: "Risk-focused",
+    title: "Partner-led",
     description:
-      "Attention stays on the transactions, reporting areas, and controls that matter most to the engagement.",
+      "Our partners stay involved from planning to sign-off, so key judgements are made by people with decades of experience.",
   },
   {
-    title: "Practical observations",
+    title: "Big Four standards",
     description:
-      "Findings are communicated with clear context so management can understand the issue and consider improvements.",
+      "Our leadership trained at PwC and EY. You get the same technical rigour with direct access and a responsive team.",
   },
   {
-    title: "Cross-industry perspective",
+    title: "Value beyond compliance",
     description:
-      "Experience spans SMEs, family-owned businesses, multinational corporations, and government-linked companies.",
+      "Beyond the audit opinion, we share practical observations on controls, reporting, and risks that management can act on.",
   },
 ];
 
@@ -27,7 +27,7 @@ export function WhyChooseUsSection() {
             </p>
 
             <h2 className="mt-5 max-w-[24rem] text-[clamp(2rem,1.95vw,2.35rem)] font-medium leading-[1.25] tracking-normal text-[#03101c]">
-              A focused approach to complex financial work
+              Experienced judgement, practical advice
             </h2>
           </div>
 

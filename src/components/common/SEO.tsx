@@ -6,7 +6,7 @@ type SEOProps = {
 };
 
 export function SEO({ title, description }: SEOProps) {
-  const pageTitle = title ? `${title} | Website` : "Website";
+  const pageTitle = title ? `${title} | YT Associates` : "YT Associates";
 
   return (
     <Head>
