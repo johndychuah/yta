@@ -1,0 +1,30 @@
+import Image from "next/image";
+
+export function AboutHeroSection() {
+  return (
+    <section className="relative isolate min-h-[clamp(28rem,38.2vw,45.9rem)] overflow-hidden bg-[#091c2f]">
+      <Image
+        src="/about-hero-accounting-desk.png"
+        alt="Accounting desk with audit reports, calculator, and handwritten notes"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+
+      <div className="relative z-10 flex min-h-[clamp(28rem,38.2vw,45.9rem)] items-center px-[clamp(1.5rem,9.1vw,11rem)] py-[clamp(4rem,7vw,8rem)]">
+        <div className="max-w-[95rem]">
+          <h1 className="max-w-[31rem] text-[clamp(2.4rem,2.5vw,3rem)] font-medium leading-[1.28] tracking-normal text-white">
+            Built on Legacy. Driven by Excellence.
+          </h1>
+          <p className="mt-5 max-w-[95rem] text-[clamp(0.78rem,0.72vw,0.86rem)] font-medium uppercase leading-[1.7] tracking-[0.16em] text-white">
+            For over three decades, we&apos;ve been trusted advisors to Malaysia&apos;s
+            most ambitious businesses—from family enterprises to multinational
+            corporations.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
