@@ -11,7 +11,7 @@ export function AboutStorySection() {
               Our Story
             </p>
             <h2 className="mt-6 max-w-[30rem] text-[clamp(2.25rem,2vw,2.5rem)] font-medium leading-[1.26] tracking-normal text-[#03101c]">
-              A Heritage of Professional Excellence
+              From boutique practice to trusted audit firm
             </h2>
           </div>
 
@@ -53,42 +53,40 @@ export function AboutStorySection() {
                 1992
               </p>
               <p className="max-w-28 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.58] tracking-[0.03em]">
-                Peter Tang & Associates practice
+                Peter Tang & Associates founded
               </p>
             </div>
 
             <div className="mt-6 space-y-7 text-[clamp(1rem,0.85vw,1.05rem)] leading-[1.58] tracking-[0.03em]">
               <p>
-                The story of YT Associates & Peter Tang & Associates is one of
-                vision, expertise, and unwavering commitment to client service.
+                Our story began in 1992, when Dato&apos; Peter Tang and Yeo Eng
+                Thong, both alumni of what is now PwC, established Peter Tang &amp;
+                Associates. The boutique firm built its reputation in
+                accounting, tax, and corporate finance, helping growing
+                companies prepare for listing on the then KLSE Second Board.
               </p>
 
               <p>
-                Dato&apos; Peter Tang has led Peter Tang & Associates since 1992.
-                His experience spans accounting, corporate services, tax
-                compliance, tax advisory, valuations, due diligence, mergers and
-                acquisitions, and IPO advisory work in Malaysia and overseas.
+                As the practice grew, its parent group was restructured and
+                listed on the Catalist board of the Singapore Exchange as
+                Axcelasia Inc. The audit practice continued as YT Associates,
+                with Yeo Eng Thong leading the transition and keeping the same
+                experienced team and long-standing client relationships.
               </p>
 
               <p>
-                Yeo Eng Thong brings more than 35 years of experience in
-                professional accounting practice. His work includes audit,
-                financial reporting, corporate matters, valuations, due
-                diligence, mergers and acquisitions, and IPO advisory exercises.
-              </p>
-
-              <p>
-                YT Associates applies a risk-focused approach to assurance work,
-                combining assessment, audit testing, and practical observations
-                to help clients improve financial reporting and address control
-                deficiencies.
+                Today, YT Associates (AF1112) combines Big Four-trained
+                leadership with the personal attention of a boutique practice.
+                Our risk-focused, data-driven approach helps clients meet their
+                reporting obligations while strengthening controls and
+                decision-making.
               </p>
             </div>
 
             <p className="mt-8 text-[clamp(1.5rem,1.3vw,1.6rem)] font-medium leading-[1.45] tracking-normal text-[#03101c]">
-              Together, YT Associates and Peter Tang & Associates support
-              organisations through audit, assurance, corporate finance,
-              accounting, payroll, restructuring, and advisory work.
+              Together, YT Associates and Peter Tang &amp; Associates provide
+              audit, corporate advisory, restructuring, accounting, and payroll
+              services to Malaysian businesses.
             </p>
           </div>
         </div>

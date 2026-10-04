@@ -106,7 +106,7 @@ export function Footer() {
           </div>
 
           <p className="text-[clamp(0.85rem,0.85vw,1rem)] leading-[1.58] tracking-[0.03em] text-[#3c3d4b]">
-            © 2025 YT Associates (AF1112), Peter Tang & Associates (AF1873)
+            © {new Date().getFullYear()} YT Associates (AF1112), Peter Tang & Associates (AF1873)
           </p>
 
           <div className="flex items-center gap-2">

@@ -13,7 +13,7 @@ const values: ValueCard[] = [
   {
     title: "Integrity",
     description:
-      "We operate with the highest ethical standards, maintaining independence and objectivity in all our engagements. Your trust is our most valuable asset.",
+      "Independence and objectivity are the foundation of every audit we sign. We tell clients what they need to hear, clearly and professionally.",
     image: "/about-story-meeting.png",
     alt: "Professional advisor meeting with clients",
     tone: "light",
@@ -22,16 +22,16 @@ const values: ValueCard[] = [
   {
     title: "Excellence",
     description:
-      "From Big Four training to continuous professional development, we maintain rigorous quality standards in every engagement, regardless of size.",
+      "Our standards were shaped in Big Four practice. Every engagement, large or small, is planned, reviewed, and signed off with the same rigour.",
     image: "/why-choose-laptop-dashboard.png",
     alt: "Financial dashboard and accounting records on a laptop",
     tone: "navy",
     icon: "rings",
   },
   {
-    title: "Personalization",
+    title: "Personal Attention",
     description:
-      "Unlike large firms where you're just a number, we assign dedicated teams who take time to understand your business, industry, and unique challenges.",
+      "You work with a consistent team led by senior people who take the time to understand your business, your industry, and your people.",
     image: "/accounting-advisory-review.png",
     alt: "Accounting professionals discussing reports",
     tone: "orange",
@@ -40,25 +40,25 @@ const values: ValueCard[] = [
   {
     title: "Partnership",
     description:
-      "We look beyond the immediate assignment to understand the reporting, operational, and strategic decisions facing your business.",
+      "We aim for long-term relationships, looking beyond this year's assignment to the reporting and strategic decisions your business faces next.",
     image: "/why-choose-laptop-dashboard.png",
     alt: "Digital accounting workspace with financial data",
     tone: "navy",
     icon: "rings",
   },
   {
-    title: "Innovation",
+    title: "Forward Thinking",
     description:
-      "We stay ahead of regulatory changes and leverage modern methodologies to deliver efficient, value-adding services that protect and grow your business.",
+      "From e-invoicing to evolving reporting standards, we track regulatory change and use data analytics to work more efficiently and effectively.",
     image: "/accounting-advisory-review.png",
     alt: "Advisors reviewing business performance documents",
     tone: "orange",
     icon: "wheel",
   },
   {
-    title: "Empowerment",
+    title: "Clarity",
     description:
-      "We don't just deliver reports—we equip you with insights and knowledge to make informed decisions and strengthen your organization's financial capabilities.",
+      "We explain our findings in plain language, with practical recommendations that management can understand and act on.",
     image: "/about-story-meeting.png",
     alt: "Client meeting with accounting advisor",
     tone: "light",
@@ -144,7 +144,7 @@ export function AboutValuesSection() {
             Our Values
           </p>
           <h2 className="mt-5 text-[clamp(2.1rem,2vw,2.5rem)] font-medium leading-[1.22] tracking-normal text-[#03101c]">
-            What Drives Us
+            The principles behind every engagement
           </h2>
         </div>
 

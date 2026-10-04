@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const stats = [
-  { value: "MNC", label: "Multinational corporations" },
-  { value: "GLC", label: "Government-linked companies" },
-  { value: "SME", label: "Small and medium enterprises" },
-  { value: "Family", label: "Family-owned businesses" },
+  { value: "35+", label: "Years of partner experience" },
+  { value: "1992", label: "Practice established" },
+  { value: "4", label: "Partners and directors, all FCCA" },
+  { value: "6", label: "Client sectors served" },
 ];
 
 type Highlight = {
@@ -18,27 +18,27 @@ type Highlight = {
 
 const highlights: Highlight[] = [
   {
-    title: "Dedicated client support",
+    title: "Partner-led attention",
     description:
-      "Personalised service keeps the engagement focused on the reporting priorities, risks, and decisions that matter to each client.",
+      "Our partners stay involved from planning to sign-off. You deal directly with senior people who know your business, not a rotating team.",
     image: "/about-story-meeting.png",
     alt: "Advisor meeting with clients",
     tone: "orange",
     icon: "diamond",
   },
   {
-    title: "Expert financial guidance",
+    title: "Big Four experience",
     description:
-      "The team brings experience across audit, accounting, taxation, corporate finance, and financial reporting matters.",
+      "Our leaders trained at Price Waterhouse, PwC, and EY, and bring the same technical discipline to clients of every size, from family businesses to listed groups.",
     image: "/why-choose-laptop-dashboard.png",
     alt: "Financial dashboard and accounting reports",
     tone: "navy",
     icon: "rings",
   },
   {
-    title: "Quality Assurance Services",
+    title: "Value beyond the opinion",
     description:
-      "A risk-focused approach combines assessment, audit procedures, and practical observations tailored to the engagement.",
+      "Our risk-focused, data-driven audits highlight control weaknesses and practical improvements, so every engagement leaves your business stronger.",
     image: "/accounting-advisory-review.png",
     alt: "Accounting professionals reviewing advisory documents",
     tone: "orange",

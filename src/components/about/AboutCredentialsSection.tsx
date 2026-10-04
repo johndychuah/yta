@@ -7,6 +7,10 @@ const bodies = [
     abbreviation: "MIA",
   },
   {
+    name: "Association of Chartered Certified Accountants",
+    abbreviation: "ACCA",
+  },
+  {
     name: "Malaysian Institute of Certified Public Accountants",
     abbreviation: "MICPA",
     logo: "/professional-bodies/micpa.png",
@@ -19,6 +23,7 @@ const bodies = [
   {
     name: "CPA Australia",
     abbreviation: "CPA",
+    wide: true,
   },
 ];
 
@@ -28,14 +33,16 @@ export function AboutCredentialsSection() {
       <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(30rem,1.28fr)] lg:items-end">
         <div>
           <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
-            Professional Standards
+            Credentials
           </p>
           <h2 className="mt-6 max-w-[27rem] text-[clamp(2rem,2.2vw,2.65rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-            Grounded in recognised professional standards
+            Members of leading professional bodies
           </h2>
           <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
-            Our work is informed by the professional bodies and standards that
-            shape accounting, audit, and taxation practice in Malaysia.
+            Our partners and directors are Chartered Accountants of the
+            Malaysian Institute of Accountants and Fellows of ACCA, with further
+            memberships of MICPA, CPA Australia, and the Chartered Tax Institute
+            of Malaysia. YT Associates is a registered audit firm (AF1112).
           </p>
           <Link
             href="/professional-bodies"
@@ -50,7 +57,7 @@ export function AboutCredentialsSection() {
           {bodies.map((body) => (
             <article
               key={body.abbreviation}
-              className="flex min-h-[11.5rem] flex-col justify-between rounded-[10px] bg-white p-6 shadow-[0_18px_45px_rgba(9,28,47,0.06)]"
+              className={`${"wide" in body ? "sm:col-span-2 " : ""}flex min-h-[11.5rem] flex-col justify-between rounded-[10px] bg-white p-6 shadow-[0_18px_45px_rgba(9,28,47,0.06)]`}
             >
               <div className="flex h-14 items-center">
                 {body.logo ? (

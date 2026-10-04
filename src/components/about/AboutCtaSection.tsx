@@ -24,7 +24,7 @@ export function AboutCtaSection() {
 
         <div className="relative z-10 max-w-[35rem]">
           <h2 className="max-w-[31rem] text-[clamp(2rem,2vw,2.5rem)] font-medium leading-[1.22] tracking-normal">
-            Need reliable accounting support? Get in touch with our team
+            Looking for an audit or advisory partner you can rely on? Talk to our team
           </h2>
 
           <Link

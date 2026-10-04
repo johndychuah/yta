@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const featureCopy =
-  "Clear financial guidance, disciplined review, and practical advice for every stage of business growth.";
+  "We start by understanding your business, risks, and deadlines, then scope the engagement around them.";
 
 function DoubleTriangleIcon() {
   return (
@@ -44,10 +44,10 @@ export function AboutPrecisionSection() {
       <div className="mx-auto max-w-[1280px]">
         <div className="text-center">
           <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">
-            Why Choose Us
+            Our Approach
           </p>
           <h2 className="mx-auto mt-7 max-w-[50rem] text-[clamp(2.15rem,2.55vw,3rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-            Simplifying finances with precision and Integrity
+            How we work with our clients
           </h2>
         </div>
 
@@ -67,7 +67,7 @@ export function AboutPrecisionSection() {
             <div className="mt-[clamp(2rem,2.4vw,2.9rem)]">
               <DoubleTriangleIcon />
               <h3 className="mt-7 text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal text-[#03101c]">
-                Client-centric approach
+                Understand first
               </h3>
               <p className="mt-8 text-[clamp(0.98rem,0.84vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#3c3d4b]">
                 {featureCopy}
@@ -78,11 +78,11 @@ export function AboutPrecisionSection() {
           <article className="relative min-h-[clamp(28rem,29vw,33rem)] overflow-hidden rounded-[20px] bg-[#f7f7f7] p-[clamp(1.5rem,1.7vw,2rem)]">
             <div className="relative z-10">
               <h3 className="text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal text-[#03101c]">
-                Experienced professionals
+                Senior-led throughout
               </h3>
               <p className="mt-9 max-w-[21rem] text-[clamp(0.98rem,0.84vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#3c3d4b]">
-                Senior-led service shaped by Big Four discipline, local market
-                understanding, and hands-on advisory experience.
+                Senior people are involved from planning to completion, so
+                issues are identified and resolved early.
               </p>
             </div>
 
@@ -102,11 +102,11 @@ export function AboutPrecisionSection() {
             <article className="rounded-[20px] bg-white p-[clamp(1.5rem,1.7vw,2rem)] shadow-[0_28px_70px_rgba(9,28,47,0.08)]">
               <DiamondIcon />
               <h3 className="mt-[clamp(2rem,2.4vw,2.9rem)] text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal text-[#03101c]">
-                Tailored solutions
+                Clear reporting
               </h3>
               <p className="mt-8 text-[clamp(0.98rem,0.84vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#3c3d4b]">
-                Practical support designed around your business structure,
-                reporting needs, timelines, and long-term goals.
+                Findings come with plain-language explanations and practical
+                recommendations for management.
               </p>
             </article>
 
@@ -114,7 +114,7 @@ export function AboutPrecisionSection() {
               <div>
                 <WheelIcon />
                 <h3 className="mt-9 text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal">
-                  Trusted advisors
+                  Ongoing support
                 </h3>
               </div>
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { OfficeMap, officeMapsUrl } from "@/components/common/OfficeMap";
 
 const contactDetails = [
   {
@@ -222,29 +223,22 @@ export function ContactPageContent() {
               Located in KL Eco City, Kuala Lumpur
             </h2>
             <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
-              The map area is prepared for an embedded Google Map once the
-              final map preference or API setup is confirmed.
+              Our office is in Menara 1, KL Eco City, close to Mid Valley and
+              Abdullah Hukum LRT station. We welcome meetings by appointment.
             </p>
+            <a
+              href={officeMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-3 text-[0.95rem] font-semibold tracking-[0.02em] text-[#1f5f9e] transition hover:text-[#03101c]"
+            >
+              Get directions on Google Maps
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
 
-          <div className="relative min-h-[clamp(17rem,24vw,25rem)] overflow-hidden rounded-[10px] bg-[#ffad50]">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-[linear-gradient(0deg,rgba(3,16,28,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(3,16,28,0.08)_1px,transparent_1px)] bg-[size:44px_44px] opacity-70"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-br from-[#ffad50] via-[#ffc174] to-[#ffe0b8]"
-            />
-            <div className="absolute left-[52%] top-[45%] z-10 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#061d31] text-3xl text-white shadow-[0_18px_35px_rgba(3,16,28,0.24)]">
-              ⌖
-            </div>
-            <div className="absolute bottom-8 left-8 right-8 z-10 rounded-[8px] bg-white/92 p-5 text-[#03101c] shadow-[0_18px_45px_rgba(9,28,47,0.12)] sm:left-auto sm:w-[20rem]">
-              <strong className="block text-[1rem]">YT Associates</strong>
-              <span className="mt-2 block text-[0.92rem] font-medium leading-[1.5] text-[#3c3d4b]">
-                Menara 1, KL Eco City, Kuala Lumpur
-              </span>
-            </div>
+          <div className="relative min-h-[clamp(20rem,26vw,27rem)] overflow-hidden rounded-[10px] bg-[#e8eaed]">
+            <OfficeMap />
           </div>
         </div>
       </section>

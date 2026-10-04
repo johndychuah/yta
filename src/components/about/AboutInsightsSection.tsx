@@ -5,19 +5,19 @@ const topics = [
     number: "01",
     title: "Audit & Reporting",
     description:
-      "Practical perspectives on financial reporting responsibilities, assurance, and controls.",
+      "Statutory audits, MFRS and MPERS reporting, internal control reviews, and audit readiness.",
   },
   {
     number: "02",
     title: "Business Transactions",
     description:
-      "Useful context for valuations, due diligence, corporate finance, and business change.",
+      "IPO preparation on Bursa Malaysia, M&A, valuations, and financial and tax due diligence.",
   },
   {
     number: "03",
-    title: "Regulatory Developments",
+    title: "Restructuring & Recovery",
     description:
-      "Topics that help business owners stay alert to Malaysian compliance and tax developments.",
+      "Independent business reviews, turnaround plans, debt advisory, receivership, and liquidation.",
   },
 ];
 
@@ -28,10 +28,10 @@ export function AboutInsightsSection() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
-              Insights
+              Expertise
             </p>
             <h2 className="mt-6 max-w-[36rem] text-[clamp(2rem,2.2vw,2.65rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-              Perspectives for informed business decisions
+              Where our clients rely on us most
             </h2>
           </div>
           <Link

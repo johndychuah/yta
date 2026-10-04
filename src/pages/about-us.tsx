@@ -3,6 +3,7 @@ import { SEO } from "@/components/common/SEO";
 import { AboutHeroSection } from "@/components/about/AboutHeroSection";
 import { AboutStatsHighlightsSection } from "@/components/about/AboutStatsHighlightsSection";
 import { AboutStorySection } from "@/components/about/AboutStorySection";
+import { AboutMilestonesSection } from "@/components/about/AboutMilestonesSection";
 import { AboutValuesSection } from "@/components/about/AboutValuesSection";
 import { AboutExpertsSection } from "@/components/about/AboutExpertsSection";
 import { AboutWhoWeServeSection } from "@/components/about/AboutWhoWeServeSection";
@@ -17,11 +18,12 @@ export default function AboutUsPage() {
     <Layout>
       <SEO
         title="About us"
-        description="Learn about YT Associates and Peter Tang & Associates, serving Malaysian organisations with audit, accounting, corporate finance, restructuring, and advisory experience."
+        description="Founded in 1992, YT Associates and Peter Tang & Associates combine Big Four-trained leadership with personal attention, serving Malaysian businesses from KL Eco City."
       />
       <AboutHeroSection />
       <AboutStatsHighlightsSection />
       <AboutStorySection />
+      <AboutMilestonesSection />
       <AboutValuesSection />
       <AboutExpertsSection />
       <AboutCredentialsSection />

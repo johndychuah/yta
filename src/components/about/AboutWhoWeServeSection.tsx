@@ -4,32 +4,32 @@ const clientGroups = [
   {
     title: "Public Listed Companies",
     description:
-      "Meeting Bursa Malaysia requirements with precision and strategic insight",
+      "Audits and reporting that meet Bursa Malaysia and regulatory expectations",
   },
   {
     title: "Government-Linked Companies (GLCs)",
     description:
-      "Navigating complex public sector compliance and governance frameworks",
+      "Governance and compliance support aligned with public-sector accountability",
   },
   {
     title: "Multinational Corporations",
     description:
-      "Supporting complex operations and international financial reporting requirements",
+      "Statutory audits and group reporting for Malaysian subsidiaries",
   },
   {
     title: "Small & Medium Enterprises (SMEs)",
     description:
-      "Supporting growth-stage businesses with audit, reporting, and advisory services",
+      "Audit, accounting, and advisory support as your business grows",
   },
   {
     title: "Family-Owned Businesses",
     description:
-      "Preserving legacy while implementing professional governance and succession planning",
+      "Professional governance, succession readiness, and IPO preparation",
   },
   {
-    title: "Non-Profit Organizations",
+    title: "Non-Profit Organisations",
     description:
-      "Ensuring transparency and compliance for associations, foundations, and NGOs",
+      "Transparent reporting for associations, foundations, and charities",
   },
 ];
 
