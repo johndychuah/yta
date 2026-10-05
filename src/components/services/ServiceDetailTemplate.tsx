@@ -157,7 +157,7 @@ function SectionListBlock({
                 <h3 className="text-[clamp(0.95rem,0.85vw,1rem)] font-semibold leading-snug text-[#03101c]">
                   {section.title}
                 </h3>
-                <ul className="mt-5 list-disc space-y-2 pl-4 text-[clamp(0.82rem,0.74vw,0.9rem)] font-medium leading-[1.65] tracking-[0.02em] text-[#4b4d5c]">
+                <ul className="mt-5 list-disc space-y-2 pl-4 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.65] tracking-[0.02em] text-[#4b4d5c]">
                   {section.points.map((point) => (
                     <li key={point}>{point}</li>
                   ))}
@@ -165,6 +165,7 @@ function SectionListBlock({
               </div>
             </div>
           </article>
+
         ))}
       </div>
     </div>
@@ -301,6 +302,15 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
         <div aria-hidden="true" className="absolute inset-0 bg-[#03101c]/55" />
 
         <div className="relative z-10 mx-auto max-w-[1180px]">
+          <nav aria-label="Breadcrumb" className="mb-6 text-sm text-white/85">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li><Link href="/" className="inline-flex min-h-11 items-center hover:underline">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/services" className="inline-flex min-h-11 items-center hover:underline">Our services</Link></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">{service.navTitle}</li>
+            </ol>
+          </nav>
           <p className="text-[clamp(0.7rem,0.62vw,0.78rem)] font-semibold uppercase tracking-[0.18em] text-white/75">
             {service.eyebrow}
           </p>
@@ -315,10 +325,30 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
 
       <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,7rem)]">
         <div className="mx-auto grid max-w-[1320px] gap-[clamp(3rem,5vw,6rem)] lg:grid-cols-[16rem_minmax(0,1fr)]">
-          <aside className="lg:sticky lg:top-8 lg:self-start">
-            <nav className="rounded-[6px] bg-[#f3f3f3] p-5" aria-label="Our service">
+
+          <article className="min-w-0 lg:col-start-2 lg:row-start-1">
+            <div className="max-w-[54rem]">
+              <h2 className="text-[clamp(1.35rem,1.25vw,1.55rem)] font-semibold leading-tight text-[#03101c]">
+                {service.title}
+              </h2>
+              <div className="mt-5 space-y-5 text-[clamp(0.95rem,0.82vw,1rem)] font-medium leading-[1.7] tracking-[0.02em] text-[#3c3d4b]">
+                {service.intro.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+
+            <DecisionGuide service={service} />
+
+            {service.contentBlocks.map((block, index) => (
+              <ContentBlock key={`${block.type}-${index}`} block={block} />
+            ))}
+          </article>
+
+          <aside className="lg:col-start-1 lg:row-start-1 lg:sticky lg:top-28 lg:self-start">
+            <nav className="rounded-[6px] bg-[#f3f3f3] p-5" aria-label="Our services">
               <p className="mb-4 text-[0.92rem] font-semibold text-[#03101c]">
-                Our service
+                Our services
               </p>
               <div className="grid gap-2">
                 {serviceNavItems.map((item) => {
@@ -327,7 +357,8 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
                     <Link
                       key={item.slug}
                       href={item.href}
-                      className={`flex min-h-9 items-center justify-between rounded-full px-4 text-[0.82rem] font-semibold transition ${
+                      aria-current={active ? "page" : undefined}
+                      className={`flex min-h-11 items-center justify-between rounded-lg px-4 py-2 text-[0.9rem] font-semibold transition ${
                         active
                           ? "bg-[#ffad50] text-[#03101c]"
                           : "text-[#27303a] hover:bg-white"
@@ -353,37 +384,18 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
                 +603 2728 4819
               </a>
               <Link
-                href="/contact"
-                className="mt-6 inline-flex h-10 min-w-[116px] items-center justify-center gap-3 rounded-full bg-[#ffad50] px-5 text-[0.78rem] font-semibold text-[#03101c]"
+                href={`/contact?service=${service.slug}#enquiry`}
+                className="mt-6 inline-flex h-11 min-w-[116px] items-center justify-center gap-3 rounded-full bg-[#ffad50] px-5 text-[0.78rem] font-semibold text-[#03101c]"
               >
                 <span>Contact us</span>
                 <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </aside>
-
-          <main>
-            <div className="max-w-[54rem]">
-              <h2 className="text-[clamp(1.35rem,1.25vw,1.55rem)] font-semibold leading-tight text-[#03101c]">
-                {service.title}
-              </h2>
-              <div className="mt-5 space-y-5 text-[clamp(0.95rem,0.82vw,1rem)] font-medium leading-[1.7] tracking-[0.02em] text-[#3c3d4b]">
-                {service.intro.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
-
-            <DecisionGuide service={service} />
-
-            {service.contentBlocks.map((block, index) => (
-              <ContentBlock key={`${block.type}-${index}`} block={block} />
-            ))}
-          </main>
         </div>
       </section>
 
-      <AboutCtaSection />
+      <AboutCtaSection contactHref={`/contact?service=${service.slug}#enquiry`} />
     </>
   );
 }

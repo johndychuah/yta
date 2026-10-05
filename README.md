@@ -34,5 +34,20 @@ utilities/types can go in `src/lib/` and `src/types/`.
 
 - `npm run dev` - start local development
 - `npm run build` - create a production build
+- `npm run build:static` - export the website to `out/` for Cloudflare Pages
 - `npm run start` - run the production build
 - `npm run lint` - run ESLint
+
+## Temporary Cloudflare hosting
+
+Connect the `johndychuah/yta` GitHub repository to a Cloudflare Pages project:
+
+- Production branch: `main`
+- Build command: `npm run build:static`
+- Build output directory: `out`
+- Root directory: the repository root
+
+Cloudflare builds and deploys new commits automatically. The deployment uses
+static assets and does not need a running Node.js server.
+Images are served directly from the exported assets. The contact form prepares
+an email draft in the visitor's email application.

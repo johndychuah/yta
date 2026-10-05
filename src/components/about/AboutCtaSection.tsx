@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function AboutCtaSection() {
+export function AboutCtaSection({ contactHref = "/contact#enquiry" }: { contactHref?: string }) {
   return (
     <section className="bg-white px-[clamp(1rem,4vw,4.75rem)] pb-[clamp(2rem,4vw,4rem)]">
       <div className="relative isolate mx-auto min-h-[clamp(27rem,34vw,40rem)] max-w-[1800px] overflow-hidden rounded-[6px] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(5rem,9vw,11rem)] text-white">
@@ -28,7 +28,7 @@ export function AboutCtaSection() {
           </h2>
 
           <Link
-            href="/contact"
+            href={contactHref}
             className="mt-[clamp(2rem,3vw,3rem)] inline-flex h-[53px] min-w-[230px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[clamp(0.8rem,0.72vw,0.87rem)] font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174]"
           >
             <span>Schedule a consultation</span>

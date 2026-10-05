@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local reference material
 /tmp/
+
+# Local UI review captures
+/artifacts/ui-review/*.png

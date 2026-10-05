@@ -1,5 +1,9 @@
+import { useRouter } from "next/router";
+import { serviceNavItems } from "@/data/serviceDetails";
+import { useRef, useState, type FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { CareerSection } from "@/components/contact/CareerSection";
 import { OfficeMap, officeMapsUrl } from "@/components/common/OfficeMap";
 
 const contactDetails = [
@@ -43,35 +47,59 @@ const contactDetails = [
   },
 ];
 
-const careerPoints = [
-  "Professional development",
-  "Internal training",
-  "Mentorship culture",
-  "Long-term growth",
-];
-
 function Field({
   label,
   type = "text",
-  wide = false,
+  name,
+  autoComplete,
+  required = false,
 }: {
   label: string;
   type?: string;
-  wide?: boolean;
+  name: string;
+  autoComplete?: string;
+  required?: boolean;
 }) {
   return (
-    <label className={wide ? "sm:col-span-2" : undefined}>
-      <span className="sr-only">{label}</span>
+    <label>
+      <span className="mb-2 block text-sm font-semibold text-[#03101c]">{label}{required ? " *" : ""}</span>
       <input
         type={type}
-        placeholder={label}
-        className="h-14 w-full rounded-[8px] border border-[#dfe3e7] bg-white px-5 text-[0.95rem] font-medium tracking-[0.02em] text-[#03101c] outline-none transition placeholder:text-[#747986] focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
+        name={name}
+        autoComplete={autoComplete}
+        required={required}
+        maxLength={200}
+        className="h-14 w-full rounded-[8px] border border-[#dfe3e7] bg-white px-5 text-base font-medium tracking-[0.02em] text-[#03101c] outline-none transition placeholder:text-[#747986] focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
       />
     </label>
   );
 }
 
 export function ContactPageContent() {
+  const { query } = useRouter();
+  const [serviceInterest, setServiceInterest] = useState<string | null>(null);
+  const selectedService = serviceInterest ?? serviceNavItems.find((item) => item.slug === query.service)?.title ?? "";
+  const [draftHref, setDraftHref] = useState("");
+  const draftRef = useRef<HTMLDivElement>(null);
+
+  function prepareEnquiry(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const value = (name: string) => String(data.get(name) ?? "").trim();
+    const subject = `Website enquiry: ${value("service")}`;
+    const body = [
+      `Name: ${value("name")}`,
+      `Email: ${value("email")}`,
+      `Phone: ${value("phone") || "Not provided"}`,
+      `Company: ${value("company") || "Not provided"}`,
+      `Service: ${value("service")}`,
+      "",
+      value("message"),
+    ].join("\n");
+    setDraftHref(`mailto:info@yta.com.my?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+    requestAnimationFrame(() => draftRef.current?.focus());
+  }
+
   return (
     <>
       <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]">
@@ -85,7 +113,7 @@ export function ContactPageContent() {
             </h1>
             <p className="mt-7 max-w-[37rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
               Whether you need audit, corporate advisory, restructuring,
-              accounting, or payroll support, our team is ready to discuss the
+              tax, accounting, or payroll support, our team is ready to discuss the
               appropriate next steps.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -127,7 +155,7 @@ export function ContactPageContent() {
         className="bg-[#f3f3f3] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]"
       >
         <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(18rem,0.82fr)_minmax(28rem,1.18fr)]">
-          <div className="rounded-[8px] bg-white p-[clamp(1.5rem,3vw,3rem)]">
+          <div className="order-2 rounded-[8px] bg-white p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
               Get In Touch
             </p>
@@ -156,7 +184,7 @@ export function ContactPageContent() {
             </div>
           </div>
 
-          <div className="rounded-[8px] bg-white p-[clamp(1.5rem,3vw,3rem)]">
+          <div className="order-1 rounded-[8px] bg-white p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
               Enquiry Form
             </p>
@@ -164,16 +192,22 @@ export function ContactPageContent() {
               How can we help?
             </h2>
 
-            <form className="mt-8 grid gap-4 sm:grid-cols-2">
-              <Field label="Full name" />
-              <Field label="Email address" type="email" />
-              <Field label="Phone number" type="tel" />
-              <Field label="Company name" />
+            <p id="enquiry-instructions" className="mt-4 text-base leading-relaxed text-[#596575]">
+              Complete the fields below to prepare an email to our team. You can review and send it in your email app. Fields marked * are required.
+            </p>
+            <form onSubmit={prepareEnquiry} onChange={() => setDraftHref("")} aria-describedby="enquiry-instructions" className="mt-8 grid gap-5 sm:grid-cols-2">
+              <Field label="Full name" name="name" autoComplete="name" required />
+              <Field label="Email address" name="email" type="email" autoComplete="email" required />
+              <Field label="Phone number" name="phone" type="tel" autoComplete="tel" />
+              <Field label="Company name" name="company" autoComplete="organization" />
               <label className="sm:col-span-2">
-                <span className="sr-only">Service interest</span>
+                <span className="mb-2 block text-sm font-semibold text-[#03101c]">Service interest *</span>
                 <select
-                  defaultValue=""
-                  className="h-14 w-full rounded-[8px] border border-[#dfe3e7] bg-white px-5 text-[0.95rem] font-medium tracking-[0.02em] text-[#747986] outline-none transition focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
+                  name="service"
+                  required
+                  value={selectedService}
+                  onChange={(event) => setServiceInterest(event.target.value)}
+                  className="h-14 w-full rounded-[8px] border border-[#dfe3e7] bg-white px-5 text-base font-medium tracking-[0.02em] text-[#03101c] outline-none transition focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
                 >
                   <option value="" disabled>
                     Service interest
@@ -188,29 +222,41 @@ export function ContactPageContent() {
                 </select>
               </label>
               <label className="sm:col-span-2">
-                <span className="sr-only">Message</span>
+                <span className="mb-2 block text-sm font-semibold text-[#03101c]">Message *</span>
                 <textarea
-                  placeholder="Message"
-                  className="min-h-36 w-full resize-none rounded-[8px] border border-[#dfe3e7] bg-white px-5 py-4 text-[0.95rem] font-medium tracking-[0.02em] text-[#03101c] outline-none transition placeholder:text-[#747986] focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
+                  name="message"
+                  required
+                  maxLength={3000}
+                  placeholder="Tell us about your business and the support you need"
+                  className="min-h-36 w-full resize-y rounded-[8px] border border-[#dfe3e7] bg-white px-5 py-4 text-base font-medium tracking-[0.02em] text-[#03101c] outline-none transition placeholder:text-[#747986] focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
                 />
               </label>
               <label className="flex items-start gap-3 rounded-[8px] border border-[#dfe3e7] px-5 py-4 text-[0.9rem] font-medium leading-[1.5] tracking-[0.02em] text-[#3c3d4b] sm:col-span-2">
                 <input
                   type="checkbox"
+                  name="consent"
+                  required
                   className="mt-1 size-4 rounded border-[#dfe3e7] accent-[#ffad50]"
                 />
                 <span>I agree to be contacted regarding my enquiry.</span>
               </label>
               <div className="sm:col-span-2">
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex h-[53px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[0.9rem] font-medium tracking-[0.04em] text-[#03101c] transition hover:bg-[#ffc174]"
                 >
-                  Send Message
+                  Prepare enquiry
                   <span aria-hidden="true">↗</span>
                 </button>
               </div>
             </form>
+            <div ref={draftRef} tabIndex={-1} role="status" className={draftHref ? "mt-6 rounded-lg border border-[#1f5f9e]/20 bg-[#f0f6fb] p-5" : "sr-only"}>
+              {draftHref ? <>
+                <p className="font-semibold text-[#03101c]">Your enquiry draft is ready</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#596575]">Nothing has been sent yet. Open your email app to review and send the message. If no email app is configured, email info@yta.com.my directly.</p>
+                <a href={draftHref} className="mt-4 inline-flex min-h-11 items-center rounded-full bg-[#091c2f] px-6 text-sm font-semibold text-white">Open email draft</a>
+              </> : null}
+            </div>
           </div>
         </div>
       </section>
@@ -245,55 +291,7 @@ export function ContactPageContent() {
         </div>
       </section>
 
-      <section
-        id="career"
-        className="bg-[#f3f3f3] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]"
-      >
-        <div className="mx-auto grid max-w-[1280px] gap-[clamp(2rem,5vw,5rem)] lg:grid-cols-2 lg:items-center">
-          <div className="relative h-[clamp(18rem,28vw,31rem)] overflow-hidden rounded-[10px]">
-            <Image
-              src="/about-story-meeting.png"
-              alt="Professional team discussion in a meeting room"
-              fill
-              sizes="(min-width: 1024px) 610px, 88vw"
-              className="object-cover object-center"
-            />
-          </div>
-
-          <div>
-            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
-              Career Opportunity
-            </p>
-            <h2 className="mt-6 max-w-[36rem] text-[clamp(1.9rem,2.25vw,2.75rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-              Grow Your Career With Us
-            </h2>
-            <p className="mt-5 max-w-[38rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
-              We welcome capable and driven individuals who want to develop
-              their professional career in audit, tax, corporate finance,
-              accounting, and advisory services.
-            </p>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {careerPoints.map((point) => (
-                <div
-                  key={point}
-                  className="rounded-[8px] bg-white px-5 py-4 text-[0.95rem] font-semibold text-[#03101c]"
-                >
-                  {point}
-                </div>
-              ))}
-            </div>
-
-            <Link
-              href="mailto:info@yta.com.my?subject=Career%20Opportunity%20Application"
-              className="mt-9 inline-flex h-[53px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[0.9rem] font-medium tracking-[0.04em] text-[#03101c] transition hover:bg-[#ffc174]"
-            >
-              Submit your resume
-              <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CareerSection />
 
       <section className="bg-white px-[clamp(1rem,4vw,4.75rem)] py-[clamp(2rem,4vw,4rem)]">
         <div className="relative isolate mx-auto min-h-[clamp(24rem,32vw,36rem)] max-w-[1800px] overflow-hidden rounded-[6px] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(5rem,8vw,10rem)] text-white">

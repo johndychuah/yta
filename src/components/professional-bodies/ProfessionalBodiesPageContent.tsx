@@ -10,12 +10,13 @@ const groups = [
         name: "Malaysian Institute of Accountants",
         abbreviation: "MIA",
         href: "https://www.mia.org.my",
+        logo: "/professional-bodies/mia.png",
       },
       {
         name: "Chartered Tax Institute of Malaysia",
         abbreviation: "CTIM",
         href: "https://www.ctim.org.my",
-        logo: "/professional-bodies/ctim.png",
+        logo: "/professional-bodies/ctim-logo.png",
       },
       {
         name: "Malaysian Institute of Certified Public Accountants",
@@ -27,6 +28,7 @@ const groups = [
         name: "CPA Australia",
         abbreviation: "CPA",
         href: "https://www.cpaaustralia.com.au",
+        logo: "/professional-bodies/cpa-australia.png",
       },
     ],
   },
@@ -64,6 +66,7 @@ const groups = [
         name: "Ministry of Finance",
         abbreviation: "MOF",
         href: "https://www.treasury.gov.my",
+        logo: "/professional-bodies/mof.svg",
       },
       {
         name: "Securities Commission Malaysia",
@@ -75,6 +78,7 @@ const groups = [
         name: "Bank Negara Malaysia",
         abbreviation: "BNM",
         href: "https://www.bnm.gov.my",
+        logo: "/professional-bodies/bnm.svg",
       },
       {
         name: "Malaysian Investment Development Authority",
@@ -155,7 +159,11 @@ export function ProfessionalBodiesPageContent() {
                               alt={`${item.name} logo`}
                               fill
                               sizes="168px"
-                              className="object-contain object-left"
+                              className={
+                                item.abbreviation === "CPA" || item.abbreviation === "CTIM"
+                                  ? "object-cover"
+                                  : "object-contain object-left"
+                              }
                             />
                           </span>
                         ) : (

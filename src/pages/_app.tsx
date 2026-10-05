@@ -1,11 +1,6 @@
 import type { AppProps } from "next/app";
-import { Geist_Mono, Lato } from "next/font/google";
+import { Lato } from "next/font/google";
 import "@/styles/globals.css";
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
 
 const lato = Lato({
   subsets: ["latin"],
@@ -15,8 +10,8 @@ const lato = Lato({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${lato.variable} ${geistMono.variable}`}>
+    <div className={`site-root ${lato.variable}`}>
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }

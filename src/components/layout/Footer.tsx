@@ -7,19 +7,14 @@ const quickLinks = [
   { label: "Our Services", href: "/services" },
   { label: "Professional Bodies", href: "/professional-bodies" },
   { label: "Career", href: "/career" },
-];
-
-const socialLinks = [
-  { label: "Facebook", mark: "f", href: "#" },
-  { label: "LinkedIn", mark: "in", href: "#" },
-  { label: "X", mark: "x", href: "#" },
+  { label: "Contact us", href: "/contact" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-white px-[clamp(1.5rem,6vw,7.5rem)] pt-[clamp(4rem,6.25vw,7.5rem)] text-[#03101c]">
+    <footer className="border-t border-[#03101c]/10 bg-[#f8f9fb] px-[clamp(1.5rem,6vw,7.5rem)] pt-[clamp(4rem,6.25vw,7.5rem)] text-[#03101c]">
       <div className="mx-auto max-w-[1386px]">
-        <div className="grid gap-10 xl:grid-cols-[minmax(18rem,25.6rem)_minmax(8rem,1fr)_minmax(16rem,1fr)_minmax(16rem,1fr)] xl:gap-[clamp(3rem,5vw,6rem)]">
+        <div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-[1.4fr_0.7fr_1.1fr_1fr] xl:gap-10">
           <div>
             <h2 className="text-[clamp(1.6rem,1.55vw,1.875rem)] font-medium leading-[1.4] tracking-normal">
               About YT Associates, Peter Tang & Associates
@@ -109,18 +104,7 @@ export function Footer() {
             © {new Date().getFullYear()} YT Associates (AF1112), Peter Tang & Associates (AF1873)
           </p>
 
-          <div className="flex items-center gap-2">
-            {socialLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                aria-label={link.label}
-                className="inline-flex size-10 items-center justify-center rounded-full bg-[#f3f3f3] text-sm font-medium text-[#3c3d4b] transition hover:bg-[#ffad50] hover:text-[#03101c]"
-              >
-                {link.mark}
-              </Link>
-            ))}
-          </div>
+
         </div>
       </div>
     </footer>
