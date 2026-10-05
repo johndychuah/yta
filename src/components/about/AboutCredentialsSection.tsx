@@ -5,10 +5,12 @@ const bodies = [
   {
     name: "Malaysian Institute of Accountants",
     abbreviation: "MIA",
+    logo: "/professional-bodies/mia.png",
   },
   {
     name: "Association of Chartered Certified Accountants",
     abbreviation: "ACCA",
+    logo: "/professional-bodies/acca.svg",
   },
   {
     name: "Malaysian Institute of Certified Public Accountants",
@@ -18,11 +20,12 @@ const bodies = [
   {
     name: "Chartered Tax Institute of Malaysia",
     abbreviation: "CTIM",
-    logo: "/professional-bodies/ctim.png",
+    logo: "/professional-bodies/ctim-logo.png",
   },
   {
     name: "CPA Australia",
     abbreviation: "CPA",
+    logo: "/professional-bodies/cpa-australia.png",
     wide: true,
   },
 ];
@@ -67,7 +70,11 @@ export function AboutCredentialsSection() {
                       alt={`${body.name} logo`}
                       fill
                       sizes="144px"
-                      className="object-contain object-left"
+                      className={
+                        body.abbreviation === "CPA" || body.abbreviation === "CTIM"
+                          ? "object-cover"
+                          : "object-contain object-left"
+                      }
                     />
                   </div>
                 ) : (
