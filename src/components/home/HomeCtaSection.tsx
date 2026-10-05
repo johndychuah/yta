@@ -32,7 +32,7 @@ export function HomeCtaSection() {
 
         <Link
           href="/contact"
-          className="mt-8 inline-flex h-[53px] min-w-[259px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[clamp(0.8rem,0.72vw,0.87rem)] font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174]"
+          className="mt-8 inline-flex min-h-[53px] w-full min-w-0 items-center justify-center gap-4 rounded-full bg-[#ffad50] px-5 py-3 text-sm font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174] sm:w-auto sm:min-w-[259px] sm:px-8"
         >
           <span>Get in Touch Today</span>
           <span aria-hidden="true">↗</span>

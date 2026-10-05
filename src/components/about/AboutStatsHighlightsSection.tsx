@@ -110,7 +110,7 @@ export function AboutStatsHighlightsSection() {
   return (
     <section className="bg-white px-[clamp(1.5rem,6vw,7.5rem)] pb-[clamp(4.5rem,8vw,8rem)] pt-[clamp(3.5rem,6vw,6rem)]">
       <div className="mx-auto max-w-[1480px]">
-        <div className="mx-auto grid max-w-[950px] grid-cols-2 gap-y-8 sm:grid-cols-4">
+        <div className="mx-auto grid max-w-[950px] grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
@@ -142,8 +142,8 @@ export function AboutStatsHighlightsSection() {
                 key={highlight.title}
                 className={`mx-auto flex w-full max-w-[30rem] flex-col items-center rounded-[14px] p-[clamp(1.75rem,2.4vw,3rem)] text-center shadow-[7px_9px_10px_rgba(3,16,28,0.22)] ${
                   isCenter
-                    ? "min-h-[clamp(34rem,36vw,43rem)] bg-[#091c2f] text-white"
-                    : "min-h-[clamp(28rem,31vw,34.5rem)] bg-[#ffad50] text-[#03101c] lg:mt-[clamp(3rem,5vw,5.5rem)]"
+                    ? "lg:min-h-[clamp(34rem,36vw,43rem)] bg-[#091c2f] text-white"
+                    : "lg:min-h-[clamp(28rem,31vw,34.5rem)] bg-[#ffad50] text-[#03101c] lg:mt-[clamp(3rem,5vw,5.5rem)]"
                 }`}
               >
                 <HighlightIcon variant={highlight.icon} tone={highlight.tone} />
@@ -165,7 +165,7 @@ export function AboutStatsHighlightsSection() {
                 </p>
 
                 <div
-                  className={`relative mt-auto w-full overflow-hidden rounded-[8px] ${
+                  className={`relative mt-6 w-full overflow-hidden lg:mt-auto rounded-[8px] ${
                     isCenter
                       ? "h-[clamp(9.5rem,10vw,12rem)] max-w-[22rem]"
                       : "h-[clamp(9rem,9.2vw,10.5rem)] max-w-[20.5rem]"

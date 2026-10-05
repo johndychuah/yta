@@ -11,7 +11,6 @@ export function AboutCtaSection({ contactHref = "/contact#enquiry" }: { contactH
           fill
           sizes="(min-width: 1280px) 1800px, 94vw"
           className="object-cover object-[62%_50%]"
-          priority
         />
         <div
           aria-hidden="true"
@@ -29,7 +28,7 @@ export function AboutCtaSection({ contactHref = "/contact#enquiry" }: { contactH
 
           <Link
             href={contactHref}
-            className="mt-[clamp(2rem,3vw,3rem)] inline-flex h-[53px] min-w-[230px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[clamp(0.8rem,0.72vw,0.87rem)] font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174]"
+            className="mt-[clamp(2rem,3vw,3rem)] inline-flex min-h-[53px] w-full min-w-0 items-center justify-center gap-3 rounded-full bg-[#ffad50] px-4 py-3 text-sm font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174] sm:w-auto sm:min-w-[230px] sm:px-8"
           >
             <span>Schedule a consultation</span>
             <span aria-hidden="true">↗</span>

@@ -30,12 +30,12 @@ export function Footer() {
             <h3 className="text-[clamp(1rem,0.96vw,1.15rem)] font-medium leading-7">
               Quick links
             </h3>
-            <nav aria-label="Footer navigation" className="mt-8 grid gap-3">
+            <nav aria-label="Footer navigation" className="mt-5 grid grid-cols-2 gap-x-4 gap-y-1 sm:mt-8 sm:grid-cols-1 sm:gap-3">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[clamp(0.95rem,0.85vw,1rem)] leading-6 tracking-[0.03em] text-[#3c3d4b] transition hover:text-[#03101c]"
+                  className="inline-flex min-h-11 items-center text-[clamp(0.95rem,0.85vw,1rem)] leading-6 tracking-[0.03em] text-[#3c3d4b] transition hover:text-[#03101c]"
                 >
                   {link.label}
                 </Link>
@@ -56,14 +56,14 @@ export function Footer() {
               </p>
               <p className="mt-5">
                 Phone:{" "}
-                <a href="tel:+60327284819" className="hover:text-[#03101c]">
+                <a href="tel:+60327284819" className="inline-flex min-h-11 items-center hover:text-[#03101c]">
                   +603 2728 4819
                 </a>
                 <br />
                 Email:{" "}
                 <a
                   href="mailto:info@yta.com.my"
-                  className="underline underline-offset-2 hover:text-[#03101c]"
+                  className="inline-flex min-h-11 items-center underline underline-offset-2 hover:text-[#03101c]"
                 >
                   info@yta.com.my
                 </a>

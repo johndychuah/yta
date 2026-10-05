@@ -108,7 +108,7 @@ export function ContactPageContent() {
             <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">
               Contact Us
             </p>
-            <h1 className="mt-7 max-w-[42rem] text-[clamp(2.4rem,3.5vw,4.25rem)] font-medium leading-[1.1] tracking-normal text-[#03101c]">
+            <h1 className="mt-7 max-w-[42rem] text-[clamp(2rem,7.2vw,2.4rem)] sm:text-[clamp(2.4rem,3.5vw,4.25rem)] font-medium leading-[1.1] tracking-normal text-[#03101c]">
               Let&apos;s Talk About Your Business Needs
             </h1>
             <p className="mt-7 max-w-[37rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
@@ -133,7 +133,7 @@ export function ContactPageContent() {
             </div>
           </div>
 
-          <div className="relative h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
+          <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
               src="/accounting-documents.png"
               alt="Accounting documents and calculator prepared for a consultation"
@@ -155,7 +155,7 @@ export function ContactPageContent() {
         className="bg-[#f3f3f3] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]"
       >
         <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(18rem,0.82fr)_minmax(28rem,1.18fr)]">
-          <div className="order-2 rounded-[8px] bg-white p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
+          <div className="order-2 rounded-[8px] bg-white p-5 sm:p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
               Get In Touch
             </p>
@@ -184,7 +184,7 @@ export function ContactPageContent() {
             </div>
           </div>
 
-          <div className="order-1 rounded-[8px] bg-white p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
+          <div className="order-1 rounded-[8px] bg-white p-5 sm:p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
               Enquiry Form
             </p>

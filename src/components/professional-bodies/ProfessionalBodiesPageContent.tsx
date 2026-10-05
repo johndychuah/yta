@@ -99,7 +99,7 @@ export function ProfessionalBodiesPageContent() {
             <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">
               Professional Bodies
             </p>
-            <h1 className="mt-7 max-w-[44rem] text-[clamp(2.4rem,3.1vw,4rem)] font-medium leading-[1.16] tracking-normal text-[#03101c]">
+            <h1 className="mt-7 max-w-[44rem] text-[clamp(2rem,7.2vw,2.4rem)] sm:text-[clamp(2.4rem,3.1vw,4rem)] font-medium leading-[1.16] tracking-normal text-[#03101c]">
               Trusted References for Compliance & Professional Standards
             </h1>
             <p className="mt-7 max-w-[36rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
@@ -109,7 +109,7 @@ export function ProfessionalBodiesPageContent() {
             </p>
           </div>
 
-          <div className="relative h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
+          <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
               src="/accounting-documents.png"
               alt="Financial reports and accounting documents for regulatory reference"

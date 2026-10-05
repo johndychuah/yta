@@ -290,7 +290,7 @@ function DecisionGuide({ service }: { service: ServiceDetail }) {
 export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
   return (
     <>
-      <section className="relative isolate min-h-[clamp(19rem,22vw,26rem)] overflow-hidden bg-[#03101c] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(5rem,7vw,8rem)] text-white">
+      <section className="relative isolate sm:min-h-[clamp(19rem,22vw,26rem)] overflow-hidden bg-[#03101c] px-[clamp(1.5rem,8vw,12rem)] py-10 text-white sm:py-[clamp(5rem,7vw,8rem)]">
         <Image
           src={service.heroImage}
           alt=""
