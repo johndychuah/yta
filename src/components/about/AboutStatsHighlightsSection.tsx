@@ -39,8 +39,8 @@ const highlights: Highlight[] = [
     title: "Value beyond the opinion",
     description:
       "Our risk-focused, data-driven audits highlight control weaknesses and practical improvements, so every engagement leaves your business stronger.",
-    image: "/images/services/corporate.webp",
-    alt: "Illustrative corporate advisory discussion",
+    image: "/images/services/audit.webp",
+    alt: "Illustrative audit team reviewing financial evidence",
     tone: "orange",
     icon: "wheel",
   },

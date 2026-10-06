@@ -37,8 +37,8 @@ export const chinaDeskZh: ServiceDetail = {
   contentBlocks: [
     {
       type: "image",
-      src: "/images/services/china.webp",
-      alt: "集装箱码头与货轮，展示跨境贸易",
+      src: "/images/editorial/team.webp",
+      alt: "示意图：多元文化专业团队共同规划业务",
     },
     {
       type: "section-list",

@@ -502,8 +502,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/services/audit.webp",
-        alt: "Illustrative audit review with financial records and a laptop",
+        src: "/images/editorial/integrity.webp",
+        alt: "Illustrative auditor carefully cross-checking financial statements",
         overlay: "Audit",
       },
       {
@@ -553,8 +553,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/services/corporate.webp",
-        alt: "Illustrative corporate advisory discussion in a boardroom",
+        src: "/images/editorial/partnership.webp",
+        alt: "Illustrative business partners discussing their next steps",
       },
       {
         type: "section-list",
@@ -575,8 +575,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       },
       {
         type: "image",
-        src: "/images/services/audit.webp",
-        alt: "Illustrative financial due diligence review",
+        src: "/images/editorial/integrity.webp",
+        alt: "Illustrative auditor carefully cross-checking financial statements",
       },
       {
         type: "text",
@@ -634,8 +634,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/services/restructuring.webp",
-        alt: "Illustrative business operations review in a distribution warehouse",
+        src: "/images/editorial/forward-thinking.webp",
+        alt: "Illustrative advisers assessing trends and planning the way forward",
         overlay: "Restructuring & Insolvency",
       },
       {
@@ -685,8 +685,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/services/tax.webp",
-        alt: "Illustrative tax planning discussion with financial documents",
+        src: "/images/editorial/clarity.webp",
+        alt: "Illustrative adviser explaining the financial implications of a decision",
         overlay: "Tax",
       },
       {
@@ -740,8 +740,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/services/china.webp",
-        alt: "Container port and cargo ship illustrating cross-border trade",
+        src: "/images/editorial/team.webp",
+        alt: "Illustrative multicultural team coordinating a business plan",
       },
       {
         type: "section-list",
@@ -797,8 +797,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/services/accounting.webp",
-        alt: "Illustrative accountant maintaining digital financial records",
+        src: "/images/editorial/working-detail.webp",
+        alt: "Illustrative organised accounting desk with financial records",
         overlay: "Accounting Outsourcing",
       },
       {

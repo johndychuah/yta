@@ -14,8 +14,8 @@ export function AboutCtaSection({
     <section className="bg-white px-[clamp(1rem,4vw,4.75rem)] pb-[clamp(2rem,4vw,4rem)]">
       <div className="relative isolate mx-auto min-h-[clamp(27rem,34vw,40rem)] max-w-[1800px] overflow-hidden rounded-[6px] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(5rem,9vw,11rem)] text-white">
         <Image
-          src="/images/services/corporate.webp"
-          alt="Illustrative advisory conversation in a boardroom"
+          src="/images/editorial/business-district.webp"
+          alt="Illustrative Malaysian business district in warm morning light"
           fill
           sizes="(min-width: 1280px) 1800px, 94vw"
           className="object-cover object-[62%_50%]"

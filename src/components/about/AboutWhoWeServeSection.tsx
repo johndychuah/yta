@@ -73,10 +73,10 @@ export function AboutWhoWeServeSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-[0.8] w-full max-w-[31rem] overflow-hidden rounded-[8px] lg:mx-0 lg:mt-5">
+        <div className="relative mx-auto aspect-[4/3] w-full max-w-[31rem] overflow-hidden rounded-[8px] lg:mx-0 lg:mt-5">
           <Image
-            src="/images/services/accounting.webp"
-            alt="Illustrative accountant working with digital financial records"
+            src="/images/services/restructuring.webp"
+            alt="Illustrative operational review at a Malaysian distribution business"
             fill
             sizes="(min-width: 1024px) 496px, 88vw"
             className="object-cover object-[42%_50%]"

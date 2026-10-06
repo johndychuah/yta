@@ -55,12 +55,11 @@ export function AboutPrecisionSection() {
           <article className="rounded-[20px] bg-white p-[clamp(1.5rem,1.7vw,2rem)] shadow-[0_28px_70px_rgba(9,28,47,0.08)]">
             <div className="relative h-[clamp(10.5rem,10vw,12.5rem)] overflow-hidden rounded-[8px]">
               <Image
-                src="/images/services/audit.webp"
-                alt="Illustrative financial review with documents and a laptop"
+                src="/images/services/tax.webp"
+                alt="Illustrative adviser learning about a client’s financial circumstances"
                 fill
                 sizes="(min-width: 1024px) 376px, 88vw"
                 className="object-cover object-center"
-                loading="eager"
               />
             </div>
 
@@ -86,14 +85,13 @@ export function AboutPrecisionSection() {
               </p>
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 h-[58%] overflow-hidden">
+            <div className="absolute inset-x-0 bottom-0 h-[42%] overflow-hidden">
               <Image
-                src="/images/services/audit.webp"
-                alt="Illustrative audit review in a professional office"
+                src="/images/editorial/mentoring.webp"
+                alt="Illustrative senior mentor guiding two younger professionals"
                 fill
                 sizes="(min-width: 1024px) 376px, 88vw"
                 className="object-cover object-[42%_54%]"
-                loading="eager"
               />
             </div>
           </article>
@@ -120,12 +118,11 @@ export function AboutPrecisionSection() {
 
               <div className="relative h-[clamp(5.5rem,5.8vw,6.75rem)] overflow-hidden rounded-[8px]">
                 <Image
-                  src="/images/services/corporate.webp"
-                  alt="Illustrative business advisory discussion"
+                  src="/images/services/payroll.webp"
+                  alt="Illustrative specialist providing ongoing financial support"
                   fill
                   sizes="(min-width: 1024px) 173px, 38vw"
                   className="object-cover object-center"
-                  loading="eager"
                 />
               </div>
             </article>

@@ -25,23 +25,23 @@ export function AboutStorySection() {
         </div>
 
         <div className="mt-[clamp(3rem,5vw,5rem)] grid gap-[clamp(3rem,6vw,5rem)] xl:grid-cols-[minmax(28rem,39.6rem)_minmax(32rem,1fr)] xl:items-start">
-          <div className="relative mx-auto min-h-[clamp(28rem,43vw,41rem)] w-full max-w-[39.6rem] xl:mx-0">
-            <div className="absolute left-0 top-0 h-[clamp(22rem,33vw,39.7rem)] w-[min(61%,23.5rem)] overflow-hidden">
+          <div className="mx-auto grid w-full max-w-[39.6rem] gap-5 xl:mx-0">
+            <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
               <Image
-                src="/about-story-advisor.png"
-                alt="Experienced professional advisor holding financial documents"
+                src="/images/editorial/team.webp"
+                alt="Illustrative Malaysian professionals collaborating around a table"
                 fill
-                sizes="(min-width: 1280px) 376px, 60vw"
+                sizes="(min-width: 1280px) 634px, 88vw"
                 className="object-cover object-center"
               />
             </div>
 
-            <div className="absolute bottom-0 right-0 h-[clamp(17rem,27vw,29.2rem)] w-[min(61%,23.5rem)] overflow-hidden">
+            <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
               <Image
-                src="/images/services/corporate.webp"
-                alt="Illustrative business advisory discussion"
+                src="/images/editorial/working-detail.webp"
+                alt="Illustrative accounting workspace with financial documents and a notebook"
                 fill
-                sizes="(min-width: 1280px) 376px, 62vw"
+                sizes="(min-width: 1280px) 634px, 88vw"
                 className="object-cover object-center"
               />
             </div>

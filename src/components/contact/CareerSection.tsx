@@ -10,10 +10,10 @@ export function CareerSection({ standalone = false }: { standalone?: boolean }) 
         className="bg-[#f3f3f3] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]"
       >
         <div className="mx-auto grid max-w-[1280px] gap-[clamp(2rem,5vw,5rem)] lg:grid-cols-2 lg:items-center">
-          <div className="relative h-[clamp(18rem,28vw,31rem)] overflow-hidden rounded-[10px]">
+          <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
             <Image
-              src="/images/services/corporate.webp"
-              alt="Illustrative business advisory discussion"
+              src="/images/editorial/mentoring.webp"
+              alt="Illustrative mentor helping younger professionals develop their skills"
               fill
               sizes="(min-width: 1024px) 610px, 88vw"
               className="object-cover object-center"

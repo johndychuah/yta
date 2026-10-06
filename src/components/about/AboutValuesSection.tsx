@@ -14,8 +14,8 @@ const values: ValueCard[] = [
     title: "Integrity",
     description:
       "Independence and objectivity are the foundation of every audit we sign. We tell clients what they need to hear, clearly and professionally.",
-    image: "/images/services/corporate.webp",
-    alt: "Illustrative business advisory discussion",
+    image: "/images/editorial/integrity.webp",
+    alt: "Illustrative close-up of an auditor checking financial documents",
     tone: "light",
     icon: "diamond",
   },
@@ -23,8 +23,8 @@ const values: ValueCard[] = [
     title: "Excellence",
     description:
       "Our standards were shaped in Big Four practice. Every engagement, large or small, is planned, reviewed, and signed off with the same rigour.",
-    image: "/images/services/accounting.webp",
-    alt: "Illustrative accountant working with digital financial records",
+    image: "/images/editorial/excellence.webp",
+    alt: "Illustrative senior analyst reviewing a report in a professional library",
     tone: "navy",
     icon: "rings",
   },
@@ -32,8 +32,8 @@ const values: ValueCard[] = [
     title: "Personal Attention",
     description:
       "You work with a consistent team led by senior people who take the time to understand your business, your industry, and your people.",
-    image: "/images/services/corporate.webp",
-    alt: "Illustrative corporate advisory discussion",
+    image: "/images/editorial/personal-attention.webp",
+    alt: "Illustrative one-to-one conversation between an adviser and a business owner",
     tone: "orange",
     icon: "wheel",
   },
@@ -41,8 +41,8 @@ const values: ValueCard[] = [
     title: "Partnership",
     description:
       "We aim for long-term relationships, looking beyond this year's assignment to the reporting and strategic decisions your business faces next.",
-    image: "/images/services/accounting.webp",
-    alt: "Illustrative accountant working with digital financial records",
+    image: "/images/editorial/partnership.webp",
+    alt: "Illustrative business partners discussing plans in a landscaped courtyard",
     tone: "navy",
     icon: "rings",
   },
@@ -50,8 +50,8 @@ const values: ValueCard[] = [
     title: "Forward Thinking",
     description:
       "From e-invoicing to evolving reporting standards, we track regulatory change and use data analytics to work more efficiently and effectively.",
-    image: "/images/services/corporate.webp",
-    alt: "Illustrative corporate advisory discussion",
+    image: "/images/editorial/forward-thinking.webp",
+    alt: "Illustrative analysts discussing financial trends on a glass whiteboard",
     tone: "orange",
     icon: "wheel",
   },
@@ -59,8 +59,8 @@ const values: ValueCard[] = [
     title: "Clarity",
     description:
       "We explain our findings in plain language, with practical recommendations that management can understand and act on.",
-    image: "/images/services/corporate.webp",
-    alt: "Illustrative business advisory discussion",
+    image: "/images/editorial/clarity.webp",
+    alt: "Illustrative adviser explaining a clear financial chart to a client",
     tone: "light",
     icon: "diamond",
   },
@@ -163,12 +163,12 @@ export function AboutValuesSection() {
                   {value.title}
                 </h3>
                 <p
-                  className={`mt-2 text-[clamp(0.98rem,0.83vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] ${tone.body}`}
+                  className={`mb-8 mt-2 text-[clamp(0.98rem,0.83vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] ${tone.body}`}
                 >
                   {value.description}
                 </p>
 
-                <div className="relative mt-auto h-[clamp(10.2rem,10vw,11.25rem)] overflow-hidden rounded-[10px]">
+                <div className="relative mt-auto aspect-[7/4] w-full shrink-0 overflow-hidden rounded-[10px]">
                   <Image
                     src={value.image}
                     alt={value.alt}
