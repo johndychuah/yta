@@ -4,8 +4,8 @@ export function AboutHeroSection() {
   return (
     <section className="relative isolate overflow-hidden bg-[#091c2f] sm:min-h-[clamp(28rem,38.2vw,45.9rem)]">
       <Image
-        src="/about-hero-accounting-desk.png"
-        alt="Accounting desk with audit reports, calculator, and handwritten notes"
+        src="/images/services/audit.webp"
+        alt="Illustrative audit review in a professional office"
         fill
         priority
         sizes="100vw"

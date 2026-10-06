@@ -12,7 +12,7 @@ export const chinaDeskZh: ServiceDetail = {
   seoDescription:
     "为投资马来西亚的中国企业提供市场进入与架构规划、公司设立、税务与投资优惠、会计、薪资、审计、工作准证、进出口准证、清真认证及商标注册等一站式服务。",
   ctaTitle: "计划从中国投资马来西亚？",
-  heroImage: "/hero-kl-skyline.png",
+  heroImage: "/images/services/china.webp",
   intro: [
     "马来西亚是中国企业拓展东南亚市场的热门目的地之一。从一开始就把投资架构、税务与合规安排妥当，可以为企业节省时间与成本，也能避免日后不必要的麻烦。",
     "我们的中马业务部为中国投资者提供一站式服务：从选择投资架构、申请各类准证，到完成首次法定审计，全程以中文沟通，并提供总部看得懂的财务报告。",
@@ -37,8 +37,8 @@ export const chinaDeskZh: ServiceDetail = {
   contentBlocks: [
     {
       type: "image",
-      src: "/china-malaysia-desk.svg",
-      alt: "上海与吉隆坡天际线以贸易航线相连的插图",
+      src: "/images/services/china.webp",
+      alt: "集装箱码头与货轮，展示跨境贸易",
     },
     {
       type: "section-list",

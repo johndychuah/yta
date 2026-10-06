@@ -21,8 +21,8 @@ const highlights: Highlight[] = [
     title: "Partner-led attention",
     description:
       "Our partners stay involved from planning to sign-off. You deal directly with senior people who know your business, not a rotating team.",
-    image: "/about-story-meeting.png",
-    alt: "Advisor meeting with clients",
+    image: "/images/services/corporate.webp",
+    alt: "Illustrative business advisory discussion",
     tone: "orange",
     icon: "diamond",
   },
@@ -30,8 +30,8 @@ const highlights: Highlight[] = [
     title: "Big Four experience",
     description:
       "Our leaders trained at Price Waterhouse, PwC, and EY, and bring the same technical discipline to clients of every size, from family businesses to listed groups.",
-    image: "/why-choose-laptop-dashboard.png",
-    alt: "Financial dashboard and accounting reports",
+    image: "/images/services/accounting.webp",
+    alt: "Illustrative accountant working with digital financial records",
     tone: "navy",
     icon: "rings",
   },
@@ -39,8 +39,8 @@ const highlights: Highlight[] = [
     title: "Value beyond the opinion",
     description:
       "Our risk-focused, data-driven audits highlight control weaknesses and practical improvements, so every engagement leaves your business stronger.",
-    image: "/accounting-advisory-review.png",
-    alt: "Accounting professionals reviewing advisory documents",
+    image: "/images/services/corporate.webp",
+    alt: "Illustrative corporate advisory discussion",
     tone: "orange",
     icon: "wheel",
   },

@@ -480,7 +480,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     seoDescription:
       "Partner-led statutory audits, review engagements, internal control reviews, forensic accounting, and reporting accountant services for Malaysian companies.",
     ctaTitle: "Need an auditor for this year's accounts?",
-    heroImage: "/accounting-documents.png",
+    heroImage: "/images/services/audit.webp",
     intro: [
       "Every Malaysian company must have its financial statements audited each year under the Companies Act 2016, unless it qualifies for an audit exemption. Our audits are planned and led by a partner or director, focus on the areas of real risk in your business, and finish with a clear report on what we found and what to improve.",
       "We audit subsidiaries of multinationals, government-linked companies, SMEs, and family-owned groups. Where a full audit is not what you need, we offer reviews and specialist assurance work instead.",
@@ -502,8 +502,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/audit-assurance-card.png",
-        alt: "Audit and assurance work with accounting documents",
+        src: "/images/services/audit.webp",
+        alt: "Illustrative audit review with financial records and a laptop",
         overlay: "Audit",
       },
       {
@@ -532,7 +532,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     seoDescription:
       "IPO preparation for Bursa Malaysia, M&A advisory, financial and tax due diligence, forecasting, and valuations for SMEs and family-owned businesses.",
     ctaTitle: "Planning an IPO or a transaction?",
-    heroImage: "/accounting-documents.png",
+    heroImage: "/images/services/corporate.webp",
     intro: [
       "Listing on Bursa Malaysia, or buying or selling a business, is a defining moment for any owner. We help SMEs and family-owned businesses prepare for an IPO, then act as their in-house financial adviser through the listing, working alongside the investment bank, lawyers, and other advisers.",
       "We also advise buyers and sellers on mergers and acquisitions, from the first valuation through to completion and integration.",
@@ -553,8 +553,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/about-story-meeting.png",
-        alt: "Corporate advisory meeting with business owners",
+        src: "/images/services/corporate.webp",
+        alt: "Illustrative corporate advisory discussion in a boardroom",
       },
       {
         type: "section-list",
@@ -575,8 +575,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       },
       {
         type: "image",
-        src: "/accounting-advisory-review.png",
-        alt: "Business handshake after advisory discussion",
+        src: "/images/services/audit.webp",
+        alt: "Illustrative financial due diligence review",
       },
       {
         type: "text",
@@ -612,7 +612,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     seoDescription:
       "Independent business reviews, turnaround planning, debt advisory and refinancing, and receivership and liquidation support for Malaysian companies.",
     ctaTitle: "Under financial pressure? Talk to us early.",
-    heroImage: "/accounting-documents.png",
+    heroImage: "/images/services/restructuring.webp",
     intro: [
       "When cash flow tightens or lenders start asking questions, early and independent advice keeps more options open. We work with management, lenders, and shareholders to understand what has gone wrong, what can be saved, and the most practical way forward.",
       "Where recovery is not possible, we support an orderly receivership or winding-up that protects the interests of everyone involved.",
@@ -634,8 +634,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/about-story-meeting.png",
-        alt: "Corporate restructuring advisory meeting",
+        src: "/images/services/restructuring.webp",
+        alt: "Illustrative business operations review in a distribution warehouse",
         overlay: "Restructuring & Insolvency",
       },
       {
@@ -663,7 +663,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     seoDescription:
       "Corporate and personal tax compliance, tax planning, incentives, LHDN tax audits, and M&A tax structuring led by a Chartered Tax Adviser in Kuala Lumpur.",
     ctaTitle: "Have a tax question or an LHDN query?",
-    heroImage: "/accounting-documents.png",
+    heroImage: "/images/services/tax.webp",
     intro: [
       "Tax affects every decision a business makes, from day-to-day pricing to buying a company. Peter Tang & Associates has advised on Malaysian tax since 1992, and the practice is led by a Chartered Tax Adviser and approved tax agent.",
       "As the Malaysian member of Taxand, a global network of independent tax advisers, we can also coordinate advice for clients with operations or investors overseas.",
@@ -685,8 +685,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/who-financial-strategy.png",
-        alt: "Tax advisers reviewing a financial strategy",
+        src: "/images/services/tax.webp",
+        alt: "Illustrative tax planning discussion with financial documents",
         overlay: "Tax",
       },
       {
@@ -715,7 +715,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     seoDescription:
       "Market entry, company set-up, tax and incentives, accounting, payroll, audit, work permits, licences, halal certification, and trademarks for Chinese companies investing in Malaysia.",
     ctaTitle: "Planning to invest in Malaysia from China?",
-    heroImage: "/hero-kl-skyline.png",
+    heroImage: "/images/services/china.webp",
     intro: [
       "Malaysia is one of the most popular destinations for Chinese companies expanding into Southeast Asia. Getting the structure, tax, and compliance right from the start saves time, cost, and difficult conversations later.",
       "Our China-Malaysia Desk gives Chinese investors one team for the full journey, from choosing a structure and obtaining licences to the first statutory audit, with communication in Mandarin and reporting your head office understands.",
@@ -740,8 +740,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/china-malaysia-desk.svg",
-        alt: "Illustration of the Shanghai and Kuala Lumpur skylines linked by a trade route",
+        src: "/images/services/china.webp",
+        alt: "Container port and cargo ship illustrating cross-border trade",
       },
       {
         type: "section-list",
@@ -776,7 +776,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     seoDescription:
       "Outsourced bookkeeping, financial reporting, cash-flow support, payroll processing, and EPF, SOCSO, EIS and PCB submissions for Malaysian businesses.",
     ctaTitle: "Want your books and payroll off your plate?",
-    heroImage: "/accounting-documents.png",
+    heroImage: "/images/services/accounting.webp",
     intro: [
       "Our Accounting and Payroll Outsourcing service takes care of your bookkeeping, reporting, and payroll, so your management team can focus on running the business.",
       "You get accurate monthly records, payroll that meets every statutory deadline, and accounts that are ready when the auditor arrives.",
@@ -797,8 +797,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/why-choose-laptop-dashboard.png",
-        alt: "Accounting outsourcing services dashboard",
+        src: "/images/services/accounting.webp",
+        alt: "Illustrative accountant maintaining digital financial records",
         overlay: "Accounting Outsourcing",
       },
       {
@@ -822,8 +822,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       },
       {
         type: "image",
-        src: "/accounting-documents.png",
-        alt: "Payroll outsourcing services documents",
+        src: "/images/services/payroll.webp",
+        alt: "Illustrative payroll specialist reviewing confidential records",
         overlay: "Payroll Outsourcing",
       },
       {

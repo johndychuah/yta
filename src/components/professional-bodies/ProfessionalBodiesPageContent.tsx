@@ -111,8 +111,8 @@ export function ProfessionalBodiesPageContent() {
 
           <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
-              src="/accounting-documents.png"
-              alt="Financial reports and accounting documents for regulatory reference"
+              src="/images/services/audit.webp"
+              alt="Illustrative financial review with documents and a laptop"
               fill
               priority
               sizes="(min-width: 1024px) 610px, 88vw"

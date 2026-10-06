@@ -181,7 +181,7 @@ function IndustryIcon({ index }: { index: number }) {
 
 function ImageBlock({ block }: { block: Extract<ServiceContentBlock, { type: "image" }> }) {
   return (
-    <div className="relative mt-10 h-[clamp(13rem,22vw,24rem)] max-w-[45rem] overflow-hidden rounded-[6px]">
+    <div className="relative mt-10 aspect-[7/4] w-full max-w-[45rem] overflow-hidden rounded-[6px]">
       <Image
         src={block.src}
         alt={block.alt}
@@ -190,8 +190,8 @@ function ImageBlock({ block }: { block: Extract<ServiceContentBlock, { type: "im
         className="object-cover object-center"
       />
       {block.overlay ? (
-        <div className="absolute inset-0 flex items-center justify-center bg-[#03101c]/28 px-6 text-center">
-          <p className="text-[clamp(1.7rem,3.3vw,4.5rem)] font-bold leading-none tracking-normal text-white">
+        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#03101c]/70 via-transparent to-transparent p-6">
+          <p className="text-[clamp(1rem,1.5vw,1.25rem)] font-semibold leading-snug tracking-[0.04em] text-white">
             {block.overlay}
           </p>
         </div>
@@ -387,9 +387,9 @@ export function ServiceDetailTemplate({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-60"
+          className="object-cover object-[65%_15%]"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-[#03101c]/55" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#03101c]/90 via-[#03101c]/75 to-[#03101c]/30" />
 
         <div className="relative z-10 mx-auto max-w-[1180px]">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4">

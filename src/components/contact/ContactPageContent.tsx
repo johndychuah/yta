@@ -135,8 +135,8 @@ export function ContactPageContent() {
 
           <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
-              src="/accounting-documents.png"
-              alt="Accounting documents and calculator prepared for a consultation"
+              src="/images/services/audit.webp"
+              alt="Illustrative financial review with documents and a laptop"
               fill
               priority
               sizes="(min-width: 1024px) 610px, 88vw"
@@ -296,8 +296,8 @@ export function ContactPageContent() {
       <section className="bg-white px-[clamp(1rem,4vw,4.75rem)] py-[clamp(2rem,4vw,4rem)]">
         <div className="relative isolate mx-auto min-h-[clamp(24rem,32vw,36rem)] max-w-[1800px] overflow-hidden rounded-[6px] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(5rem,8vw,10rem)] text-white">
           <Image
-            src="/about-cta-coins.png"
-            alt="Hands holding coins as a symbol of trusted financial advisory"
+            src="/images/services/corporate.webp"
+            alt="Illustrative advisory conversation in a boardroom"
             fill
             sizes="(min-width: 1280px) 1800px, 94vw"
             className="object-cover object-[62%_50%]"

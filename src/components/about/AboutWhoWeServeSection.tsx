@@ -75,8 +75,8 @@ export function AboutWhoWeServeSection() {
 
         <div className="relative mx-auto aspect-[0.8] w-full max-w-[31rem] overflow-hidden rounded-[8px] lg:mx-0 lg:mt-5">
           <Image
-            src="/why-choose-laptop-dashboard.png"
-            alt="Financial reports and dashboard used for client advisory"
+            src="/images/services/accounting.webp"
+            alt="Illustrative accountant working with digital financial records"
             fill
             sizes="(min-width: 1024px) 496px, 88vw"
             className="object-cover object-[42%_50%]"

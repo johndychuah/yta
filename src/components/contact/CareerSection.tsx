@@ -12,8 +12,8 @@ export function CareerSection({ standalone = false }: { standalone?: boolean }) 
         <div className="mx-auto grid max-w-[1280px] gap-[clamp(2rem,5vw,5rem)] lg:grid-cols-2 lg:items-center">
           <div className="relative h-[clamp(18rem,28vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
-              src="/about-story-meeting.png"
-              alt="Professional team discussion in a meeting room"
+              src="/images/services/corporate.webp"
+              alt="Illustrative business advisory discussion"
               fill
               sizes="(min-width: 1024px) 610px, 88vw"
               className="object-cover object-center"

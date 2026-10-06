@@ -55,8 +55,8 @@ export function AboutPrecisionSection() {
           <article className="rounded-[20px] bg-white p-[clamp(1.5rem,1.7vw,2rem)] shadow-[0_28px_70px_rgba(9,28,47,0.08)]">
             <div className="relative h-[clamp(10.5rem,10vw,12.5rem)] overflow-hidden rounded-[8px]">
               <Image
-                src="/accounting-documents.png"
-                alt="Accounting documents and financial reports"
+                src="/images/services/audit.webp"
+                alt="Illustrative financial review with documents and a laptop"
                 fill
                 sizes="(min-width: 1024px) 376px, 88vw"
                 className="object-cover object-center"
@@ -88,8 +88,8 @@ export function AboutPrecisionSection() {
 
             <div className="absolute inset-x-0 bottom-0 h-[58%] overflow-hidden">
               <Image
-                src="/about-hero-accounting-desk.png"
-                alt="Professional accounting workspace"
+                src="/images/services/audit.webp"
+                alt="Illustrative audit review in a professional office"
                 fill
                 sizes="(min-width: 1024px) 376px, 88vw"
                 className="object-cover object-[42%_54%]"
@@ -120,8 +120,8 @@ export function AboutPrecisionSection() {
 
               <div className="relative h-[clamp(5.5rem,5.8vw,6.75rem)] overflow-hidden rounded-[8px]">
                 <Image
-                  src="/about-story-meeting.png"
-                  alt="Advisors and clients in a consultation"
+                  src="/images/services/corporate.webp"
+                  alt="Illustrative business advisory discussion"
                   fill
                   sizes="(min-width: 1024px) 173px, 38vw"
                   className="object-cover object-center"

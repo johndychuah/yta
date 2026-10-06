@@ -38,8 +38,8 @@ export function AboutStorySection() {
 
             <div className="absolute bottom-0 right-0 h-[clamp(17rem,27vw,29.2rem)] w-[min(61%,23.5rem)] overflow-hidden">
               <Image
-                src="/about-story-meeting.png"
-                alt="Advisor and client reviewing financial reports"
+                src="/images/services/corporate.webp"
+                alt="Illustrative business advisory discussion"
                 fill
                 sizes="(min-width: 1280px) 376px, 62vw"
                 className="object-cover object-center"
