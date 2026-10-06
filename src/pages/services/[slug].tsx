@@ -19,6 +19,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
       <SEO
         title={service.seoTitle}
         description={service.seoDescription}
+        alternates={service.languages}
       />
       <ServiceDetailTemplate service={service} />
     </Layout>

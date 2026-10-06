@@ -7,6 +7,87 @@ import {
   type ServiceDetail,
 } from "@/data/serviceDetails";
 
+export type Lang = "en" | "zh";
+
+const ui = {
+  en: {
+    home: "Home",
+    services: "Our services",
+    guideEyebrow: "A practical guide for business owners",
+    guideHeading: "Is this the right support for your business?",
+    situations: "This service may be relevant when",
+    scope: "The engagement can cover",
+    guideNote:
+      "The right scope depends on your business and what you need it for. Talk to us and we will recommend an approach before any work begins.",
+    contact: "Contact us",
+    ctaTitle: undefined,
+    ctaButton: undefined,
+  },
+  zh: {
+    home: "首页",
+    services: "我们的服务",
+    guideEyebrow: "企业主实用指南",
+    guideHeading: "这项服务适合您的企业吗？",
+    situations: "以下情况可能适合您",
+    scope: "服务范围可包括",
+    guideNote:
+      "具体服务范围取决于您的业务及需求。欢迎与我们联系，我们会在开始工作前为您建议合适的方案。",
+    contact: "联系我们",
+    ctaTitle: "正在寻找值得信赖的审计与咨询伙伴？欢迎与我们的团队联系",
+    ctaButton: "预约咨询",
+  },
+};
+
+const zhNavTitles: Record<string, string> = {
+  "audit-assurance": "审计与鉴证",
+  "corporate-advisory": "企业咨询",
+  "restructuring-advisory": "重组与破产",
+  "tax-advisory": "税务咨询与合规",
+  "china-malaysia-desk": "中马业务部",
+  "accounting-payroll-outsourcing": "会计与薪资外包",
+};
+
+function LanguageToggle({
+  lang,
+  languages,
+}: {
+  lang: Lang;
+  languages: { en: string; zh: string };
+}) {
+  const options = [
+    { lang: "en" as const, label: "English", href: languages.en, hrefLang: "en" },
+    { lang: "zh" as const, label: "简体中文", href: languages.zh, hrefLang: "zh-Hans" },
+  ];
+
+  return (
+    <div
+      role="group"
+      aria-label={lang === "zh" ? "选择语言" : "Choose language"}
+      className="inline-flex rounded-full border border-white/30 bg-white/10 p-1 text-[0.85rem] font-semibold backdrop-blur"
+    >
+      {options.map((option) => {
+        const active = option.lang === lang;
+        return (
+          <Link
+            key={option.lang}
+            href={option.href}
+            hrefLang={option.hrefLang}
+            lang={option.hrefLang}
+            aria-current={active ? "page" : undefined}
+            className={`inline-flex min-h-9 items-center rounded-full px-4 transition ${
+              active
+                ? "bg-[#ffad50] text-[#03101c]"
+                : "text-white/85 hover:text-white"
+            }`}
+          >
+            {option.label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
 const industries = [
   "Trading, Retail & Distribution",
   "Manufacturing & Construction",
@@ -226,14 +307,15 @@ function ContentBlock({ block }: { block: ServiceContentBlock }) {
   return <IndustryBlock />;
 }
 
-function DecisionGuide({ service }: { service: ServiceDetail }) {
+function DecisionGuide({ service, lang }: { service: ServiceDetail; lang: Lang }) {
+  const t = ui[lang];
   const columns = [
     {
-      title: "This service may be relevant when",
+      title: t.situations,
       items: service.decisionGuide.situations,
     },
     {
-      title: "The engagement can cover",
+      title: t.scope,
       items: service.decisionGuide.scope,
     },
   ];
@@ -244,13 +326,13 @@ function DecisionGuide({ service }: { service: ServiceDetail }) {
       aria-labelledby="service-fit-heading"
     >
       <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#596575]">
-        A practical guide for business owners
+        {t.guideEyebrow}
       </p>
       <h2
         id="service-fit-heading"
         className="mt-4 text-[clamp(1.35rem,1.35vw,1.65rem)] font-semibold leading-tight text-[#03101c]"
       >
-        Is this the right support for your business?
+        {t.guideHeading}
       </h2>
 
       <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-10">
@@ -280,16 +362,24 @@ function DecisionGuide({ service }: { service: ServiceDetail }) {
       </div>
 
       <p className="mt-8 border-t border-[#03101c]/12 pt-6 text-[0.86rem] font-medium leading-[1.6] text-[#596575]">
-        The right scope depends on your business and what you need it for.
-        Talk to us and we will recommend an approach before any work begins.
+        {t.guideNote}
       </p>
     </section>
   );
 }
 
-export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
+export function ServiceDetailTemplate({
+  service,
+  lang = "en",
+}: {
+  service: ServiceDetail;
+  lang?: Lang;
+}) {
+  const t = ui[lang];
+  const contactHref = `/contact?service=${service.slug}#enquiry`;
+
   return (
-    <>
+    <div lang={lang === "zh" ? "zh-Hans" : undefined}>
       <section className="relative isolate sm:min-h-[clamp(19rem,22vw,26rem)] overflow-hidden bg-[#03101c] px-[clamp(1.5rem,8vw,12rem)] py-10 text-white sm:py-[clamp(5rem,7vw,8rem)]">
         <Image
           src={service.heroImage}
@@ -302,15 +392,20 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
         <div aria-hidden="true" className="absolute inset-0 bg-[#03101c]/55" />
 
         <div className="relative z-10 mx-auto max-w-[1180px]">
-          <nav aria-label="Breadcrumb" className="mb-6 text-sm text-white/85">
-            <ol className="flex flex-wrap items-center gap-2">
-              <li><Link href="/" className="inline-flex min-h-11 items-center hover:underline">Home</Link></li>
-              <li aria-hidden="true">/</li>
-              <li><Link href="/services" className="inline-flex min-h-11 items-center hover:underline">Our services</Link></li>
-              <li aria-hidden="true">/</li>
-              <li aria-current="page">{service.navTitle}</li>
-            </ol>
-          </nav>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <nav aria-label="Breadcrumb" className="text-sm text-white/85">
+              <ol className="flex flex-wrap items-center gap-2">
+                <li><Link href="/" className="inline-flex min-h-11 items-center hover:underline">{t.home}</Link></li>
+                <li aria-hidden="true">/</li>
+                <li><Link href="/services" className="inline-flex min-h-11 items-center hover:underline">{t.services}</Link></li>
+                <li aria-hidden="true">/</li>
+                <li aria-current="page">{service.navTitle}</li>
+              </ol>
+            </nav>
+            {service.languages ? (
+              <LanguageToggle lang={lang} languages={service.languages} />
+            ) : null}
+          </div>
           <p className="text-[clamp(0.7rem,0.62vw,0.78rem)] font-semibold uppercase tracking-[0.18em] text-white/75">
             {service.eyebrow}
           </p>
@@ -338,7 +433,7 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
               </div>
             </div>
 
-            <DecisionGuide service={service} />
+            <DecisionGuide service={service} lang={lang} />
 
             {service.contentBlocks.map((block, index) => (
               <ContentBlock key={`${block.type}-${index}`} block={block} />
@@ -346,17 +441,19 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
           </article>
 
           <aside className="lg:col-start-1 lg:row-start-1 lg:sticky lg:top-28 lg:self-start">
-            <nav className="rounded-[6px] bg-[#f3f3f3] p-5" aria-label="Our services">
+            <nav className="rounded-[6px] bg-[#f3f3f3] p-5" aria-label={t.services}>
               <p className="mb-4 text-[0.92rem] font-semibold text-[#03101c]">
-                Our services
+                {t.services}
               </p>
               <div className="grid gap-2">
                 {serviceNavItems.map((item) => {
                   const active = item.slug === service.slug;
+                  const href =
+                    active && service.languages ? service.languages[lang] : item.href;
                   return (
                     <Link
                       key={item.slug}
-                      href={item.href}
+                      href={href}
                       aria-current={active ? "page" : undefined}
                       className={`flex min-h-11 items-center justify-between rounded-lg px-4 py-2 text-[0.9rem] font-semibold transition ${
                         active
@@ -364,7 +461,7 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
                           : "text-[#27303a] hover:bg-white"
                       }`}
                     >
-                      <span>{item.title}</span>
+                      <span>{lang === "zh" ? zhNavTitles[item.slug] : item.title}</span>
                       <span aria-hidden="true">›</span>
                     </Link>
                   );
@@ -384,10 +481,10 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
                 +603 2728 4819
               </a>
               <Link
-                href={`/contact?service=${service.slug}#enquiry`}
+                href={contactHref}
                 className="mt-6 inline-flex h-11 min-w-[116px] items-center justify-center gap-3 rounded-full bg-[#ffad50] px-5 text-[0.78rem] font-semibold text-[#03101c]"
               >
-                <span>Contact us</span>
+                <span>{t.contact}</span>
                 <span aria-hidden="true">↗</span>
               </Link>
             </div>
@@ -395,7 +492,11 @@ export function ServiceDetailTemplate({ service }: { service: ServiceDetail }) {
         </div>
       </section>
 
-      <AboutCtaSection contactHref={`/contact?service=${service.slug}#enquiry`} />
-    </>
+      <AboutCtaSection
+        contactHref={contactHref}
+        title={t.ctaTitle}
+        buttonLabel={t.ctaButton}
+      />
+    </div>
   );
 }

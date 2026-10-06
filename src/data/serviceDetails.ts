@@ -64,6 +64,8 @@ export type ServiceDetail = {
     scope: string[];
   };
   contentBlocks: ServiceContentBlock[];
+  /** Links for the language toggle, only set on pages with a translation. */
+  languages?: { en: string; zh: string };
 };
 
 export const serviceNavItems: { title: string; href: string; slug: ServiceSlug }[] =
@@ -280,6 +282,38 @@ const taxSections: DetailSection[] = [
     points: [
       "Personal tax returns for business owners, directors, and expatriates.",
       "Advice on residence status and double taxation agreements.",
+    ],
+  },
+];
+
+export const chinaDeskLanguages = {
+  en: "/services/china-malaysia-desk",
+  zh: "/services/china-malaysia-desk/zh",
+};
+
+const whyMalaysiaSections: DetailSection[] = [
+  {
+    title: "A gateway to ASEAN",
+    points: [
+      "Malaysia sits at the centre of Southeast Asia, giving access to an ASEAN market of more than 600 million people.",
+    ],
+  },
+  {
+    title: "Close ties with China",
+    points: [
+      "China has been Malaysia's largest trading partner for more than a decade, and the double taxation agreement between the two countries reduces tax on cross-border income.",
+    ],
+  },
+  {
+    title: "Investor-friendly policies",
+    points: [
+      "Tax incentives for manufacturing, technology, and regional headquarters, administered by MIDA.",
+    ],
+  },
+  {
+    title: "A trilingual business environment",
+    points: [
+      "Business is conducted in Malay, English, and Chinese, making it easier to build local teams and partnerships.",
     ],
   },
 ];
@@ -711,6 +745,12 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
       },
       {
         type: "section-list",
+        heading: "Why Malaysia?",
+        sections: whyMalaysiaSections,
+        icon: "circle",
+      },
+      {
+        type: "section-list",
         heading: "How our China-Malaysia Desk supports you:",
         sections: chinaDeskSections,
         icon: "check",
@@ -723,6 +763,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         ],
       },
     ],
+    languages: chinaDeskLanguages,
   },
   "accounting-payroll-outsourcing": {
     slug: "accounting-payroll-outsourcing",

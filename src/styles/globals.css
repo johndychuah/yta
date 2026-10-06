@@ -34,3 +34,7 @@
 }
 
 .site-root { font-family: var(--font-lato), Arial, Helvetica, sans-serif; }
+
+[lang="zh-Hans"] {
+  font-family: var(--font-lato), "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}

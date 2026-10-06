@@ -30,7 +30,10 @@ A running list collected during the website rebuild. Tick off each item once the
   - Scope: structuring, set-up coordination with company secretarial/legal partners, MIDA incentives, withholding tax, transfer pricing, accounting, payroll, audit. Anything to add or remove?
   - The page also lists **work permits (Employment Pass), import and export licences, halal certification, trademark registration (MyIPO), and wealth management**, following Wezmart. Do you offer each of these in-house, through partners, or not at all? Any you don't offer will be removed.
   - Wealth management is worded as "introductions to licensed partners", since investment advice needs a Securities Commission licence. Is that accurate, and who are the partners?
-  - Should this page also have a Chinese-language version, and a WeChat contact?
+  - ~~Should this page also have a Chinese-language version?~~ **Done:** a Simplified Chinese version is live at /services/china-malaysia-desk/zh, with an English / 简体中文 toggle on both pages.
+  - Please have a native Chinese speaker on your team review the Chinese copy, especially the name **中马业务部** (Wezmart uses 中国事务部). Would you prefer a different name?
+  - Is there a WeChat ID or QR code to show on the Chinese page? Wezmart displays theirs prominently.
+  - The site header, footer and contact form stay in English. Is that acceptable, or should the contact form also accept enquiries in Chinese?
 - [ ] Insolvency: the Restructuring page now includes a "Receivership & Liquidation" section (members' and creditors' voluntary winding-up, receivership, court winding-up). Is that accurate? Is any partner an approved liquidator / insolvency practitioner? Do you also handle Corporate Voluntary Arrangements or Judicial Management?
 - [ ] The service was renamed "Restructuring & Insolvency" to match the Home page. Keep the URL /services/restructuring-advisory, or change it to /services/restructuring-insolvency?
 - [ ] Corporate Advisory: the old site said "we have successfully guided multiple businesses" through IPOs. We removed it for now. Can we restore it with a number or named listings?
