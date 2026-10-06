@@ -29,7 +29,7 @@ const services = [
   },
   {
     title: "Tax Advisory & Compliance",
-    body: "Good tax advice starts before the transaction, not after the assessment. Led by a Chartered Tax Adviser, we handle corporate and personal tax compliance, plan for incentives and restructurings, and represent you in LHDN tax audits. As the Malaysian member of Taxand, we can also coordinate cross-border advice.",
+    body: "Good tax advice starts before the transaction, not after the assessment. Led by a Chartered Tax Adviser, we handle corporate and personal tax compliance, plan for incentives and restructurings, and represent you in LHDN tax audits. Cross-border matters are scoped with the relevant advisers before work begins.",
     helpfulWhen: "You need tax returns filed, LHDN has raised queries or opened an audit, or you want to understand the tax impact of a transaction or expansion.",
     href: "/services/tax-advisory",
     image: "/images/topics/home-tax.webp",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     title: "China-Malaysia Desk",
-    body: "Malaysia is a natural base for Chinese companies expanding into Southeast Asia. Our China-Malaysia Desk gives investors one team for the whole journey, from choosing a structure and setting up the company to work permits, licences, halal certification, tax, payroll, and the first statutory audit, with support in Mandarin.",
+    body: "Malaysia is a natural base for Chinese companies expanding into Southeast Asia. Our China-Malaysia Desk discusses company set-up, tax, payroll and audit requirements. Language support and any specialist coordination are confirmed in the agreed scope.",
     helpfulWhen: "Your company in China is setting up in Malaysia, or your Malaysian subsidiary needs accounting, tax, audit, and reporting your head office understands.",
     href: "/services/china-malaysia-desk",
     image: "/images/topics/home-china.webp",

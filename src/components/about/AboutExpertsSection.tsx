@@ -16,7 +16,7 @@ const experts: Expert[] = [
     title: "Chartered Accountant · Chartered Tax Adviser",
     credentials: "MBA, CA(M), FCCA, CPA(M), CPA(Aust.), CTA, CTIM",
     description:
-      "Dato' Peter Tang founded Peter Tang & Associates in 1992 after senior roles at Price Waterhouse and Baxter Healthcare, and has led Taxand Malaysia, part of a global network of independent tax advisers, since 2006. Clients turn to Dato' Peter for tax structuring, valuations, and guidance through M&A and listings.",
+      "Dato' Peter Tang founded Peter Tang & Associates in 1992 after senior roles at Price Waterhouse and Baxter Healthcare, and has extensive experience in Malaysian tax advisory. Clients turn to Dato' Peter for tax structuring, valuations, and guidance through M&A and listings.",
     focus: ["Tax advisory", "Valuations", "M&A", "IPOs"],
   },
   {

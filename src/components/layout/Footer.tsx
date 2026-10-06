@@ -106,6 +106,14 @@ export function Footer() {
 
 
         </div>
+        <div className="flex flex-col gap-4 border-t border-[#0b1c18]/10 py-5 text-sm text-[#596575] sm:flex-row sm:items-center sm:justify-between">
+          <nav aria-label="Legal information" className="flex flex-wrap gap-x-6 gap-y-1">
+            <Link href="/privacy-policy" className="inline-flex min-h-11 items-center hover:underline">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="inline-flex min-h-11 items-center hover:underline">Terms &amp; Conditions</Link>
+            <Link href="/cookie-policy" className="inline-flex min-h-11 items-center hover:underline">Cookie Policy</Link>
+          </nav>
+          <p className="max-w-sm text-xs leading-5">Illustrative people and business photography includes AI-generated imagery.</p>
+        </div>
       </div>
     </footer>
   );

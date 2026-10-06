@@ -27,7 +27,7 @@ export function HomeCtaSection() {
           <a href="tel:+60327284819" className="font-semibold text-white underline-offset-4 hover:underline">
             +603 2728 4819
           </a>{" "}
-          or send an enquiry, and we will respond within one working day.
+          or send an enquiry to discuss the next steps with our team.
         </p>
 
         <Link

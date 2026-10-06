@@ -195,6 +195,7 @@ export function ContactPageContent() {
             <p id="enquiry-instructions" className="mt-4 text-base leading-relaxed text-[#596575]">
               Complete the fields below to prepare an email to our team. You can review and send it in your email app. Fields marked * are required.
             </p>
+            <p className="mt-3 text-sm leading-6 text-[#596575]">Please keep your initial message brief and avoid identity documents, bank or payroll records and other confidential material. Arrange a suitable channel with our team first.</p>
             <form onSubmit={prepareEnquiry} onChange={() => setDraftHref("")} aria-describedby="enquiry-instructions" className="mt-8 grid gap-5 sm:grid-cols-2">
               <Field label="Full name" name="name" autoComplete="name" required />
               <Field label="Email address" name="email" type="email" autoComplete="email" required />
@@ -238,7 +239,7 @@ export function ContactPageContent() {
                   required
                   className="mt-1 size-4 rounded border-[#dfe3e7] accent-[#ffad50]"
                 />
-                <span>I agree to be contacted regarding my enquiry.</span>
+                <span>I have read the <Link href="/privacy-policy" className="text-[#1f5f9e] underline underline-offset-4">Privacy Policy</Link> (<Link href="/privacy-policy/ms" lang="ms" className="text-[#1f5f9e] underline underline-offset-4">Bahasa Malaysia</Link>) and consent to the relevant firm handling my details and contacting me about this enquiry. This does not opt me into marketing.</span>
               </label>
               <div className="sm:col-span-2">
                 <button
@@ -285,7 +286,7 @@ export function ContactPageContent() {
             </a>
           </div>
 
-          <div className="relative min-h-[clamp(20rem,26vw,27rem)] overflow-hidden rounded-[10px] bg-[#e8eaed]">
+          <div className="relative min-h-[clamp(26rem,26vw,28rem)] overflow-hidden rounded-[10px] bg-[#e8eaed]">
             <OfficeMap />
           </div>
         </div>

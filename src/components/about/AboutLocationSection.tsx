@@ -42,7 +42,7 @@ export function AboutLocationSection() {
           </div>
         </div>
 
-        <div className="relative min-h-[clamp(22rem,28vw,26rem)] overflow-hidden rounded-[12px] bg-[#e8eaed]">
+        <div className="relative min-h-[clamp(26rem,28vw,28rem)] overflow-hidden rounded-[12px] bg-[#e8eaed]">
           <OfficeMap />
         </div>
       </div>

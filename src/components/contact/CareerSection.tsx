@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const careerPoints = ["Professional development", "Internal training", "Mentorship culture", "Long-term growth"];
 
@@ -44,6 +45,7 @@ export function CareerSection({ standalone = false }: { standalone?: boolean }) 
               ))}
             </div>
 
+            <p className="mt-7 max-w-[38rem] text-sm leading-6 text-[#596575]">Before emailing your CV, read our <Link href="/privacy-policy" className="text-[#1f5f9e] underline underline-offset-4">Privacy Policy</Link> (<Link href="/privacy-policy/ms" lang="ms" className="text-[#1f5f9e] underline underline-offset-4">Bahasa Malaysia</Link>). Include only information relevant to your application; identity documents, bank details and sensitive personal records are not needed for an initial application.</p>
             <a
               href="mailto:info@yta.com.my?subject=Career%20Opportunity%20Application"
               className="mt-9 inline-flex h-[53px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[0.9rem] font-medium tracking-[0.04em] text-[#03101c] transition hover:bg-[#ffc174]"

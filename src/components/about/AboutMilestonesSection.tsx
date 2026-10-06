@@ -15,7 +15,7 @@ const milestones = [
     description: "Dato' Peter Tang begins leading Taxand Malaysia, part of a global network of tax advisers.",
   },
   {
-    year: "2016",
+    year: "2015",
     title: "Group listing",
     description: "The parent group lists on Singapore's Catalist board as Axcelasia Inc, and the audit practice continues as YT Associates.",
   },

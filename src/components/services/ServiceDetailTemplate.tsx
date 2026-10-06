@@ -438,6 +438,9 @@ export function ServiceDetailTemplate({
             {service.contentBlocks.map((block, index) => (
               <ContentBlock key={`${block.type}-${index}`} block={block} />
             ))}
+            <p className="mt-10 max-w-[62rem] border-t border-[#03101c]/10 pt-6 text-sm leading-7 text-[#596575]">
+              {lang === "zh" ? "本页为一般服务介绍，并非针对您的情况提供的专业意见。具体服务范围、负责机构及适用资格须在书面委托中确认；审批及结果不作保证。审计及非审计服务须遵守适用的独立性及监管要求。" : "This is a general service description, not advice for your circumstances. The scope, responsible provider and applicable authorisations must be confirmed in a written engagement; approvals and outcomes are not guaranteed. Audit and non-audit work remain subject to applicable independence and regulatory requirements."}
+            </p>
           </article>
 
           <aside className="lg:col-start-1 lg:row-start-1 lg:sticky lg:top-28 lg:self-start">

@@ -323,7 +323,7 @@ const chinaDeskSections: DetailSection[] = [
     title: "Market Entry & Structuring",
     points: [
       "Advice on the right vehicle for Malaysia: a Sdn Bhd, a branch, or a representative office.",
-      "Holding structures that make use of the Malaysia–China double taxation agreement.",
+      "Review of potential Malaysia–China tax treaty treatment, subject to eligibility and applicable anti-abuse requirements.",
       "A clear view of the ongoing reporting and tax obligations before you commit.",
     ],
   },
@@ -353,29 +353,22 @@ const chinaDeskSections: DetailSection[] = [
   {
     title: "Work Permits & Expatriate Staff",
     points: [
-      "Support with Employment Pass and other work permit applications for staff relocating from China.",
+      "Review of the accounting and tax implications of relocating employees; any immigration application support requires a separately agreed scope and appropriately authorised provider.",
       "Expatriate payroll and personal tax, including residence status and treaty relief.",
     ],
   },
   {
     title: "Licences & Certifications",
     points: [
-      "Import and export licence applications for trading and manufacturing businesses.",
-      "Halal certification support for food, cosmetics, and consumer products entering the Malaysian and wider Muslim markets.",
+      "Identification of licence requirements to discuss with the relevant authority or specialist; application support must be confirmed separately.",
+      "Accounting and tax considerations for businesses seeking halal certification; certification and approvals remain with the relevant authorities.",
     ],
   },
   {
     title: "Trademark & Brand Protection",
     points: [
-      "Trademark searches and registration with MyIPO, so your brand is protected in Malaysia before you launch.",
-      "Coordination of wider intellectual property protection across Southeast Asia.",
-    ],
-  },
-  {
-    title: "Wealth Management",
-    points: [
-      "Introductions to licensed wealth management and investment partners for business owners and expatriate executives.",
-      "Coordinated advice so that personal investments, tax, and business structures work together.",
+      "Trademark requirements should be reviewed with a suitably qualified intellectual-property adviser before launch.",
+      "Any intellectual-property application or regional coordination must be agreed separately with the appropriate provider.",
     ],
   },
   {
@@ -658,7 +651,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     navTitle: "Tax Advisory & Compliance",
     eyebrow: "Our Services",
     summary:
-      "Tax compliance, planning, and LHDN support led by a Chartered Tax Adviser, backed by the Taxand global network.",
+      "Tax compliance, planning, and LHDN support led by a Chartered Tax Adviser.",
     seoTitle: "Corporate Tax Advisory & Compliance in Malaysia",
     seoDescription:
       "Corporate and personal tax compliance, tax planning, incentives, LHDN tax audits, and M&A tax structuring led by a Chartered Tax Adviser in Kuala Lumpur.",
@@ -666,7 +659,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     heroImage: "/images/services/tax.webp",
     intro: [
       "Tax affects every decision a business makes, from day-to-day pricing to buying a company. Peter Tang & Associates has advised on Malaysian tax since 1992, and the practice is led by a Chartered Tax Adviser and approved tax agent.",
-      "As the Malaysian member of Taxand, a global network of independent tax advisers, we can also coordinate advice for clients with operations or investors overseas.",
+      "For cross-border matters, the relevant advisers and scope of coordination are agreed with you before work begins.",
     ],
     decisionGuide: {
       situations: [
@@ -710,15 +703,15 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     navTitle: "China-Malaysia Desk",
     eyebrow: "Our Services",
     summary:
-      "One team to help Chinese companies set up, stay compliant, and grow in Malaysia, with support in Mandarin.",
+      "Accounting, tax, audit and market-entry coordination for Chinese companies operating in Malaysia.",
     seoTitle: "China-Malaysia Desk: Set Up and Grow Your Business in Malaysia",
     seoDescription:
-      "Market entry, company set-up, tax and incentives, accounting, payroll, audit, work permits, licences, halal certification, and trademarks for Chinese companies investing in Malaysia.",
+      "Market-entry coordination, tax, accounting, payroll and audit for Chinese companies investing in Malaysia; specialist support is subject to an agreed scope.",
     ctaTitle: "Planning to invest in Malaysia from China?",
     heroImage: "/images/services/china.webp",
     intro: [
       "Malaysia is one of the most popular destinations for Chinese companies expanding into Southeast Asia. Getting the structure, tax, and compliance right from the start saves time, cost, and difficult conversations later.",
-      "Our China-Malaysia Desk gives Chinese investors one team for the full journey, from choosing a structure and obtaining licences to the first statutory audit, with communication in Mandarin and reporting your head office understands.",
+      "Our China-Malaysia Desk discusses market-entry, accounting, tax and audit requirements with Chinese investors. Language support, the responsible providers and any specialist coordination are confirmed for each engagement.",
     ],
     decisionGuide: {
       situations: [
@@ -733,8 +726,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         "Company set-up and bank account coordination",
         "Tax, incentives, and transfer pricing",
         "Accounting, payroll, audit, and ongoing compliance",
-        "Work permits, licences, halal certification, and trademarks",
-        "Introductions to wealth management partners",
+        "Review of specialist-provider requirements, subject to a separately confirmed scope",
       ],
     },
     contentBlocks: [
@@ -779,7 +771,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     heroImage: "/images/services/accounting.webp",
     intro: [
       "Our Accounting and Payroll Outsourcing service takes care of your bookkeeping, reporting, and payroll, so your management team can focus on running the business.",
-      "You get accurate monthly records, payroll that meets every statutory deadline, and accounts that are ready when the auditor arrives.",
+      "The engagement covers the agreed monthly records, payroll timetable and year-end audit preparation, supported by the information you provide.",
     ],
     decisionGuide: {
       situations: [

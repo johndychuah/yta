@@ -32,14 +32,14 @@ const services: Service[] = [
   {
     title: "Tax Advisory & Compliance",
     description:
-      "Corporate and personal tax compliance, tax planning, LHDN audits, incentives, and deal structuring, backed by our membership of the Taxand global network.",
+      "Corporate and personal tax compliance, tax planning, LHDN audits, incentives, and deal structuring.",
     href: "/services/tax-advisory",
     icon: "tax",
   },
   {
     title: "China-Malaysia Desk",
     description:
-      "One team for Chinese companies setting up and growing in Malaysia: structuring, company set-up, tax, accounting, audit, work permits, licences, halal certification, and trademarks, with support in Mandarin.",
+      "Market-entry coordination, tax, accounting, payroll and audit for Chinese companies in Malaysia. Language support and specialist-provider coordination are confirmed for each engagement.",
     href: "/services/china-malaysia-desk",
     icon: "china",
   },

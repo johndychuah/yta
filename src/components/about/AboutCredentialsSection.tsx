@@ -47,6 +47,7 @@ export function AboutCredentialsSection() {
             memberships of MICPA, CPA Australia, and the Chartered Tax Institute
             of Malaysia. YT Associates is a registered audit firm (AF1112).
           </p>
+          <p className="mt-4 max-w-[27rem] text-sm leading-6 text-[#596575]">Memberships relate to individual professionals. Names and logos identify the organisations and do not imply their endorsement of our services.</p>
           <Link
             href="/professional-bodies"
             className="mt-8 inline-flex items-center gap-3 text-[0.95rem] font-semibold tracking-[0.02em] text-[#1f5f9e] transition hover:text-[#03101c]"

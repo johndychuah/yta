@@ -107,6 +107,7 @@ export function ProfessionalBodiesPageContent() {
               Malaysian government organisations relevant to audit, accounting,
               taxation, and corporate finance advisory.
             </p>
+            <p className="mt-5 max-w-[36rem] text-sm leading-6 text-[#596575]">These links are provided for reference. Names and logos belong to their respective organisations and do not imply endorsement of our firm or services.</p>
           </div>
 
           <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">

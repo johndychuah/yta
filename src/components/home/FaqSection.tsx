@@ -4,12 +4,12 @@ const faqs = [
   {
     question: "Does my company need an audit?",
     answer:
-      "Under the Companies Act 2016, most Malaysian companies must have their annual financial statements audited. Certain small, dormant, or zero-revenue private companies may qualify for audit exemption under SSM criteria. We can review your company's position and confirm what applies.",
+      "Malaysian companies generally require an audit unless an applicable exemption is available. Eligible private companies may qualify under SSM Practice Directive 10/2024, which uses phased revenue, asset and employee thresholds and other conditions. Eligibility depends on the financial period and circumstances; another legal, lender or shareholder requirement may still require an audit. We can help review the criteria for your company.",
   },
   {
     question: "When do our audited financial statements need to be ready?",
     answer:
-      "A private company must circulate its audited financial statements to members within six months of its financial year-end, then lodge them with SSM within 30 days of circulation. Starting the audit early leaves time to resolve issues before the deadline.",
+      "For a Malaysian private company, the general requirements are circulation of financial statements and reports within six months of financial year-end, followed by lodgement with SSM within 30 days of circulation. Audit exemptions, approved extensions and other obligations can affect what applies. Confirm the requirements for your company and start early to leave time for queries.",
   },
   {
     question: "What do you need from us to start an audit?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Can you take over from our current auditor?",
     answer:
-      "Yes. A change of auditor is approved by the company's members, and we then contact the outgoing auditor for professional clearance as required. We guide you through each step so the transition is smooth.",
+      "A change of auditor must follow the applicable appointment, resignation or removal procedures and professional requirements. The steps depend on the company's circumstances; we can discuss the required approvals and communication with the outgoing auditor before accepting an appointment.",
   },
   {
     question: "Can you help us prepare for a listing on Bursa Malaysia?",
@@ -71,6 +71,7 @@ export function FaqSection() {
           <h2 className="mx-auto mt-4 max-w-[36rem] text-[clamp(2rem,2vw,2.32rem)] font-medium leading-[1.35] tracking-normal text-[#03101c]">
             Common questions from our clients
           </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#596575]">General information, not advice for your specific circumstances. Requirements can change; confirm the rules applicable to your company. <a href="https://www.ssm.com.my/Pages/Legal_Framework/Audit-Exemption.aspx" target="_blank" rel="noopener noreferrer" className="text-[#1f5f9e] underline">Current SSM audit-exemption guidance</a>.</p>
         </div>
 
         <div className="mt-[clamp(2.5rem,4.5vw,4rem)] border-t border-[#d8d8d8]">

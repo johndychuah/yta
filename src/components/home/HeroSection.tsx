@@ -24,7 +24,7 @@ export function HeroSection() {
             <p className="mt-5 max-w-[31rem] text-[clamp(0.95rem,0.9vw,1.08rem)] leading-[1.65] tracking-[0.02em] text-white/85">
               Partner-led audit, corporate advisory, and restructuring support
               for family-owned companies, SMEs, and listed groups, backed by
-              more than 35 years of practice in Malaysia.
+              more than three decades of practice in Malaysia.
             </p>
 
             <Link
