@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function AboutCtaSection({
@@ -12,22 +11,7 @@ export function AboutCtaSection({
 }) {
   return (
     <section className="bg-white px-[clamp(1rem,4vw,4.75rem)] pb-[clamp(2rem,4vw,4rem)]">
-      <div className="relative isolate mx-auto min-h-[clamp(27rem,34vw,40rem)] max-w-[1800px] overflow-hidden rounded-[6px] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(5rem,9vw,11rem)] text-white">
-        <Image
-          src="/images/editorial/business-district.webp"
-          alt="Illustrative Malaysian business district in warm morning light"
-          fill
-          sizes="(min-width: 1280px) 1800px, 94vw"
-          className="object-cover object-[62%_50%]"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[#03101c]/52"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-[#03101c]/45 to-transparent"
-        />
+      <div className="relative isolate mx-auto max-w-[1800px] overflow-hidden rounded-[6px] bg-[#091c2f] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(4rem,6vw,7rem)] text-white">
 
         <div className="relative z-10 max-w-[35rem]">
           <h2 className="max-w-[31rem] text-[clamp(2rem,2vw,2.5rem)] font-medium leading-[1.22] tracking-normal">

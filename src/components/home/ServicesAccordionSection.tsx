@@ -8,48 +8,48 @@ const services = [
     body: "An audit should do more than meet a statutory requirement. Our risk-focused approach, supported by data analytics, concentrates on the areas that matter most to your financial statements and highlights control weaknesses along the way, so you receive practical recommendations alongside our opinion.",
     helpfulWhen: "You need a statutory or international-standard audit, a limited review, agreed-upon procedures, forensic work, or an independent review of internal controls.",
     href: "/services/audit-assurance",
-    image: "/images/services/audit.webp",
-    imageAlt: "Illustrative audit review with financial records and a laptop",
+    image: "/images/topics/home-audit.webp",
+    imageAlt: "Illustrative audit evidence files with reconciled bank, invoice and account entries",
   },
   {
     title: "Corporate Advisory",
     body: "We have guided SMEs and family-owned businesses through listings on Bursa Malaysia, acting as an in-house financial adviser from preparation to post-listing. On transactions, we support buyers and sellers with due diligence, valuations, forecasts, and deal structuring, working alongside your bankers and lawyers.",
     helpfulWhen: "You are preparing for an IPO, buying or selling a business, raising funds, or need financial and tax due diligence or a valuation.",
     href: "/services/corporate-advisory",
-    image: "/images/services/corporate.webp",
-    imageAlt: "Illustrative corporate advisory discussion in a boardroom",
+    image: "/images/topics/home-corporate.webp",
+    imageAlt: "Illustrative transaction memorandum, valuation records and prospectus draft",
   },
   {
     title: "Restructuring & Insolvency",
     body: "When a business comes under financial pressure, early and independent advice protects options. We carry out independent business reviews, prepare turnaround plans, and advise on debt and refinancing. Where recovery is not possible, we support receivership and liquidation processes.",
     helpfulWhen: "Cash flow is tight, lenders are asking for an independent review, debt needs restructuring, or a receivership or winding-up is being considered.",
     href: "/services/restructuring-advisory",
-    image: "/images/services/restructuring.webp",
-    imageAlt: "Illustrative business operations review in a distribution warehouse",
+    image: "/images/topics/home-restructuring.webp",
+    imageAlt: "Illustrative cash-flow recovery forecast and revised debt schedule",
   },
   {
     title: "Tax Advisory & Compliance",
     body: "Good tax advice starts before the transaction, not after the assessment. Led by a Chartered Tax Adviser, we handle corporate and personal tax compliance, plan for incentives and restructurings, and represent you in LHDN tax audits. As the Malaysian member of Taxand, we can also coordinate cross-border advice.",
     helpfulWhen: "You need tax returns filed, LHDN has raised queries or opened an audit, or you want to understand the tax impact of a transaction or expansion.",
     href: "/services/tax-advisory",
-    image: "/images/services/tax.webp",
-    imageAlt: "Illustrative tax planning discussion with financial documents",
+    image: "/images/topics/home-tax.webp",
+    imageAlt: "Illustrative corporate tax computation and deduction reconciliation documents",
   },
   {
     title: "China-Malaysia Desk",
     body: "Malaysia is a natural base for Chinese companies expanding into Southeast Asia. Our China-Malaysia Desk gives investors one team for the whole journey, from choosing a structure and setting up the company to work permits, licences, halal certification, tax, payroll, and the first statutory audit, with support in Mandarin.",
     helpfulWhen: "Your company in China is setting up in Malaysia, or your Malaysian subsidiary needs accounting, tax, audit, and reporting your head office understands.",
     href: "/services/china-malaysia-desk",
-    image: "/images/services/china.webp",
-    imageAlt: "Container port and cargo ship illustrating cross-border trade",
+    image: "/images/topics/home-china.webp",
+    imageAlt: "Illustrative Malaysian company setup documents with China and Malaysia desk flags",
   },
   {
     title: "Accounting & Payroll Outsourcing",
     body: "Accurate records are the foundation of good decisions and a smooth audit. We keep your books to MFRS or MPERS, prepare monthly management reports and cash-flow budgets, and run payroll with EPF, SOCSO, EIS, PCB, and HRD Corp levies handled correctly and on time.",
     helpfulWhen: "You need dependable bookkeeping, management reports, payroll processing, or want your records audit-ready at year end.",
     href: "/services/accounting-payroll-outsourcing",
-    image: "/images/services/accounting.webp",
-    imageAlt: "Illustrative accountant maintaining digital financial records",
+    image: "/images/topics/home-accounting.webp",
+    imageAlt: "Illustrative monthly ledger, bank reconciliation and anonymous payroll register",
   },
 ];
 
@@ -133,7 +133,7 @@ export function ServicesAccordionSection() {
                       </div>
                     </div>
 
-                    <div className="relative h-[clamp(13rem,15.8vw,18.95rem)] overflow-hidden rounded-[10px]">
+                    <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
                       <Image
                         src={service.image}
                         alt={service.imageAlt}

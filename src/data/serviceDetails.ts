@@ -502,8 +502,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/editorial/integrity.webp",
-        alt: "Illustrative auditor carefully cross-checking financial statements",
+        src: "/images/topics/audit-evidence.webp",
+        alt: "Illustrative auditors matching bank statements and supplier invoices to ledger entries",
         overlay: "Audit",
       },
       {
@@ -553,8 +553,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/editorial/partnership.webp",
-        alt: "Illustrative business partners discussing their next steps",
+        src: "/images/topics/ipo-preparation.webp",
+        alt: "Illustrative founder, financial adviser and legal adviser reviewing a draft prospectus and listing timeline",
       },
       {
         type: "section-list",
@@ -574,17 +574,17 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
         ],
       },
       {
-        type: "image",
-        src: "/images/editorial/integrity.webp",
-        alt: "Illustrative auditor carefully cross-checking financial statements",
-      },
-      {
         type: "text",
         paragraphs: [
           "Throughout the process, we act as your in-house financial adviser: guiding your accounting and tax position, keeping the timetable on track, and making sure the numbers are consistent across every document.",
           "After listing, many clients keep us on as corporate advisers for ongoing compliance, financial strategy, and corporate exercises that build shareholder value.",
           "On mergers and acquisitions, we act for both buyers and sellers, whether you are acquiring a business, merging with a strategic partner, or divesting assets.",
         ],
+      },
+      {
+        type: "image",
+        src: "/images/topics/transaction-diligence.webp",
+        alt: "Illustrative financial analysts verifying inventory and valuation records for a transaction",
       },
       {
         type: "section-list",
@@ -634,8 +634,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/editorial/forward-thinking.webp",
-        alt: "Illustrative advisers assessing trends and planning the way forward",
+        src: "/images/topics/recovery-review.webp",
+        alt: "Illustrative owner and adviser examining a cash-flow forecast and debt repayment schedule",
         overlay: "Restructuring & Insolvency",
       },
       {
@@ -685,8 +685,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/editorial/clarity.webp",
-        alt: "Illustrative adviser explaining the financial implications of a decision",
+        src: "/images/topics/tax-compliance.webp",
+        alt: "Illustrative tax specialist reviewing a corporate tax computation and online return",
         overlay: "Tax",
       },
       {
@@ -740,8 +740,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/editorial/team.webp",
-        alt: "Illustrative multicultural team coordinating a business plan",
+        src: "/images/topics/china-market-entry.webp",
+        alt: "Illustrative Chinese investor and interpreter discussing Malaysian subsidiary setup with a local adviser",
       },
       {
         type: "section-list",
@@ -797,8 +797,8 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     contentBlocks: [
       {
         type: "image",
-        src: "/images/editorial/working-detail.webp",
-        alt: "Illustrative organised accounting desk with financial records",
+        src: "/images/topics/monthly-bookkeeping.webp",
+        alt: "Illustrative bookkeeper reconciling supplier invoices and bank transactions with a monthly ledger",
         overlay: "Accounting Outsourcing",
       },
       {

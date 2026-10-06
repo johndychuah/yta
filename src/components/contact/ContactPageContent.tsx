@@ -135,8 +135,8 @@ export function ContactPageContent() {
 
           <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
-              src="/images/editorial/office.webp"
-              alt="Illustrative calm professional client lounge"
+              src="/images/topics/contact-welcome.webp"
+              alt="Illustrative client coordinator welcoming a visitor for an advisory consultation"
               fill
               priority
               sizes="(min-width: 1024px) 610px, 88vw"
@@ -294,22 +294,7 @@ export function ContactPageContent() {
       <CareerSection />
 
       <section className="bg-white px-[clamp(1rem,4vw,4.75rem)] py-[clamp(2rem,4vw,4rem)]">
-        <div className="relative isolate mx-auto min-h-[clamp(24rem,32vw,36rem)] max-w-[1800px] overflow-hidden rounded-[6px] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(5rem,8vw,10rem)] text-white">
-          <Image
-            src="/images/editorial/business-district.webp"
-            alt="Illustrative Malaysian business district in warm morning light"
-            fill
-            sizes="(min-width: 1280px) 1800px, 94vw"
-            className="object-cover object-[62%_50%]"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-[#03101c]/52"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-[#03101c]/45 to-transparent"
-          />
+        <div className="relative isolate mx-auto max-w-[1800px] overflow-hidden rounded-[6px] bg-[#091c2f] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(4rem,6vw,7rem)] text-white">
 
           <div className="relative z-10 max-w-[35rem]">
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-white">

@@ -37,8 +37,8 @@ export const chinaDeskZh: ServiceDetail = {
   contentBlocks: [
     {
       type: "image",
-      src: "/images/editorial/team.webp",
-      alt: "示意图：多元文化专业团队共同规划业务",
+      src: "/images/topics/china-market-entry.webp",
+      alt: "示意图：中国投资者及翻译与马来西亚顾问讨论子公司设立",
     },
     {
       type: "section-list",

@@ -23,8 +23,8 @@ const values: ValueCard[] = [
     title: "Excellence",
     description:
       "Our standards were shaped in Big Four practice. Every engagement, large or small, is planned, reviewed, and signed off with the same rigour.",
-    image: "/images/editorial/excellence.webp",
-    alt: "Illustrative senior analyst reviewing a report in a professional library",
+    image: "/images/topics/value-excellence.webp",
+    alt: "Illustrative senior auditor and manager checking a completed file against a quality-review checklist",
     tone: "navy",
     icon: "rings",
   },
@@ -41,8 +41,8 @@ const values: ValueCard[] = [
     title: "Partnership",
     description:
       "We aim for long-term relationships, looking beyond this year's assignment to the reporting and strategic decisions your business faces next.",
-    image: "/images/editorial/partnership.webp",
-    alt: "Illustrative business partners discussing plans in a landscaped courtyard",
+    image: "/images/topics/value-partnership.webp",
+    alt: "Illustrative adviser and business owner reviewing a three-year business roadmap",
     tone: "navy",
     icon: "rings",
   },
@@ -50,8 +50,8 @@ const values: ValueCard[] = [
     title: "Forward Thinking",
     description:
       "From e-invoicing to evolving reporting standards, we track regulatory change and use data analytics to work more efficiently and effectively.",
-    image: "/images/editorial/forward-thinking.webp",
-    alt: "Illustrative analysts discussing financial trends on a glass whiteboard",
+    image: "/images/topics/value-forward-thinking.webp",
+    alt: "Illustrative accountants reviewing a digital e-invoice workflow and reconciliation",
     tone: "orange",
     icon: "wheel",
   },

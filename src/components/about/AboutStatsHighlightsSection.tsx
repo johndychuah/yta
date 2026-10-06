@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const stats = [
   { value: "35+", label: "Years of partner experience" },
@@ -10,8 +9,6 @@ const stats = [
 type Highlight = {
   title: string;
   description: string;
-  image: string;
-  alt: string;
   tone: "orange" | "navy";
   icon: "diamond" | "rings" | "wheel";
 };
@@ -21,8 +18,6 @@ const highlights: Highlight[] = [
     title: "Partner-led attention",
     description:
       "Our partners stay involved from planning to sign-off. You deal directly with senior people who know your business, not a rotating team.",
-    image: "/images/services/corporate.webp",
-    alt: "Illustrative business advisory discussion",
     tone: "orange",
     icon: "diamond",
   },
@@ -30,8 +25,6 @@ const highlights: Highlight[] = [
     title: "Big Four experience",
     description:
       "Our leaders trained at Price Waterhouse, PwC, and EY, and bring the same technical discipline to clients of every size, from family businesses to listed groups.",
-    image: "/images/services/accounting.webp",
-    alt: "Illustrative accountant working with digital financial records",
     tone: "navy",
     icon: "rings",
   },
@@ -39,8 +32,6 @@ const highlights: Highlight[] = [
     title: "Value beyond the opinion",
     description:
       "Our risk-focused, data-driven audits highlight control weaknesses and practical improvements, so every engagement leaves your business stronger.",
-    image: "/images/services/audit.webp",
-    alt: "Illustrative audit team reviewing financial evidence",
     tone: "orange",
     icon: "wheel",
   },
@@ -132,7 +123,7 @@ export function AboutStatsHighlightsSection() {
           Why Choose Us
         </p>
 
-        <div className="mt-[clamp(3.5rem,5vw,5rem)] grid gap-[clamp(1.75rem,3vw,4rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.18fr)_minmax(0,1fr)] lg:items-center">
+        <div className="mt-[clamp(3.5rem,5vw,5rem)] grid gap-[clamp(1.75rem,3vw,4rem)] lg:grid-cols-3 lg:items-stretch">
           {highlights.map((highlight, index) => {
             const isCenter = index === 1;
             const isNavy = highlight.tone === "navy";
@@ -140,10 +131,10 @@ export function AboutStatsHighlightsSection() {
             return (
               <article
                 key={highlight.title}
-                className={`mx-auto flex w-full max-w-[30rem] flex-col items-center rounded-[14px] p-[clamp(1.75rem,2.4vw,3rem)] text-center shadow-[7px_9px_10px_rgba(3,16,28,0.22)] ${
+                className={`mx-auto flex w-full max-w-[30rem] flex-col items-center rounded-[14px] p-[clamp(1.75rem,2.4vw,3rem)] text-center shadow-[0_16px_40px_rgba(3,16,28,0.08)] ${
                   isCenter
-                    ? "lg:min-h-[clamp(34rem,36vw,43rem)] bg-[#091c2f] text-white"
-                    : "lg:min-h-[clamp(28rem,31vw,34.5rem)] bg-[#ffad50] text-[#03101c] lg:mt-[clamp(3rem,5vw,5.5rem)]"
+                    ? "bg-[#091c2f] text-white"
+                    : "bg-[#ffad50] text-[#03101c]"
                 }`}
               >
                 <HighlightIcon variant={highlight.icon} tone={highlight.tone} />
@@ -164,25 +155,7 @@ export function AboutStatsHighlightsSection() {
                   {highlight.description}
                 </p>
 
-                <div
-                  className={`relative mt-6 w-full overflow-hidden lg:mt-auto rounded-[8px] ${
-                    isCenter
-                      ? "h-[clamp(9.5rem,10vw,12rem)] max-w-[22rem]"
-                      : "h-[clamp(9rem,9.2vw,10.5rem)] max-w-[20.5rem]"
-                  }`}
-                >
-                  <Image
-                    src={highlight.image}
-                    alt={highlight.alt}
-                    fill
-                    sizes={
-                      isCenter
-                        ? "(min-width: 1024px) 352px, 82vw"
-                        : "(min-width: 1024px) 328px, 82vw"
-                    }
-                    className="object-cover object-center"
-                  />
-                </div>
+
               </article>
             );
           })}

@@ -1,42 +1,21 @@
-import Image from "next/image";
-
-const featureCopy =
-  "We start by understanding your business, risks, and deadlines, then scope the engagement around them.";
-
-function DoubleTriangleIcon() {
-  return (
-    <span className="flex h-8 items-center gap-0.5" aria-hidden="true">
-      <span className="h-0 w-0 border-y-[11px] border-l-[18px] border-y-transparent border-l-[#f6a400]" />
-      <span className="h-0 w-0 border-y-[11px] border-l-[18px] border-y-transparent border-l-[#f6a400]" />
-    </span>
-  );
-}
-
-function DiamondIcon() {
-  return (
-    <span className="flex h-8 items-center" aria-hidden="true">
-      <span className="h-5 w-5 rotate-45 border-2 border-[#153c8b]" />
-      <span className="-ml-1 h-5 w-5 rotate-45 bg-[#153c8b]" />
-    </span>
-  );
-}
-
-function WheelIcon() {
-  return (
-    <span
-      className="relative block size-8 rounded-full border-2 border-[#f6a400]"
-      aria-hidden="true"
-    >
-      {[0, 45, 90, 135].map((rotation) => (
-        <span
-          key={rotation}
-          className="absolute left-1/2 top-1/2 h-[2px] w-6 -translate-x-1/2 -translate-y-1/2 bg-[#f6a400]"
-          style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
-        />
-      ))}
-    </span>
-  );
-}
+const steps = [
+  {
+    title: "Understand first",
+    description: "We start by understanding your business, risks, and deadlines, then scope the engagement around them.",
+  },
+  {
+    title: "Senior-led throughout",
+    description: "Senior people are involved from planning to completion, so issues are identified and resolved early.",
+  },
+  {
+    title: "Clear reporting",
+    description: "Findings come with plain-language explanations and practical recommendations for management.",
+  },
+  {
+    title: "Ongoing support",
+    description: "You work with a consistent team who understand your business and can help with questions and follow-up.",
+  },
+];
 
 export function AboutPrecisionSection() {
   return (
@@ -46,87 +25,18 @@ export function AboutPrecisionSection() {
           <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">
             Our Approach
           </p>
-          <h2 className="mx-auto mt-7 max-w-[50rem] text-[clamp(2.15rem,2.55vw,3rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
+          <h2 className="mx-auto mt-7 max-w-[50rem] text-[clamp(2.15rem,2.55vw,3rem)] font-medium leading-[1.18] text-[#03101c]">
             How we work with our clients
           </h2>
         </div>
-
-        <div className="mt-[clamp(3rem,4.5vw,4.25rem)] grid gap-8 lg:grid-cols-3 lg:items-stretch">
-          <article className="rounded-[20px] bg-white p-[clamp(1.5rem,1.7vw,2rem)] shadow-[0_28px_70px_rgba(9,28,47,0.08)]">
-            <div className="relative h-[clamp(10.5rem,10vw,12.5rem)] overflow-hidden rounded-[8px]">
-              <Image
-                src="/images/services/tax.webp"
-                alt="Illustrative adviser learning about a client’s financial circumstances"
-                fill
-                sizes="(min-width: 1024px) 376px, 88vw"
-                className="object-cover object-center"
-              />
-            </div>
-
-            <div className="mt-[clamp(2rem,2.4vw,2.9rem)]">
-              <DoubleTriangleIcon />
-              <h3 className="mt-7 text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal text-[#03101c]">
-                Understand first
-              </h3>
-              <p className="mt-8 text-[clamp(0.98rem,0.84vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#3c3d4b]">
-                {featureCopy}
-              </p>
-            </div>
-          </article>
-
-          <article className="relative min-h-[clamp(28rem,29vw,33rem)] overflow-hidden rounded-[20px] bg-[#f7f7f7] p-[clamp(1.5rem,1.7vw,2rem)]">
-            <div className="relative z-10">
-              <h3 className="text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal text-[#03101c]">
-                Senior-led throughout
-              </h3>
-              <p className="mt-9 max-w-[21rem] text-[clamp(0.98rem,0.84vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#3c3d4b]">
-                Senior people are involved from planning to completion, so
-                issues are identified and resolved early.
-              </p>
-            </div>
-
-            <div className="absolute inset-x-0 bottom-0 h-[42%] overflow-hidden">
-              <Image
-                src="/images/editorial/mentoring.webp"
-                alt="Illustrative senior mentor guiding two younger professionals"
-                fill
-                sizes="(min-width: 1024px) 376px, 88vw"
-                className="object-cover object-[42%_54%]"
-              />
-            </div>
-          </article>
-
-          <div className="grid gap-8">
-            <article className="rounded-[20px] bg-white p-[clamp(1.5rem,1.7vw,2rem)] shadow-[0_28px_70px_rgba(9,28,47,0.08)]">
-              <DiamondIcon />
-              <h3 className="mt-[clamp(2rem,2.4vw,2.9rem)] text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal text-[#03101c]">
-                Clear reporting
-              </h3>
-              <p className="mt-8 text-[clamp(0.98rem,0.84vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#3c3d4b]">
-                Findings come with plain-language explanations and practical
-                recommendations for management.
-              </p>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {steps.map((step, index) => (
+            <article key={step.title} className={`rounded-[20px] p-7 ${index === 3 ? "bg-[#091c2f] text-white" : "bg-[#f3f3f3] text-[#03101c]"}`}>
+              <p aria-hidden="true" className="text-4xl font-medium text-[#d88a2e]">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="mt-8 text-xl font-medium leading-snug">{step.title}</h3>
+              <p className={`mt-5 text-base leading-relaxed ${index === 3 ? "text-white/85" : "text-[#3c3d4b]"}`}>{step.description}</p>
             </article>
-
-            <article className="grid min-h-[10rem] grid-cols-[1fr_minmax(7.5rem,10.8rem)] items-center gap-5 rounded-[20px] bg-[#091c2f] p-[clamp(1.5rem,1.7vw,2rem)] text-white">
-              <div>
-                <WheelIcon />
-                <h3 className="mt-9 text-[clamp(1.18rem,1.05vw,1.3rem)] font-medium leading-snug tracking-normal">
-                  Ongoing support
-                </h3>
-              </div>
-
-              <div className="relative h-[clamp(5.5rem,5.8vw,6.75rem)] overflow-hidden rounded-[8px]">
-                <Image
-                  src="/images/services/payroll.webp"
-                  alt="Illustrative specialist providing ongoing financial support"
-                  fill
-                  sizes="(min-width: 1024px) 173px, 38vw"
-                  className="object-cover object-center"
-                />
-              </div>
-            </article>
-          </div>
+          ))}
         </div>
       </div>
     </section>

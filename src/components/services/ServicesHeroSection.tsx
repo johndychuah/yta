@@ -19,8 +19,8 @@ export function ServicesHeroSection() {
 
         <div className="relative mt-[clamp(2.5rem,4vw,3.5rem)] h-[clamp(13rem,35vw,31.75rem)] overflow-hidden rounded-[8px]">
           <Image
-            src="/images/editorial/team.webp"
-            alt="Illustrative Malaysian professionals collaborating on a business plan"
+            src="/images/topics/services-overview.webp"
+            alt="Illustrative audit, tax and corporate-finance specialists coordinating separate engagement files"
             fill
             priority
             sizes="(min-width: 1280px) 1250px, 88vw"

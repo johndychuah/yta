@@ -9,8 +9,8 @@ export function CareerSection({ standalone = false }: { standalone?: boolean }) 
         id="career"
         className="bg-[#f3f3f3] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]"
       >
-        <div className="mx-auto grid max-w-[1280px] gap-[clamp(2rem,5vw,5rem)] lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
+        <div className={`mx-auto grid max-w-[1280px] gap-[clamp(2rem,5vw,5rem)] ${standalone ? "lg:grid-cols-2 lg:items-center" : ""}`}>
+          {standalone ? <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
             <Image
               src="/images/editorial/mentoring.webp"
               alt="Illustrative mentor helping younger professionals develop their skills"
@@ -18,7 +18,7 @@ export function CareerSection({ standalone = false }: { standalone?: boolean }) 
               sizes="(min-width: 1024px) 610px, 88vw"
               className="object-cover object-center"
             />
-          </div>
+          </div> : null}
 
           <div>
             <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">

@@ -35,16 +35,6 @@ export function AboutStorySection() {
                 className="object-cover object-center"
               />
             </div>
-
-            <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
-              <Image
-                src="/images/editorial/working-detail.webp"
-                alt="Illustrative accounting workspace with financial documents and a notebook"
-                fill
-                sizes="(min-width: 1280px) 634px, 88vw"
-                className="object-cover object-center"
-              />
-            </div>
           </div>
 
           <div className="text-[#3c3d4b]">
