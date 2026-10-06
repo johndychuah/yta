@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./HeroSection.module.css";
 
 export function HeroSection() {
   return (
@@ -13,6 +14,10 @@ export function HeroSection() {
           sizes="100vw"
           className="object-cover object-center"
         />
+        <div className={styles.sky} aria-hidden="true">
+          <div className={styles.clouds} />
+          <div className={`${styles.clouds} ${styles.distantClouds}`} />
+        </div>
         <div className="absolute inset-0 bg-black/25" />
 
         <div className="relative z-10 flex min-h-[clamp(34rem,44vw,56.25rem)] items-end px-[clamp(1.5rem,5.9vw,7.5rem)] pb-[clamp(2rem,3.2vw,4rem)] lg:pb-[clamp(1rem,0.8vw,1rem)]">

@@ -1,0 +1,42 @@
+.sky {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 48%;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+}
+
+.clouds {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 200%;
+  background: url("/images/hero-clouds.svg") repeat-x;
+  background-size: 50% 100%;
+  opacity: 0.32;
+  animation: cloud-drift 75s linear infinite;
+}
+
+.distantClouds {
+  top: -18%;
+  bottom: 18%;
+  opacity: 0.18;
+  animation-duration: 115s;
+  animation-delay: -42s;
+  animation-direction: reverse;
+}
+
+@keyframes cloud-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clouds {
+    animation: none;
+  }
+}
