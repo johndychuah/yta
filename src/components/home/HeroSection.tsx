@@ -6,10 +6,10 @@ export function HeroSection() {
     <section className="w-full px-0">
       <div className="relative isolate min-h-[clamp(34rem,44vw,56.25rem)] overflow-hidden rounded-none bg-slate-900 lg:rounded-[20px]">
         <Image
-          src="/hero-kl-skyline.png"
+          src="/images/home/klcc-refined.webp"
           alt="Kuala Lumpur skyline with the Petronas Twin Towers"
           fill
-          priority
+          preload
           sizes="100vw"
           className="object-cover object-center"
         />

@@ -6,7 +6,7 @@ Use each photo at one editorial placement across the site. Brand and professiona
 
 | Placement | Visual subject | Asset |
 | --- | --- | --- |
-| Home hero | Kuala Lumpur skyline | `/hero-kl-skyline.png` |
+| Home hero | Refined Kuala Lumpur skyline | `/images/home/klcc-refined.webp` |
 | Home audit panel | Matched audit evidence and review ticks | `/images/topics/home-audit.webp` |
 | Home corporate panel | Transaction memorandum, valuation and prospectus | `/images/topics/home-corporate.webp` |
 | Home restructuring panel | Cash-flow forecast and debt schedule | `/images/topics/home-restructuring.webp` |
