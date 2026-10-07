@@ -43,10 +43,19 @@ export function AboutCredentialsSection() {
           </h2>
           <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
             Our partners and directors are Chartered Accountants of the
-            Malaysian Institute of Accountants and Fellows of ACCA, with further
+            Malaysian Institute of Accountants and members or Fellows of ACCA, with further
             memberships of MICPA, CPA Australia, and the Chartered Tax Institute
-            of Malaysia. YT Associates is a registered audit firm (AF1112).
+            of Malaysia. YT Associates (AF1112) and Peter Tang &amp; Associates
+            (AF1873) are registered audit firms.
           </p>
+          <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
+            Licences held by our firms and professionals include:
+          </p>
+          <ul className="mt-3 max-w-[27rem] list-disc space-y-3 pl-5 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
+            <li>Ministry of Finance licences for audit and tax services.</li>
+            <li>Companies Commission of Malaysia (SSM) licences for corporate secretary services.</li>
+            <li>Securities Commission Malaysia Capital Markets Services Representative’s Licence (CMSRL).</li>
+          </ul>
           <p className="mt-4 max-w-[27rem] text-sm leading-6 text-[#596575]">Memberships relate to individual professionals. Names and logos identify the organisations and do not imply their endorsement of our services.</p>
           <Link
             href="/professional-bodies"

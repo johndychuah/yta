@@ -16,7 +16,7 @@ const experts: Expert[] = [
     title: "Chartered Accountant · Chartered Tax Adviser",
     credentials: "MBA, CA(M), FCCA, CPA(M), CPA(Aust.), CTA, CTIM",
     description:
-      "Dato' Peter Tang founded Peter Tang & Associates in 1992 after senior roles at Price Waterhouse and Baxter Healthcare, and has extensive experience in Malaysian tax advisory. Clients turn to Dato' Peter for tax structuring, valuations, and guidance through M&A and listings.",
+      "Dato' Peter Tang founded Peter Tang & Associates in 1992 after senior roles at Price Waterhouse and Baxter Healthcare, and has extensive experience in Malaysian tax advisory. Clients turn to Dato' Peter for tax structuring, valuations, and guidance through M&A and listings. He also served as CEO of Axcelasia Inc., an integrated professional services group listed on SGX Catalist.",
     focus: ["Tax advisory", "Valuations", "M&A", "IPOs"],
   },
   {
@@ -30,23 +30,23 @@ const experts: Expert[] = [
     focus: ["Statutory audit", "Due diligence", "Valuations", "IPOs"],
   },
   {
-    name: "Saktei Leela",
-    initials: "SL",
+    name: "Felix Chew Wee Shen",
+    initials: "FC",
     role: "Assurance Director",
     title: "Chartered Accountant",
-    credentials: "CA(M), FCCA, BA (Hons) Accounting",
+    credentials: "CA(M), ACCA, MSc Professional Accountancy",
     description:
-      "Saktei Leela spent over a decade in audit at PwC and EY, rising to Senior Manager, then five years as Finance Director in the infrastructure sector. That combination gives clients an auditor who understands the pressures on the finance team.",
-    focus: ["Assurance", "Due diligence", "M&A"],
+      "Felix Chew Wee Shen has spent over eight years in audit with the firm, specialising in hotels, resorts, retail, construction, and car park operations. He regularly leads non-statutory special audits, including revenue and SOP verification. Clients value his deep sector knowledge and the discretion he brings to confidential engagements.",
+    focus: ["Statutory audit", "Special audits", "Revenue verification", "SOP review"],
   },
   {
-    name: "Lim Swee Loong",
+    name: "Lim Swee Leong",
     initials: "LS",
     role: "Assurance Director",
-    title: "Chartered Accountant",
+    title: "Chartered Accountant by Professional",
     credentials: "CA(M), FCCA",
     description:
-      "Lim Swee Loong has audited investment holding, property, construction, and manufacturing companies for more than a decade. Clients value Lim Swee Loong's depth in share valuations and financial due diligence.",
+      "Lim Swee Leong has audited investment holding, property, construction, and manufacturing companies for more than a decade. Clients value Lim Swee Leong's depth in share valuations and financial due diligence.",
     focus: ["Assurance", "Share valuations", "Due diligence"],
   },
 ];
@@ -64,8 +64,8 @@ export function AboutExpertsSection() {
           </h2>
           <p className="mx-auto mt-5 max-w-[40rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.65] tracking-[0.02em] text-[#4b4d5c]">
             Every engagement is led by a partner or director, not handed down
-            to a junior team. Between them, our leaders have trained at PwC,
-            EY, and Price Waterhouse.
+            to a junior team. Our leadership combines experience at PwC and
+            Price Waterhouse with deep sector knowledge developed within the firm.
           </p>
         </div>
 
