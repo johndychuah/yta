@@ -95,6 +95,8 @@ const industries = [
   "Logistic & Transportation",
   "Technology, Media & Communication",
   "Family Business",
+  "Education",
+  "Professional Services Organization",
 ];
 
 function Marker({ icon }: { icon?: "check" | "diamond" | "circle" }) {
@@ -122,7 +124,7 @@ function Marker({ icon }: { icon?: "check" | "diamond" | "circle" }) {
 function IndustryIcon({ index }: { index: number }) {
   return (
     <span className="mx-auto flex size-[clamp(5rem,6vw,7rem)] items-center justify-center rounded-full bg-[#ffad50] text-white">
-      <svg viewBox="0 0 64 64" fill="none" className="size-[58%]">
+      <svg viewBox="0 0 64 64" fill="none" className="size-[58%]" aria-hidden="true">
         {index === 0 ? (
           <path
             d="M18 34h28v16H18V34Zm5 0v-8a9 9 0 0 1 18 0v8M14 43H9v10h11M50 43h5v10H44"
@@ -166,6 +168,22 @@ function IndustryIcon({ index }: { index: number }) {
               strokeLinecap="round"
             />
           </>
+        ) : index === 6 ? (
+          <path
+            d="M8 25l24-12 24 12-24 12L8 25Zm10 5v14c9 7 19 7 28 0V30M56 25v20"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        ) : index === 7 ? (
+          <path
+            d="M12 25h40v27H12V25Zm12 0v-9h16v9M12 35c12 7 28 7 40 0M28 35h8v8h-8v-8Z"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         ) : (
           <path
             d="M24 24a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm18 7a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM33 48a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM13 53c2-8 8-11 20-8 9-3 16 0 18 8"
@@ -255,12 +273,12 @@ function SectionListBlock({
 
 function IndustryBlock() {
   return (
-    <div className="mt-[clamp(5rem,8vw,8rem)] border-t border-black/12 pt-[clamp(4rem,6vw,6rem)]">
+    <div className="mt-10">
       <h2 className="text-[clamp(1.2rem,1vw,1.35rem)] font-semibold text-[#03101c]">
         Industry Expertise
       </h2>
 
-      <div className="mt-8 grid gap-x-[clamp(3rem,6vw,7rem)] gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
         {industries.map((industry, index) => (
           <div key={industry} className="text-center">
             <IndustryIcon index={index} />

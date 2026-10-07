@@ -29,7 +29,7 @@ export function CareerSection({ standalone = false }: { standalone?: boolean }) 
               Grow Your Career With Us
             </Heading>
             <p className="mt-5 max-w-[38rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
-              We welcome capable and driven individuals who want to develop
+              We welcome capable and career driven individuals who want to develop
               their professional career in audit, tax, corporate finance,
               accounting, and advisory services.
             </p>

@@ -1,9 +1,9 @@
 
 const clientGroups = [
   {
-    title: "Public Listed Companies",
+    title: "Professional Services Organization",
     description:
-      "Audits and reporting that meet Bursa Malaysia and regulatory expectations",
+      "Audit, accounting, and advisory support for professional practices, with a focus on revenue reporting, internal controls, and sustainable growth",
   },
   {
     title: "Government-Linked Companies (GLCs)",

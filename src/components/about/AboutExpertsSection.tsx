@@ -46,7 +46,7 @@ const experts: Expert[] = [
     title: "Chartered Accountant by Professional",
     credentials: "CA(M), FCCA",
     description:
-      "Lim Swee Leong has audited investment holding, property, construction, and manufacturing companies for more than a decade. Clients value Lim Swee Leong's depth in share valuations and financial due diligence.",
+      "Lim Swee Leong has audited investment holding, property, construction, and manufacturing companies for more than a decade. Clients value Lim Swee Leong's depth in auditing, share valuations and financial due diligence and special projects.",
     focus: ["Assurance", "Share valuations", "Due diligence"],
   },
 ];
