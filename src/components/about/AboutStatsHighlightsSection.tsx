@@ -2,7 +2,7 @@
 const stats = [
   { value: "35+", label: "Years of partner experience" },
   { value: "1992", label: "Practice established" },
-  { value: "4", label: "Partners and directors, all FCCA" },
+  { value: "4", label: "Partners and director, all qualified chartered accountants" },
   { value: "8", label: "Client sectors served" },
 ];
 

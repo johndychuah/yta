@@ -49,7 +49,7 @@ const values: ValueCard[] = [
   {
     title: "Forward Thinking",
     description:
-      "From e-invoicing to evolving reporting standards, we track regulatory change and use data analytics to work more efficiently and effectively.",
+      "From e-invoicing to evolving reporting standards, we track regulatory change, use data analytics and AI to work more efficiently and effectively.",
     image: "/images/topics/value-forward-thinking.webp",
     alt: "Illustrative accountants reviewing a digital e-invoice workflow and reconciliation",
     tone: "orange",

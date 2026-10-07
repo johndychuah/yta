@@ -22,7 +22,7 @@ const milestones = [
   {
     year: "Today",
     title: "Serving from KL Eco City",
-    description: "YT Associates (AF1112) serves listed groups, GLCs, multinationals, SMEs, and family businesses.",
+    description: "YT Associates (AF1112) serves GLCs, multinationals, SMEs, and family businesses.",
   },
 ];
 
