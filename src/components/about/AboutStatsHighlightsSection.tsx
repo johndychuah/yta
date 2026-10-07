@@ -3,7 +3,7 @@ const stats = [
   { value: "35+", label: "Years of partner experience" },
   { value: "1992", label: "Practice established" },
   { value: "4", label: "Partners and directors, all FCCA" },
-  { value: "6", label: "Client sectors served" },
+  { value: "8", label: "Client sectors served" },
 ];
 
 type Highlight = {

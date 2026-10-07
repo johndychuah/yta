@@ -19,8 +19,8 @@ export function AboutHeroSection() {
             Three decades of trusted audit and advisory
           </h1>
           <p className="mt-5 max-w-[95rem] text-[clamp(0.78rem,0.72vw,0.86rem)] font-medium uppercase leading-[1.7] tracking-[0.16em] text-white">
-            Big Four-trained partners. Personal attention. Serving family
-            businesses, SMEs, multinationals, and listed groups since 1992.
+            Big Four-trained partners. Personal attention. Serving multinationals,
+            family businesses and SMEs since 1992
           </p>
         </div>
       </div>
