@@ -17,7 +17,7 @@ export function IntroSection() {
 
         <p className="mt-6 max-w-[48rem] text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.7] tracking-[0.02em] text-[#4b4d5c]">
           Our roots go back to Peter Tang &amp; Associates, founded in 1992 by
-          former PwC professionals. Today, YT Associates (AF1112) serves public
+          2 former PwC professionals. Today, YT Associates (AF1112) serves public
           listed companies, government-linked companies, multinationals, SMEs,
           family-owned businesses, and non-profit organisations from our office
           in KL Eco City.
