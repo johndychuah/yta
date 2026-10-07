@@ -32,62 +32,7 @@ const groups = [
       },
     ],
   },
-  {
-    label: "Malaysian Tax Authorities",
-    description:
-      "Reference points for tax compliance, customs matters, and regulatory filings.",
-    items: [
-      {
-        name: "Inland Revenue Board",
-        abbreviation: "LHDN",
-        href: "https://www.hasil.gov.my",
-        logo: "/professional-bodies/lhdn.png",
-      },
-      {
-        name: "Royal Malaysian Customs Department",
-        abbreviation: "RCM",
-        href: "https://www.customs.gov.my",
-        logo: "/professional-bodies/rcm.png",
-      },
-    ],
-  },
-  {
-    label: "Malaysian Government Organisations",
-    description:
-      "Government, finance, banking, capital markets, and investment agencies.",
-    items: [
-      {
-        name: "Government Printers",
-        abbreviation: "LAW",
-        href: "https://www.lawnet.com.my",
-        logo: "/professional-bodies/law.png",
-      },
-      {
-        name: "Ministry of Finance",
-        abbreviation: "MOF",
-        href: "https://www.treasury.gov.my",
-        logo: "/professional-bodies/mof.svg",
-      },
-      {
-        name: "Securities Commission Malaysia",
-        abbreviation: "SC",
-        href: "https://www.sc.com.my",
-        logo: "/professional-bodies/sc.png",
-      },
-      {
-        name: "Bank Negara Malaysia",
-        abbreviation: "BNM",
-        href: "https://www.bnm.gov.my",
-        logo: "/professional-bodies/bnm.svg",
-      },
-      {
-        name: "Malaysian Investment Development Authority",
-        abbreviation: "MIDA",
-        href: "https://www.mida.gov.my",
-        logo: "/professional-bodies/mida.png",
-      },
-    ],
-  },
+
 ];
 
 export function ProfessionalBodiesPageContent() {
@@ -103,9 +48,8 @@ export function ProfessionalBodiesPageContent() {
               Trusted References for Compliance & Professional Standards
             </h1>
             <p className="mt-7 max-w-[36rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
-              A curated directory of professional bodies, tax authorities, and
-              Malaysian government organisations relevant to audit, accounting,
-              taxation, and corporate finance advisory.
+              A curated directory of professional bodies relevant to audit,
+              accounting, taxation, and professional standards.
             </p>
             <p className="mt-5 max-w-[36rem] text-sm leading-6 text-[#596575]">These links are provided for reference. Names and logos belong to their respective organisations and do not imply endorsement of our firm or services.</p>
           </div>

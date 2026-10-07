@@ -7,7 +7,7 @@ export default function ProfessionalBodiesPage() {
     <Layout>
       <SEO
         title="Professional Bodies"
-        description="Useful professional, tax, and Malaysian government organisation links for accounting, audit, and advisory reference."
+        description="Useful professional body links for accounting, taxation, audit, and assurance standards."
       />
       <ProfessionalBodiesPageContent />
     </Layout>
