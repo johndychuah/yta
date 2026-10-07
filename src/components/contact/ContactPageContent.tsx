@@ -11,7 +11,7 @@ const contactDetails = [
     label: "KL Eco City Office",
     value: (
       <>
-        SO-11-5 Menara 1, KL Eco City
+        SO-29-1 Menara 1, KL Eco City
         <br />3 Jalan Bangsar
         <br />59200 Kuala Lumpur, Malaysia
       </>
@@ -40,7 +40,7 @@ const contactDetails = [
     label: "Office Hours",
     value: (
       <>
-        Monday - Friday: 8:00 AM - 5:00 PM
+        Monday - Friday: 8:30 AM - 5:30 PM
         <br />Saturday - Sunday: Closed
       </>
     ),

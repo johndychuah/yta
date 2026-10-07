@@ -50,7 +50,7 @@ export function Footer() {
             <address className="mt-8 not-italic text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.58] tracking-[0.03em] text-[#3c3d4b]">
               <p>KL Eco City Office</p>
               <p>
-                SO-11-5 Menara 1, KL Eco City
+                SO-29-1 Menara 1, KL Eco City
                 <br />3 Jalan Bangsar
                 <br />59200 Kuala Lumpur, Malaysia
               </p>
@@ -76,7 +76,7 @@ export function Footer() {
               Office Hours
             </h3>
             <div className="mt-8 text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.58] tracking-[0.03em] text-[#3c3d4b]">
-              <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+              <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
               <p>Saturday - Sunday: Closed</p>
             </div>
           </div>

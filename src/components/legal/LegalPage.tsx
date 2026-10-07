@@ -50,7 +50,7 @@ export function LegalPage({ title, intro, sections, language = "en", languageLin
               <h2 className="text-xl font-bold text-[#03101c]">{malay ? "Hubungi kami" : "Questions or requests?"}</h2>
               <p className="mt-3 leading-7 text-[#3c3d4b]">{malay ? "Untuk pertanyaan privasi, nyatakan ‘Privasi’ dalam tajuk e-mel anda." : "For privacy requests, include ‘Privacy’ in your email subject."}</p>
               <a href="mailto:info@yta.com.my" className="mt-3 inline-flex min-h-11 items-center font-bold text-[#1f5f9e] underline underline-offset-4">info@yta.com.my</a>
-              <p className="mt-2 leading-7 text-[#3c3d4b]">SO-11-5 Menara 1, KL Eco City, 3 Jalan Bangsar, 59200 Kuala Lumpur, Malaysia</p>
+              <p className="mt-2 leading-7 text-[#3c3d4b]">SO-29-1 Menara 1, KL Eco City, 3 Jalan Bangsar, 59200 Kuala Lumpur, Malaysia</p>
               <a href="tel:+60327284819" className="inline-flex min-h-11 items-center text-[#1f5f9e] underline underline-offset-4">+603 2728 4819</a>
             </div>
             <nav aria-label="Related policies" className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold text-[#1f5f9e]">

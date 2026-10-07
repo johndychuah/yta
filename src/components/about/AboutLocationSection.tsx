@@ -17,7 +17,7 @@ export function AboutLocationSection() {
             Abdullah Hukum LRT station. We welcome meetings by appointment.
           </p>
           <address className="mt-6 border-l-2 border-[#ffad50] pl-4 not-italic text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.02em] text-white">
-            SO-11-5 Menara 1, KL Eco City
+            SO-29-1 Menara 1, KL Eco City
             <br />
             3 Jalan Bangsar
             <br />
