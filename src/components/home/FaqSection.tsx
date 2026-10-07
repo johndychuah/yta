@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What do you need from us to start an audit?",
     answer:
-      "Typically your trial balance and general ledger, bank statements, fixed asset register, key contracts, and the prior year's audited accounts. We share a document checklist at the start of each engagement so your team knows exactly what to prepare.",
+      "Typically your management accounts, trial balance and general ledger, bank statements, fixed asset register, key contracts, and the prior year's audited accounts. We share a document checklist at the start of each engagement so your team knows exactly what to prepare.",
   },
   {
     question: "How long does an audit take?",

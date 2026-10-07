@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: "Corporate Advisory",
-    body: "We have guided SMEs and family-owned businesses through listings on Bursa Malaysia, acting as an in-house financial adviser from preparation to post-listing. On transactions, we support buyers and sellers with due diligence, valuations, forecasts, and deal structuring, working alongside your bankers and lawyers.",
+    body: "We have guided SMEs and family-owned businesses through listings on Bursa Malaysia, acting as an in-house financial adviser from preparation to post-listing. On transactions, we support buyers and sellers with due diligence, valuations, forecasts, and deal structuring, working alongside your investment bankers and lawyers.",
     helpfulWhen: "You are preparing for an IPO, buying or selling a business, raising funds, or need financial and tax due diligence or a valuation.",
     href: "/services/corporate-advisory",
     image: "/images/topics/home-corporate.webp",
