@@ -65,16 +65,18 @@ export function AboutCredentialsSection() {
             >
               <div className="flex h-14 items-center">
                 {body.logo ? (
-                  <div className="relative h-12 w-36 max-w-full">
+                  <div className={`relative h-12 max-w-full ${body.abbreviation === "CTIM" ? "w-[5.375rem] overflow-hidden" : "w-36"}`}>
                     <Image
                       src={body.logo}
                       alt={`${body.name} logo`}
                       fill
                       sizes="144px"
                       className={
-                        body.abbreviation === "CPA" || body.abbreviation === "CTIM"
-                          ? "object-cover"
-                          : "object-contain object-left"
+                        body.abbreviation === "CTIM"
+                          ? "object-cover scale-200"
+                          : body.abbreviation === "CPA"
+                            ? "object-cover"
+                            : "object-contain object-left"
                       }
                     />
                   </div>

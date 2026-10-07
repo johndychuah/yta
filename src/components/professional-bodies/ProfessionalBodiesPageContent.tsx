@@ -98,16 +98,18 @@ export function ProfessionalBodiesPageContent() {
                     >
                       <span className="flex h-16 w-full items-center">
                         {item.logo ? (
-                          <span className="relative block h-14 w-[10.5rem] max-w-full">
+                          <span className={`relative block h-14 max-w-full ${item.abbreviation === "CTIM" ? "w-[6.25rem] overflow-hidden" : "w-[10.5rem]"}`}>
                             <Image
                               src={item.logo}
                               alt={`${item.name} logo`}
                               fill
                               sizes="168px"
                               className={
-                                item.abbreviation === "CPA" || item.abbreviation === "CTIM"
-                                  ? "object-cover"
-                                  : "object-contain object-left"
+                                item.abbreviation === "CTIM"
+                                  ? "object-cover scale-200"
+                                  : item.abbreviation === "CPA"
+                                    ? "object-cover"
+                                    : "object-contain object-left"
                               }
                             />
                           </span>
