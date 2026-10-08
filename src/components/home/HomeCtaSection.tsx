@@ -1,6 +1,8 @@
-import Link from "next/link";
+import { useTranslation } from "@/i18n/Locale";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 
 export function HomeCtaSection() {
+  const { t } = useTranslation();
   return (
     <section className="relative isolate overflow-hidden bg-[#091c2f] px-6 py-[clamp(5rem,8vw,8rem)] text-white">
       <div
@@ -13,28 +15,21 @@ export function HomeCtaSection() {
           <span className="inline-flex size-7 items-center justify-center rounded-full bg-white text-lg leading-none text-[#091c2f]">
             +
           </span>
-          <p className="text-[clamp(0.75rem,0.72vw,0.875rem)] font-medium uppercase tracking-[0.16em] text-[#ffad50]">
-            Start a conversation
-          </p>
+          <p className="text-[clamp(0.75rem,0.72vw,0.875rem)] font-medium uppercase tracking-[0.16em] text-[#ffad50]">{t("Start a conversation")}</p>
         </div>
 
-        <h2 className="mt-8 text-[clamp(2rem,1.95vw,2.35rem)] font-medium leading-[1.34] tracking-normal text-white">
-          Talk to a partner about your audit, transaction, or business challenge
-        </h2>
+        <h2 className="mt-8 text-[clamp(2rem,1.95vw,2.35rem)] font-medium leading-[1.34] tracking-normal text-white">{t("Talk to a partner about your audit, transaction, or business challenge")}</h2>
 
-        <p className="mt-5 text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.65] text-white/75">
-          Call us on{" "}
+        <p className="mt-5 text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.65] text-white/75">{t("Call us on")}{t(" ")}
           <a href="tel:+60327284819" className="font-semibold text-white underline-offset-4 hover:underline">
             +603 2728 4819
-          </a>{" "}
-          or send an enquiry to discuss the next steps with our team.
-        </p>
+          </a>{t(" ")}{t("or send an enquiry to discuss the next steps with our team.")}</p>
 
         <Link
           href="/contact"
           className="mt-8 inline-flex min-h-[53px] w-full min-w-0 items-center justify-center gap-4 rounded-full bg-[#ffad50] px-5 py-3 text-sm font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174] sm:w-auto sm:min-w-[259px] sm:px-8"
         >
-          <span>Get in Touch Today</span>
+          <span>{t("Get in Touch Today")}</span>
           <span aria-hidden="true">↗</span>
         </Link>
       </div>

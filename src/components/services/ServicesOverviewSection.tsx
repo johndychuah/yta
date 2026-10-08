@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslation } from "@/i18n/Locale";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 
 type Service = {
   title: string;
@@ -107,6 +108,7 @@ const iconPaths: Record<Service["icon"], React.ReactNode> = {
 };
 
 function ServiceIcon({ type }: { type: Service["icon"] }) {
+  const { t } = useTranslation();
   return (
     <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-full bg-[#091c2f] text-[#ffad50]">
       <svg
@@ -119,23 +121,21 @@ function ServiceIcon({ type }: { type: Service["icon"] }) {
         className="size-6"
         aria-hidden="true"
       >
-        {iconPaths[type]}
+        {t(iconPaths[type])}
       </svg>
     </span>
   );
 }
 
 export function ServicesOverviewSection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] pb-[clamp(3.5rem,5vw,5rem)] pt-[clamp(1rem,2vw,2rem)]">
       <div className="mx-auto max-w-[960px]">
-        <p className="mx-auto max-w-[40rem] text-center text-[clamp(1.2rem,1.3vw,1.55rem)] font-semibold leading-snug tracking-normal text-[#03101c]">
-          Six areas of expertise, one experienced team. Choose the service
-          that matches the decision in front of your business.
-        </p>
+        <p className="mx-auto max-w-[40rem] text-center text-[clamp(1.2rem,1.3vw,1.55rem)] font-semibold leading-snug tracking-normal text-[#03101c]">{t("Six areas of expertise, one experienced team. Choose the service that matches the decision in front of your business.")}</p>
 
         <div className="mt-[clamp(2.5rem,3.5vw,3.5rem)]">
-          {services.map((service) => (
+          {t(services.map((service) => (
             <article
               key={service.title}
               className="flex flex-col gap-5 border-t border-black/12 py-[clamp(1.75rem,2.6vw,2.5rem)] sm:flex-row sm:gap-8"
@@ -144,21 +144,21 @@ export function ServicesOverviewSection() {
 
               <div>
                 <h2 className="text-[clamp(1.4rem,1.4vw,1.75rem)] font-semibold leading-tight tracking-normal text-[#03101c]">
-                  {service.title}
+                  {t(service.title)}
                 </h2>
                 <p className="mt-3 max-w-[44rem] text-[clamp(0.98rem,0.9vw,1.08rem)] font-medium leading-[1.65] tracking-[0.02em] text-[#4b4d5c]">
-                  {service.description}
+                  {t(service.description)}
                 </p>
                 <Link
                   href={service.href}
                   className="mt-4 inline-flex items-center gap-3 text-[clamp(0.92rem,0.82vw,0.98rem)] font-semibold leading-none tracking-normal text-[#1f5f9e] transition hover:text-[#0d365d]"
                 >
-                  <span>Explore {service.title}</span>
+                  <span>{t("Explore")}{t(service.title)}</span>
                   <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </article>
-          ))}
+          )))}
         </div>
       </div>
     </section>

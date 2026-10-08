@@ -1,7 +1,4 @@
-// Keep page language accurate for Chinese service copy and the Malay privacy notice.
-const zhPages = new Set(["/services/china-malaysia-desk/zh"]);
-
 export function pageLanguage(pathname: string) {
-  if (pathname === "/privacy-policy/ms") return "ms";
-  return zhPages.has(pathname) ? "zh-Hans" : "en";
+  if (pathname.split("?")[0] === "/privacy-policy/ms") return "ms";
+  return pathname.startsWith("/zh") || pathname === "/services/china-malaysia-desk/zh" ? "zh-Hans" : "en";
 }

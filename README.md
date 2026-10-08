@@ -51,3 +51,23 @@ Cloudflare builds and deploys new commits automatically. The deployment uses
 static assets and does not need a running Node.js server.
 Images are served directly from the exported assets. The contact form prepares
 an email draft in the visitor's email application.
+
+## Languages
+
+English uses the existing URLs. Simplified Chinese uses `/zh` and matching
+paths, such as `/zh/about-us`. The globe in the navigation switches the current
+page, and internal links retain the selected language. The old Chinese Desk URL
+forwards to `/zh/services/china-malaysia-desk`.
+
+Shared components use `useTranslation()` and `LocalisedLink` from
+`src/i18n/Locale.tsx`. When updating English copy, add its exact text and Chinese
+translation to `src/i18n/zh.json`. Keep official names, addresses and credentials
+unchanged where translating them would introduce ambiguity. Add new Chinese
+routes to `src/pages/zh/[[...path]].tsx`, then run lint and the static build.
+
+Chinese marketing copy is written for the section's purpose and audience, rather
+than sentence-by-sentence translation. Use concise headings, explain the business
+need in natural Chinese, and retain the underlying facts, qualifications and
+service limits. Policy language must preserve rights, obligations and exceptions.
+Topic-specific service introduction and closing headings live in
+`src/i18n/serviceCopy.ts`; navigation retains the official service names.

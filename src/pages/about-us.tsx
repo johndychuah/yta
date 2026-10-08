@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/common/SEO";
 import { AboutHeroSection } from "@/components/about/AboutHeroSection";
@@ -14,11 +15,12 @@ import { AboutInsightsSection } from "@/components/about/AboutInsightsSection";
 import { AboutCtaSection } from "@/components/about/AboutCtaSection";
 
 export default function AboutUsPage() {
+  const { t } = useTranslation();
   return (
     <Layout>
       <SEO
-        title="About us"
-        description="Founded in 1992, YT Associates and Peter Tang & Associates combine Big Four-trained leadership with personal attention, serving Malaysian businesses from KL Eco City."
+        title={t("About us")}
+        description={t("Founded in 1992, YT Associates and Peter Tang & Associates combine Big Four-trained leadership with personal attention, serving Malaysian businesses from KL Eco City.")}
       />
       <AboutHeroSection />
       <AboutStatsHighlightsSection />

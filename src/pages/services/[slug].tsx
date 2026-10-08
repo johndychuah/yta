@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import { SEO } from "@/components/common/SEO";
 import { Layout } from "@/components/layout/Layout";
@@ -14,11 +15,12 @@ type ServiceDetailPageProps = {
 };
 
 export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
+  const { t } = useTranslation();
   return (
     <Layout>
       <SEO
-        title={service.seoTitle}
-        description={service.seoDescription}
+        title={t(service.seoTitle)}
+        description={t(service.seoDescription)}
         alternates={service.languages}
       />
       <ServiceDetailTemplate service={service} />

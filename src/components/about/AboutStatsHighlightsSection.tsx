@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 
 const stats = [
   { value: "35+", label: "Years of partner experience" },
@@ -44,6 +45,7 @@ function HighlightIcon({
   variant: "diamond" | "rings" | "wheel";
   tone: "orange" | "navy";
 }) {
+  const { t } = useTranslation();
   const dark = tone === "navy";
   const color = dark ? "#ffad50" : "#03101c";
 
@@ -83,7 +85,7 @@ function HighlightIcon({
       style={{ borderColor: color }}
       aria-hidden="true"
     >
-      {[0, 45, 90, 135].map((rotation) => (
+      {t([0, 45, 90, 135].map((rotation) => (
         <span
           key={rotation}
           className="absolute left-1/2 top-1/2 h-[2px] w-7 -translate-x-1/2 -translate-y-1/2"
@@ -92,17 +94,18 @@ function HighlightIcon({
             transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
           }}
         />
-      ))}
+      )))}
     </span>
   );
 }
 
 export function AboutStatsHighlightsSection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-[clamp(1.5rem,6vw,7.5rem)] pb-[clamp(4.5rem,8vw,8rem)] pt-[clamp(3.5rem,6vw,6rem)]">
       <div className="mx-auto max-w-[1480px]">
         <div className="mx-auto grid max-w-[950px] grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4">
-          {stats.map((stat, index) => (
+          {t(stats.map((stat, index) => (
             <div
               key={stat.label}
               className={`text-center sm:border-r sm:border-black/12 ${
@@ -110,21 +113,19 @@ export function AboutStatsHighlightsSection() {
               }`}
             >
               <p className="text-[clamp(2.7rem,3.8vw,4.6rem)] font-medium leading-none tracking-normal text-[#03101c]">
-                {stat.value}
+                {t(stat.value)}
               </p>
               <p className="mt-4 text-[clamp(0.88rem,0.83vw,1rem)] font-medium leading-tight tracking-normal text-[#03101c]">
-                {stat.label}
+                {t(stat.label)}
               </p>
             </div>
-          ))}
+          )))}
         </div>
 
-        <p className="mt-[clamp(5rem,7vw,7rem)] text-center text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">
-          Why Choose Us
-        </p>
+        <p className="mt-[clamp(5rem,7vw,7rem)] text-center text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">{t("Why Choose Us")}</p>
 
         <div className="mt-[clamp(3.5rem,5vw,5rem)] grid gap-[clamp(1.75rem,3vw,4rem)] lg:grid-cols-3 lg:items-stretch">
-          {highlights.map((highlight, index) => {
+          {t(highlights.map((highlight, index) => {
             const isCenter = index === 1;
             const isNavy = highlight.tone === "navy";
 
@@ -144,7 +145,7 @@ export function AboutStatsHighlightsSection() {
                     isNavy ? "text-white" : "text-[#cf3030]"
                   }`}
                 >
-                  {highlight.title}
+                  {t(highlight.title)}
                 </h3>
 
                 <p
@@ -152,13 +153,13 @@ export function AboutStatsHighlightsSection() {
                     isNavy ? "text-white/88" : "text-[#03101c]"
                   }`}
                 >
-                  {highlight.description}
+                  {t(highlight.description)}
                 </p>
 
 
               </article>
             );
-          })}
+          }))}
         </div>
       </div>
     </section>

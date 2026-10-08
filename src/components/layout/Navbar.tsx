@@ -1,5 +1,7 @@
+import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
+import { useTranslation } from "@/i18n/Locale";
 import Image from "next/image";
-import Link from "next/link";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,10 +14,12 @@ const navItems = [
 ];
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const headerRef = useRef<HTMLElement>(null);
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
+  const pathname = asPath.split(/[?#]/)[0].replace(/^\/zh(?=\/|$)/, "") || "/";
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
 
@@ -42,31 +46,32 @@ export function Navbar() {
       }}
     >
       <div className="mx-auto flex min-h-18 max-w-[1440px] items-center justify-between gap-3 px-4 py-2.5 sm:min-h-20 sm:gap-6 sm:px-[clamp(1.25rem,3vw,3rem)] sm:py-3">
-        <Link href="/" aria-label="YTA home" className="shrink-0 rounded-sm" onClick={() => setIsOpen(false)}>
-          <Image src="/yta-logo.png" alt="YT Associates" width={128} height={74} priority className="h-auto w-20 sm:w-24 lg:w-28" />
+        <Link href="/" aria-label={t("YTA home")} className="shrink-0 rounded-sm" onClick={() => setIsOpen(false)}>
+          <Image src="/yta-logo.png" alt={t("YT Associates")} width={128} height={74} priority className="h-auto w-20 sm:w-24 lg:w-28" />
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-[clamp(1rem,2vw,2rem)] text-base font-semibold lg:flex">
-          {navItems.map((item) => (
+        <nav aria-label={t("Primary navigation")} className="hidden items-center gap-[clamp(0.6rem,1.3vw,1.25rem)] text-base font-semibold lg:flex">
+          {t(navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={`inline-flex min-h-11 items-center whitespace-nowrap border-b-2 px-1 transition ${isActive(item.href) ? "border-[#c52228] text-[#c52228]" : "border-transparent text-[#27303a] hover:border-[#ffad50] hover:text-[#03101c]"}`}
             >
-              {item.label}
+              {t(item.label)}
             </Link>
-          ))}
+          )))}
+          <LanguageSwitcher />
         </nav>
 
-        <Link href="/" aria-label="Peter Tang & Associates home" className="shrink-0 rounded-sm" onClick={() => setIsOpen(false)}>
-          <Image src="/peter-tang-associates-logo.png" alt="Peter Tang & Associates" width={200} height={60} priority className="h-auto w-28 sm:w-36 xl:w-44" />
+        <Link href="/" aria-label={t("Peter Tang & Associates home")} className="shrink-0 rounded-sm" onClick={() => setIsOpen(false)}>
+          <Image src="/peter-tang-associates-logo.png" alt={t("Peter Tang & Associates")} width={200} height={60} priority className="h-auto w-28 sm:w-36 xl:w-44" />
         </Link>
 
         <button
           ref={toggleRef}
           type="button"
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={t(isOpen ? "Close navigation menu" : "Open navigation menu")}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsOpen((open) => !open)}
@@ -82,12 +87,12 @@ export function Navbar() {
 
       <nav
         id="mobile-navigation"
-        aria-label="Mobile navigation"
+        aria-label={t("Mobile navigation")}
         hidden={!isOpen}
         className="absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain border-b border-[#03101c]/10 bg-white px-4 py-3 shadow-lg sm:max-h-[calc(100dvh-5rem)] lg:hidden"
       >
         <div className="grid gap-1 text-base font-semibold">
-          {navItems.map((item) => (
+          {t(navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -95,9 +100,10 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
               className={`flex min-h-12 items-center rounded-lg px-4 transition ${isActive(item.href) ? "bg-[#fff3e4] text-[#a31b20]" : "text-[#27303a] hover:bg-[#f3f3f3]"}`}
             >
-              {item.label}
+              {t(item.label)}
             </Link>
-          ))}
+          )))}
+          <div className="px-2"><LanguageSwitcher /></div>
         </div>
       </nav>
     </header>

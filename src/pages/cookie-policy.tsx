@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 import { LegalPage, type LegalSection } from "@/components/legal/LegalPage";
 
 const sections: LegalSection[] = [
@@ -10,11 +11,12 @@ const sections: LegalSection[] = [
 ];
 
 export default function CookiePolicyPage() {
-  return <LegalPage title="Cookie Policy" intro="A clear account of website storage, hosting security and the optional Google Maps connection." sections={sections}>
+  const { t } = useTranslation();
+  return <LegalPage title={t("Cookie Policy")} intro="A clear account of website storage, hosting security and the optional Google Maps connection." sections={sections}>
     <div className="mt-8 flex flex-wrap gap-6 text-sm text-[#1f5f9e]">
-      <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" target="_blank" rel="noopener noreferrer" className="underline">Cloudflare cookie documentation</a>
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Google Privacy Policy</a>
-      <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer" className="underline">Google cookie information</a>
+      <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" target="_blank" rel="noopener noreferrer" className="underline">{t("Cloudflare cookie documentation")}</a>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{t("Google Privacy Policy")}</a>
+      <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer" className="underline">{t("Google cookie information")}</a>
     </div>
   </LegalPage>;
 }

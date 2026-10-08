@@ -1,17 +1,8 @@
-import { SEO } from "@/components/common/SEO";
-import { Layout } from "@/components/layout/Layout";
-import { ServiceDetailTemplate } from "@/components/services/ServiceDetailTemplate";
-import { chinaDeskZh } from "@/data/chinaDeskZh";
-
-export default function ChinaDeskZhPage() {
-  return (
-    <Layout>
-      <SEO
-        title={chinaDeskZh.seoTitle}
-        description={chinaDeskZh.seoDescription}
-        alternates={chinaDeskZh.languages}
-      />
-      <ServiceDetailTemplate service={chinaDeskZh} lang="zh" />
-    </Layout>
-  );
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+export default function LegacyChineseDesk() {
+  const router=useRouter();
+  useEffect(()=>{void router.replace('/zh/services/china-malaysia-desk');},[router]);
+  return <p className="p-8"><Link href="/zh/services/china-malaysia-desk">前往新版中马业务页面</Link></p>;
 }

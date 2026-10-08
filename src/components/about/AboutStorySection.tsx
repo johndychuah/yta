@@ -1,25 +1,23 @@
+import { useTranslation } from "@/i18n/Locale";
 import Image from "next/image";
-import Link from "next/link";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 
 export function AboutStorySection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8.5rem)]">
       <div className="mx-auto max-w-[1292px]">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">
-              Our Story
-            </p>
-            <h2 className="mt-6 max-w-[30rem] text-[clamp(2.25rem,2vw,2.5rem)] font-medium leading-[1.26] tracking-normal text-[#03101c]">
-              From boutique practice to trusted audit firm
-            </h2>
+            <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">{t("Our Story")}</p>
+            <h2 className="mt-6 max-w-[30rem] text-[clamp(2.25rem,2vw,2.5rem)] font-medium leading-[1.26] tracking-normal text-[#03101c]">{t("From boutique practice to trusted audit firm")}</h2>
           </div>
 
           <Link
             href="/contact"
             className="inline-flex h-[53px] w-fit min-w-[176px] items-center justify-center gap-6 rounded-full bg-[#ffad50] px-8 text-[clamp(0.95rem,0.85vw,1rem)] font-medium tracking-[0.03em] text-[#03101c] transition hover:bg-[#ffc174] lg:mt-14"
           >
-            <span>Contact Us</span>
+            <span>{t("Contact Us")}</span>
             <span aria-hidden="true">↗</span>
           </Link>
         </div>
@@ -29,7 +27,7 @@ export function AboutStorySection() {
             <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
               <Image
                 src="/images/editorial/team.webp"
-                alt="Illustrative Malaysian professionals collaborating around a table"
+                alt={t("Illustrative Malaysian professionals collaborating around a table")}
                 fill
                 sizes="(min-width: 1280px) 634px, 88vw"
                 className="object-cover object-center"
@@ -42,42 +40,18 @@ export function AboutStorySection() {
               <p className="text-[clamp(4.25rem,4.5vw,5.4rem)] font-medium leading-none tracking-normal">
                 1992
               </p>
-              <p className="max-w-28 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.58] tracking-[0.03em]">
-                Peter Tang & Associates founded
-              </p>
+              <p className="max-w-28 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.58] tracking-[0.03em]">{t("Peter Tang & Associates founded")}</p>
             </div>
 
             <div className="mt-6 space-y-7 text-[clamp(1rem,0.85vw,1.05rem)] leading-[1.58] tracking-[0.03em]">
-              <p>
-                Our story began in 1992, when Dato&apos; Peter Tang and Yeo Eng
-                Thong, both alumni of what is now PwC, established Peter Tang &amp;
-                Associates. The boutique firm built its reputation in
-                accounting, tax, and corporate finance, helping growing
-                companies prepare for listing on the then KLSE Second Board.
-              </p>
+              <p>{t("Our story began in 1992, when Dato' Peter Tang and Yeo Eng Thong, both alumni of what is now PwC, established Peter Tang & Associates. The boutique firm built its reputation in accounting, tax, and corporate finance, helping growing companies prepare for listing on the then KLSE Second Board.")}</p>
 
-              <p>
-                As the practice grew, its parent group was restructured and
-                listed on the Catalist board of the Singapore Exchange as
-                Axcelasia Inc. The audit practice continued as YT Associates,
-                with Yeo Eng Thong leading the transition and keeping the same
-                experienced team and long-standing client relationships.
-              </p>
+              <p>{t("As the practice grew, its parent group was restructured and listed on the Catalist board of the Singapore Exchange as Axcelasia Inc. The audit practice continued as YT Associates, with Yeo Eng Thong leading the transition and keeping the same experienced team and long-standing client relationships.")}</p>
 
-              <p>
-                Today, YT Associates (AF1112) combines Big Four-trained
-                leadership with the personal attention of a boutique practice.
-                Our risk-focused, data-driven approach helps clients meet their
-                reporting obligations while strengthening controls and
-                decision-making.
-              </p>
+              <p>{t("Today, YT Associates (AF1112) combines Big Four-trained leadership with the personal attention of a boutique practice. Our risk-focused, data-driven approach helps clients meet their reporting obligations while strengthening controls and decision-making.")}</p>
             </div>
 
-            <p className="mt-8 text-[clamp(1.5rem,1.3vw,1.6rem)] font-medium leading-[1.45] tracking-normal text-[#03101c]">
-              Together, YT Associates and Peter Tang &amp; Associates provide
-              audit, corporate advisory, restructuring, accounting, and payroll
-              services to Malaysian businesses.
-            </p>
+            <p className="mt-8 text-[clamp(1.5rem,1.3vw,1.6rem)] font-medium leading-[1.45] tracking-normal text-[#03101c]">{t("Together, YT Associates and Peter Tang & Associates provide audit, corporate advisory, restructuring, accounting, and payroll services to Malaysian businesses.")}</p>
           </div>
         </div>
       </div>

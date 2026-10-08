@@ -1,5 +1,7 @@
+import { useTranslation } from "@/i18n/Locale";
 import Image from "next/image";
-import Link from "next/link";
+import { chineseServiceCopy } from "@/i18n/serviceCopy";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 import { AboutCtaSection } from "@/components/about/AboutCtaSection";
 import {
   serviceNavItems,
@@ -47,47 +49,6 @@ const zhNavTitles: Record<string, string> = {
   "accounting-payroll-outsourcing": "会计与薪资外包",
 };
 
-function LanguageToggle({
-  lang,
-  languages,
-}: {
-  lang: Lang;
-  languages: { en: string; zh: string };
-}) {
-  const options = [
-    { lang: "en" as const, label: "English", href: languages.en, hrefLang: "en" },
-    { lang: "zh" as const, label: "简体中文", href: languages.zh, hrefLang: "zh-Hans" },
-  ];
-
-  return (
-    <div
-      role="group"
-      aria-label={lang === "zh" ? "选择语言" : "Choose language"}
-      className="inline-flex rounded-full border border-white/30 bg-white/10 p-1 text-[0.85rem] font-semibold backdrop-blur"
-    >
-      {options.map((option) => {
-        const active = option.lang === lang;
-        return (
-          <Link
-            key={option.lang}
-            href={option.href}
-            hrefLang={option.hrefLang}
-            lang={option.hrefLang}
-            aria-current={active ? "page" : undefined}
-            className={`inline-flex min-h-9 items-center rounded-full px-4 transition ${
-              active
-                ? "bg-[#ffad50] text-[#03101c]"
-                : "text-white/85 hover:text-white"
-            }`}
-          >
-            {option.label}
-          </Link>
-        );
-      })}
-    </div>
-  );
-}
-
 const industries = [
   "Trading, Retail & Distribution",
   "Manufacturing & Construction",
@@ -122,10 +83,11 @@ function Marker({ icon }: { icon?: "check" | "diamond" | "circle" }) {
 }
 
 function IndustryIcon({ index }: { index: number }) {
+  const { t } = useTranslation();
   return (
     <span className="mx-auto flex size-[clamp(5rem,6vw,7rem)] items-center justify-center rounded-full bg-[#ffad50] text-white">
       <svg viewBox="0 0 64 64" fill="none" className="size-[58%]" aria-hidden="true">
-        {index === 0 ? (
+        {t(index === 0 ? (
           <path
             d="M18 34h28v16H18V34Zm5 0v-8a9 9 0 0 1 18 0v8M14 43H9v10h11M50 43h5v10H44"
             stroke="currentColor"
@@ -191,34 +153,36 @@ function IndustryIcon({ index }: { index: number }) {
             strokeWidth="3"
             strokeLinecap="round"
           />
-        )}
+        ))}
       </svg>
     </span>
   );
 }
 
 function ImageBlock({ block }: { block: Extract<ServiceContentBlock, { type: "image" }> }) {
+  const { t } = useTranslation();
   return (
     <div className="relative mt-10 aspect-[7/4] w-full max-w-[45rem] overflow-hidden rounded-[6px]">
       <Image
         src={block.src}
-        alt={block.alt}
+        alt={t(block.alt)}
         fill
         sizes="(min-width: 1024px) 720px, 88vw"
         className="object-cover object-center"
       />
-      {block.overlay ? (
+      {t(block.overlay ? (
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#03101c]/70 via-transparent to-transparent p-6">
           <p className="text-[clamp(1rem,1.5vw,1.25rem)] font-semibold leading-snug tracking-[0.04em] text-white">
-            {block.overlay}
+            {t(block.overlay)}
           </p>
         </div>
-      ) : null}
+      ) : null)}
     </div>
   );
 }
 
 function TextBlock({ block }: { block: Extract<ServiceContentBlock, { type: "text" }> }) {
+  const { t } = useTranslation();
   return (
     <div
       className={`mt-9 max-w-[54rem] space-y-5 text-[clamp(0.95rem,0.82vw,1rem)] leading-[1.7] tracking-[0.02em] ${
@@ -227,9 +191,9 @@ function TextBlock({ block }: { block: Extract<ServiceContentBlock, { type: "tex
           : "font-medium text-[#3c3d4b]"
       }`}
     >
-      {block.paragraphs.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
-      ))}
+      {t(block.paragraphs.map((paragraph) => (
+        <p key={paragraph}>{t(paragraph)}</p>
+      )))}
     </div>
   );
 }
@@ -239,60 +203,61 @@ function SectionListBlock({
 }: {
   block: Extract<ServiceContentBlock, { type: "section-list" }>;
 }) {
+  const { t } = useTranslation();
   return (
     <div className="mt-9 max-w-[62rem]">
-      {block.heading ? (
+      {t(block.heading ? (
         <h2 className="mb-7 text-[clamp(1.05rem,0.95vw,1.18rem)] font-semibold text-[#03101c]">
-          {block.heading}
+          {t(block.heading)}
         </h2>
-      ) : null}
+      ) : null)}
 
       <div>
-        {block.sections.map((section) => (
+        {t(block.sections.map((section) => (
           <article key={section.title} className="border-b border-black/15 py-5">
             <div className="flex items-start gap-4">
               <Marker icon={block.icon} />
               <div>
                 <h3 className="text-[clamp(0.95rem,0.85vw,1rem)] font-semibold leading-snug text-[#03101c]">
-                  {section.title}
+                  {t(section.title)}
                 </h3>
                 <ul className="mt-5 list-disc space-y-2 pl-4 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.65] tracking-[0.02em] text-[#4b4d5c]">
-                  {section.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
+                  {t(section.points.map((point) => (
+                    <li key={point}>{t(point)}</li>
+                  )))}
                 </ul>
               </div>
             </div>
           </article>
 
-        ))}
+        )))}
       </div>
     </div>
   );
 }
 
 function IndustryBlock() {
+  const { t } = useTranslation();
   return (
     <div className="mt-10">
-      <h2 className="text-[clamp(1.2rem,1vw,1.35rem)] font-semibold text-[#03101c]">
-        Industry Expertise
-      </h2>
+      <h2 className="text-[clamp(1.2rem,1vw,1.35rem)] font-semibold text-[#03101c]">{t("Industry Expertise")}</h2>
 
       <div className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-        {industries.map((industry, index) => (
+        {t(industries.map((industry, index) => (
           <div key={industry} className="text-center">
             <IndustryIcon index={index} />
             <p className="mt-5 text-[clamp(0.7rem,0.64vw,0.78rem)] font-semibold uppercase leading-tight tracking-[0.04em] text-[#03101c]">
-              {industry}
+              {t(industry)}
             </p>
           </div>
-        ))}
+        )))}
       </div>
     </div>
   );
 }
 
 function ContentBlock({ block }: { block: ServiceContentBlock }) {
+  const { t } = useTranslation();
   if (block.type === "image") {
     return <ImageBlock block={block} />;
   }
@@ -305,15 +270,15 @@ function ContentBlock({ block }: { block: ServiceContentBlock }) {
     return (
       <div className="mt-12 max-w-[54rem]">
         <h2 className="text-[clamp(1.25rem,1.1vw,1.4rem)] font-semibold text-[#03101c]">
-          {block.title}
+          {t(block.title)}
         </h2>
-        {block.intro ? (
+        {t(block.intro ? (
           <div className="mt-5 space-y-5 text-[clamp(0.95rem,0.82vw,1rem)] font-medium leading-[1.7] tracking-[0.02em] text-[#3c3d4b]">
-            {block.intro.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            {t(block.intro.map((paragraph) => (
+              <p key={paragraph}>{t(paragraph)}</p>
+            )))}
           </div>
-        ) : null}
+        ) : null)}
       </div>
     );
   }
@@ -326,14 +291,15 @@ function ContentBlock({ block }: { block: ServiceContentBlock }) {
 }
 
 function DecisionGuide({ service, lang }: { service: ServiceDetail; lang: Lang }) {
-  const t = ui[lang];
+  const { t } = useTranslation();
+  const labels = ui[lang];
   const columns = [
     {
-      title: t.situations,
+      title: labels.situations,
       items: service.decisionGuide.situations,
     },
     {
-      title: t.scope,
+      title: labels.scope,
       items: service.decisionGuide.scope,
     },
   ];
@@ -344,23 +310,23 @@ function DecisionGuide({ service, lang }: { service: ServiceDetail; lang: Lang }
       aria-labelledby="service-fit-heading"
     >
       <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#596575]">
-        {t.guideEyebrow}
+        {t(labels.guideEyebrow)}
       </p>
       <h2
         id="service-fit-heading"
         className="mt-4 text-[clamp(1.35rem,1.35vw,1.65rem)] font-semibold leading-tight text-[#03101c]"
       >
-        {t.guideHeading}
+        {t(labels.guideHeading)}
       </h2>
 
       <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-10">
-        {columns.map((column) => (
+        {t(columns.map((column) => (
           <div key={column.title}>
             <h3 className="text-[1rem] font-semibold leading-snug text-[#03101c]">
-              {column.title}
+              {t(column.title)}
             </h3>
             <ul className="mt-5 space-y-4">
-              {column.items.map((item) => (
+              {t(column.items.map((item) => (
                 <li
                   key={item}
                   className="flex items-start gap-3 text-[clamp(0.9rem,0.78vw,0.96rem)] font-medium leading-[1.6] text-[#4b4d5c]"
@@ -371,16 +337,16 @@ function DecisionGuide({ service, lang }: { service: ServiceDetail; lang: Lang }
                   >
                     ✓
                   </span>
-                  <span>{item}</span>
+                  <span>{t(item)}</span>
                 </li>
-              ))}
+              )))}
             </ul>
           </div>
-        ))}
+        )))}
       </div>
 
       <p className="mt-8 border-t border-[#03101c]/12 pt-6 text-[0.86rem] font-medium leading-[1.6] text-[#596575]">
-        {t.guideNote}
+        {t(labels.guideNote)}
       </p>
     </section>
   );
@@ -393,7 +359,9 @@ export function ServiceDetailTemplate({
   service: ServiceDetail;
   lang?: Lang;
 }) {
-  const t = ui[lang];
+  const { t, locale } = useTranslation();
+  const editorial = chineseServiceCopy[service.slug];
+  const labels = ui[lang];
   const contactHref = `/contact?service=${service.slug}#enquiry`;
 
   return (
@@ -401,7 +369,7 @@ export function ServiceDetailTemplate({
       <section className="relative isolate sm:min-h-[clamp(19rem,22vw,26rem)] overflow-hidden bg-[#03101c] px-[clamp(1.5rem,8vw,12rem)] py-10 text-white sm:py-[clamp(5rem,7vw,8rem)]">
         <Image
           src={service.heroImage}
-          alt=""
+          alt={t("")}
           fill
           priority
           sizes="100vw"
@@ -411,27 +379,24 @@ export function ServiceDetailTemplate({
 
         <div className="relative z-10 mx-auto max-w-[1180px]">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-            <nav aria-label="Breadcrumb" className="text-sm text-white/85">
+            <nav aria-label={t("Breadcrumb")} className="text-sm text-white/85">
               <ol className="flex flex-wrap items-center gap-2">
-                <li><Link href="/" className="inline-flex min-h-11 items-center hover:underline">{t.home}</Link></li>
+                <li><Link href="/" className="inline-flex min-h-11 items-center hover:underline">{t(labels.home)}</Link></li>
                 <li aria-hidden="true">/</li>
-                <li><Link href="/services" className="inline-flex min-h-11 items-center hover:underline">{t.services}</Link></li>
+                <li><Link href="/services" className="inline-flex min-h-11 items-center hover:underline">{t(labels.services)}</Link></li>
                 <li aria-hidden="true">/</li>
-                <li aria-current="page">{service.navTitle}</li>
+                <li aria-current="page">{t(service.navTitle)}</li>
               </ol>
             </nav>
-            {service.languages ? (
-              <LanguageToggle lang={lang} languages={service.languages} />
-            ) : null}
           </div>
           <p className="text-[clamp(0.7rem,0.62vw,0.78rem)] font-semibold uppercase tracking-[0.18em] text-white/75">
-            {service.eyebrow}
+            {t(service.eyebrow)}
           </p>
           <h1 className="mt-4 text-[clamp(2rem,2vw,2.5rem)] font-medium leading-tight tracking-normal">
-            {service.title}
+            {t(service.title)}
           </h1>
           <p className="mt-5 max-w-[40rem] text-[clamp(0.98rem,0.9vw,1.08rem)] font-medium leading-[1.6] tracking-[0.02em] text-white/85">
-            {service.summary}
+            {t(service.summary)}
           </p>
         </div>
       </section>
@@ -442,35 +407,35 @@ export function ServiceDetailTemplate({
           <article className="min-w-0 lg:col-start-2 lg:row-start-1">
             <div className="max-w-[54rem]">
               <h2 className="text-[clamp(1.35rem,1.25vw,1.55rem)] font-semibold leading-tight text-[#03101c]">
-                {service.title}
+                {locale === "zh" ? editorial.introHeading : t(service.title)}
               </h2>
               <div className="mt-5 space-y-5 text-[clamp(0.95rem,0.82vw,1rem)] font-medium leading-[1.7] tracking-[0.02em] text-[#3c3d4b]">
-                {service.intro.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+                {t(service.intro.map((paragraph) => (
+                  <p key={paragraph}>{t(paragraph)}</p>
+                )))}
               </div>
             </div>
 
             <DecisionGuide service={service} lang={lang} />
 
-            {service.contentBlocks.map((block, index) => (
+            {t(service.contentBlocks.map((block, index) => (
               <ContentBlock key={`${block.type}-${index}`} block={block} />
-            ))}
+            )))}
             <p className="mt-10 max-w-[62rem] border-t border-[#03101c]/10 pt-6 text-sm leading-7 text-[#596575]">
-              {lang === "zh" ? "本页为一般服务介绍，并非针对您的情况提供的专业意见。具体服务范围、负责机构及适用资格须在书面委托中确认；审批及结果不作保证。审计及非审计服务须遵守适用的独立性及监管要求。" : "This is a general service description, not advice for your circumstances. The scope, responsible provider and applicable authorisations must be confirmed in a written engagement; approvals and outcomes are not guaranteed. Audit and non-audit work remain subject to applicable independence and regulatory requirements."}
+              {t(lang === "zh" ? "本页为一般服务介绍，并非针对您的情况提供的专业意见。具体服务范围、负责机构及适用资格须在书面委托中确认；审批及结果不作保证。审计及非审计服务须遵守适用的独立性及监管要求。" : "This is a general service description, not advice for your circumstances. The scope, responsible provider and applicable authorisations must be confirmed in a written engagement; approvals and outcomes are not guaranteed. Audit and non-audit work remain subject to applicable independence and regulatory requirements.")}
             </p>
           </article>
 
           <aside className="lg:col-start-1 lg:row-start-1 lg:sticky lg:top-28 lg:self-start">
-            <nav className="rounded-[6px] bg-[#f3f3f3] p-5" aria-label={t.services}>
+            <nav className="rounded-[6px] bg-[#f3f3f3] p-5" aria-label={t(labels.services)}>
               <p className="mb-4 text-[0.92rem] font-semibold text-[#03101c]">
-                {t.services}
+                {t(labels.services)}
               </p>
               <div className="grid gap-2">
-                {serviceNavItems.map((item) => {
+                {t(serviceNavItems.map((item) => {
                   const active = item.slug === service.slug;
                   const href =
-                    active && service.languages ? service.languages[lang] : item.href;
+                    item.href;
                   return (
                     <Link
                       key={item.slug}
@@ -482,17 +447,17 @@ export function ServiceDetailTemplate({
                           : "text-[#27303a] hover:bg-white"
                       }`}
                     >
-                      <span>{lang === "zh" ? zhNavTitles[item.slug] : item.title}</span>
+                      <span>{t(lang === "zh" ? zhNavTitles[item.slug] : item.title)}</span>
                       <span aria-hidden="true">›</span>
                     </Link>
                   );
-                })}
+                }))}
               </div>
             </nav>
 
             <div className="mt-8 rounded-[6px] bg-[#091c2f] p-6 text-white">
               <p className="max-w-[12rem] text-[0.86rem] font-semibold leading-[1.55]">
-                {service.ctaTitle}
+                {t(service.ctaTitle)}
               </p>
               <div className="my-5 h-px bg-white/25" />
               <a
@@ -505,7 +470,7 @@ export function ServiceDetailTemplate({
                 href={contactHref}
                 className="mt-6 inline-flex h-11 min-w-[116px] items-center justify-center gap-3 rounded-full bg-[#ffad50] px-5 text-[0.78rem] font-semibold text-[#03101c]"
               >
-                <span>{t.contact}</span>
+                <span>{t(labels.contact)}</span>
                 <span aria-hidden="true">↗</span>
               </Link>
             </div>
@@ -515,8 +480,8 @@ export function ServiceDetailTemplate({
 
       <AboutCtaSection
         contactHref={contactHref}
-        title={t.ctaTitle}
-        buttonLabel={t.ctaButton}
+        title={locale === "zh" ? editorial.ctaHeading : t(labels.ctaTitle)}
+        buttonLabel={labels.ctaButton}
       />
     </div>
   );

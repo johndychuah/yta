@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 import Head from "next/head";
 
 const faqs = [
@@ -54,32 +55,29 @@ const faqSchema = {
 };
 
 export function FaqSection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-[clamp(1.25rem,6.25vw,7.5rem)] py-[clamp(4rem,6vw,7.25rem)]">
       <Head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...faqSchema, mainEntity: faqSchema.mainEntity.map(item => ({ ...item, name: t(item.name), acceptedAnswer: { ...item.acceptedAnswer, text: t(item.acceptedAnswer.text) } })) }) }}
         />
       </Head>
 
       <div className="mx-auto max-w-[1138px]">
         <div className="text-center">
-          <p className="text-[clamp(0.7rem,0.72vw,0.85rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">
-            Frequently asked questions
-          </p>
-          <h2 className="mx-auto mt-4 max-w-[36rem] text-[clamp(2rem,2vw,2.32rem)] font-medium leading-[1.35] tracking-normal text-[#03101c]">
-            Common questions from our clients
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#596575]">General information, not advice for your specific circumstances. Requirements can change; confirm the rules applicable to your company. <a href="https://www.ssm.com.my/Pages/Legal_Framework/Audit-Exemption.aspx" target="_blank" rel="noopener noreferrer" className="text-[#1f5f9e] underline">Current SSM audit-exemption guidance</a>.</p>
+          <p className="text-[clamp(0.7rem,0.72vw,0.85rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">{t("Frequently asked questions")}</p>
+          <h2 className="mx-auto mt-4 max-w-[36rem] text-[clamp(2rem,2vw,2.32rem)] font-medium leading-[1.35] tracking-normal text-[#03101c]">{t("Common questions from our clients")}</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#596575]">{t("General information, not advice for your specific circumstances. Requirements can change; confirm the rules applicable to your company.")}</p>
         </div>
 
         <div className="mt-[clamp(2.5rem,4.5vw,4rem)] border-t border-[#d8d8d8]">
-          {faqs.map((faq) => (
+          {t(faqs.map((faq) => (
             <details key={faq.question} className="group border-b border-[#d8d8d8]">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-[clamp(1.1rem,1.6vw,1.75rem)] text-left [&::-webkit-details-marker]:hidden">
                 <span className="text-[clamp(1.05rem,1.15vw,1.35rem)] font-medium leading-snug text-[#03101c]">
-                  {faq.question}
+                  {t(faq.question)}
                 </span>
                 <span
                   aria-hidden="true"
@@ -95,10 +93,10 @@ export function FaqSection() {
                 </span>
               </summary>
               <p className="max-w-[48rem] pb-[clamp(1.25rem,2vw,2rem)] text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.7] tracking-[0.02em] text-[#4b4d5c]">
-                {faq.answer}
+                {t(faq.answer)}
               </p>
             </details>
-          ))}
+          )))}
         </div>
       </div>
     </section>

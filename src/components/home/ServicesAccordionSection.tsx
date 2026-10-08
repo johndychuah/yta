@@ -1,5 +1,6 @@
+import { useTranslation } from "@/i18n/Locale";
 import Image from "next/image";
-import Link from "next/link";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 import { useState } from "react";
 
 const services = [
@@ -54,27 +55,20 @@ const services = [
 ];
 
 export function ServicesAccordionSection() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <section className="bg-white px-[clamp(1.25rem,6.25vw,7.5rem)] py-[clamp(4rem,6vw,7.25rem)]">
       <div className="mx-auto max-w-[1138px]">
         <div className="text-center">
-          <p className="text-[clamp(0.7rem,0.72vw,0.85rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">
-            Our services
-          </p>
-          <h2 className="mx-auto mt-4 max-w-[36rem] text-[clamp(2rem,2vw,2.32rem)] font-medium leading-[1.35] tracking-normal text-[#03101c]">
-            Start with the business challenge you need to solve
-          </h2>
-          <p className="mx-auto mt-5 max-w-[42rem] text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.65] tracking-[0.03em] text-[#4b4d5c]">
-            Each engagement is scoped around your reporting requirements,
-            transaction, or business situation. Select a service to see how we
-            can help.
-          </p>
+          <p className="text-[clamp(0.7rem,0.72vw,0.85rem)] font-medium uppercase tracking-[0.16em] text-[#091c2f]">{t("Our services")}</p>
+          <h2 className="mx-auto mt-4 max-w-[36rem] text-[clamp(2rem,2vw,2.32rem)] font-medium leading-[1.35] tracking-normal text-[#03101c]">{t("Start with the business challenge you need to solve")}</h2>
+          <p className="mx-auto mt-5 max-w-[42rem] text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.65] tracking-[0.03em] text-[#4b4d5c]">{t("Each engagement is scoped around your reporting requirements, transaction, or business situation. Select a service to see how we can help.")}</p>
         </div>
 
         <div className="mt-[clamp(2.5rem,4.5vw,4rem)]">
-          {services.map((service, index) => {
+          {t(services.map((service, index) => {
             const isOpen = openIndex === index;
             const panelId = `service-panel-${index}`;
             const buttonId = `service-button-${index}`;
@@ -90,17 +84,17 @@ export function ServicesAccordionSection() {
                   className="flex w-full items-center justify-between gap-6 py-[clamp(1.25rem,2vw,2.25rem)] text-left"
                 >
                   <span className="text-[clamp(1.55rem,1.95vw,2.32rem)] font-medium leading-tight tracking-normal text-[#03101c]">
-                    {service.title}
+                    {t(service.title)}
                   </span>
                   <span
                     aria-hidden="true"
                     className="shrink-0 text-[clamp(1.8rem,1.95vw,2.3rem)] leading-none text-black"
                   >
-                    {isOpen ? "-" : "+"}
+                    {t(isOpen ? "-" : "+")}
                   </span>
                 </button>
 
-                {isOpen ? (
+                {t(isOpen ? (
                   <div
                     id={panelId}
                     role="region"
@@ -109,25 +103,23 @@ export function ServicesAccordionSection() {
                   >
                     <div className="grid gap-5 sm:grid-cols-[2rem_1fr]">
                       <p className="text-[clamp(0.9rem,0.85vw,1rem)] leading-[1.58] tracking-[0.03em] text-[#03101c]">
-                        {String(index + 1).padStart(2, "0")}.
+                        {t(String(index + 1).padStart(2, "0"))}.
                       </p>
                       <div>
                         <p className="max-w-[31rem] text-[clamp(0.95rem,0.85vw,1rem)] leading-[1.58] tracking-[0.03em] text-[#3c3d4b]">
-                          {service.body}
+                          {t(service.body)}
                         </p>
                         <div className="mt-5 max-w-[31rem] rounded-[8px] bg-[#f3f3f3] px-5 py-4">
-                          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#596575]">
-                            Helpful when
-                          </p>
+                          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#596575]">{t("Helpful when")}</p>
                           <p className="mt-2 text-[clamp(0.9rem,0.82vw,0.98rem)] font-medium leading-[1.55] text-[#03101c]">
-                            {service.helpfulWhen}
+                            {t(service.helpfulWhen)}
                           </p>
                         </div>
                         <Link
                           href={service.href}
                           className="mt-5 inline-flex items-center gap-2 text-[clamp(0.95rem,0.85vw,1rem)] font-semibold leading-[1.58] tracking-[0.03em] text-[#1f5f9e]"
                         >
-                          <span>Explore this service</span>
+                          <span>{t("Explore this service")}</span>
                           <span aria-hidden="true">→</span>
                         </Link>
                       </div>
@@ -136,7 +128,7 @@ export function ServicesAccordionSection() {
                     <div className="relative aspect-[7/4] overflow-hidden rounded-[10px]">
                       <Image
                         src={service.image}
-                        alt={service.imageAlt}
+                        alt={t(service.imageAlt)}
                         fill
                         loading="eager"
                         sizes="(min-width: 768px) 520px, 100vw"
@@ -144,10 +136,10 @@ export function ServicesAccordionSection() {
                       />
                     </div>
                   </div>
-                ) : null}
+                ) : null)}
               </div>
             );
-          })}
+          }))}
         </div>
       </div>
     </section>

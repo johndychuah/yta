@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 
 const clientGroups = [
   {
@@ -33,19 +34,16 @@ const clientGroups = [
 ];
 
 export function AboutWhoWeServeSection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-[#f4f4f4] px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]">
       <div className="mx-auto max-w-[1270px]">
         <div>
-          <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#2b3949]">
-            Who We Serve
-          </p>
-          <h2 className="mt-7 max-w-[31rem] text-[clamp(2.15rem,2.25vw,2.75rem)] font-medium leading-[1.22] tracking-normal text-[#03101c]">
-            Diverse Clients, Tailored Solutions
-          </h2>
+          <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#2b3949]">{t("Who We Serve")}</p>
+          <h2 className="mt-7 max-w-[31rem] text-[clamp(2.15rem,2.25vw,2.75rem)] font-medium leading-[1.22] tracking-normal text-[#03101c]">{t("Diverse Clients, Tailored Solutions")}</h2>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {clientGroups.map((group) => (
+            {t(clientGroups.map((group) => (
               <article
                 key={group.title}
                 className="grid grid-cols-[1.25rem_1fr_auto] gap-x-3 rounded-[10px] bg-white p-6 text-[#03101c]"
@@ -57,10 +55,10 @@ export function AboutWhoWeServeSection() {
 
                 <div>
                   <h3 className="text-[clamp(1.05rem,0.98vw,1.18rem)] font-semibold leading-snug tracking-normal">
-                    {group.title}
+                    {t(group.title)}
                   </h3>
                   <p className="mt-4 max-w-[23rem] text-[clamp(0.95rem,0.84vw,1rem)] font-medium leading-[1.55] tracking-[0.03em] text-[#5b5d6b]">
-                    {group.description}
+                    {t(group.description)}
                   </p>
                 </div>
 
@@ -68,7 +66,7 @@ export function AboutWhoWeServeSection() {
                   ↘
                 </span>
               </article>
-            ))}
+            )))}
           </div>
         </div>
 

@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 import Image from "next/image";
 
 type ValueCard = {
@@ -91,6 +92,7 @@ function ValueIcon({
   variant: ValueCard["icon"];
   tone: ValueCard["tone"];
 }) {
+  const { t } = useTranslation();
   const iconClass = toneClasses[tone].icon;
 
   if (variant === "diamond") {
@@ -124,32 +126,29 @@ function ValueIcon({
       className={`relative block h-9 w-9 rounded-full border-2 ${iconClass}`}
       aria-hidden="true"
     >
-      {[0, 45, 90, 135].map((rotation) => (
+      {t([0, 45, 90, 135].map((rotation) => (
         <span
           key={rotation}
           className={`absolute left-1/2 top-1/2 h-[2px] w-5 -translate-x-1/2 -translate-y-1/2 ${tone === "navy" ? "bg-[#ffad50]" : "bg-[#03101c]"}`}
           style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
         />
-      ))}
+      )))}
     </span>
   );
 }
 
 export function AboutValuesSection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8.5rem)]">
       <div className="mx-auto max-w-[1260px]">
         <div className="text-center">
-          <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.16em] text-[#596575]">
-            Our Values
-          </p>
-          <h2 className="mt-5 text-[clamp(2.1rem,2vw,2.5rem)] font-medium leading-[1.22] tracking-normal text-[#03101c]">
-            The principles behind every engagement
-          </h2>
+          <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.16em] text-[#596575]">{t("Our Values")}</p>
+          <h2 className="mt-5 text-[clamp(2.1rem,2vw,2.5rem)] font-medium leading-[1.22] tracking-normal text-[#03101c]">{t("The principles behind every engagement")}</h2>
         </div>
 
         <div className="mt-[clamp(4rem,6.6vw,7.8rem)] grid gap-[clamp(1.5rem,2vw,1.875rem)] md:grid-cols-2 xl:grid-cols-3">
-          {values.map((value) => {
+          {t(values.map((value) => {
             const tone = toneClasses[value.tone];
 
             return (
@@ -160,18 +159,18 @@ export function AboutValuesSection() {
                 <ValueIcon variant={value.icon} tone={value.tone} />
 
                 <h3 className="mt-6 text-[clamp(1.25rem,1.05vw,1.35rem)] font-medium leading-tight tracking-normal">
-                  {value.title}
+                  {t(value.title)}
                 </h3>
                 <p
                   className={`mb-8 mt-2 text-[clamp(0.98rem,0.83vw,1.03rem)] font-medium leading-[1.55] tracking-[0.03em] ${tone.body}`}
                 >
-                  {value.description}
+                  {t(value.description)}
                 </p>
 
                 <div className="relative mt-auto aspect-[7/4] w-full shrink-0 overflow-hidden rounded-[10px]">
                   <Image
                     src={value.image}
-                    alt={value.alt}
+                    alt={t(value.alt)}
                     fill
                     sizes="(min-width: 1280px) 348px, (min-width: 768px) 42vw, 86vw"
                     className="object-cover object-center"
@@ -179,7 +178,7 @@ export function AboutValuesSection() {
                 </div>
               </article>
             );
-          })}
+          }))}
         </div>
       </div>
     </section>

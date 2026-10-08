@@ -1,8 +1,9 @@
+import { useTranslation } from "@/i18n/Locale";
 import { useRouter } from "next/router";
 import { serviceNavItems } from "@/data/serviceDetails";
 import { useRef, useState, type FormEvent } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { LocalisedLink as Link } from "@/i18n/Locale";
 import { CareerSection } from "@/components/contact/CareerSection";
 import { OfficeMap, officeMapsUrl } from "@/components/common/OfficeMap";
 
@@ -60,9 +61,10 @@ function Field({
   autoComplete?: string;
   required?: boolean;
 }) {
+  const { t } = useTranslation();
   return (
     <label>
-      <span className="mb-2 block text-sm font-semibold text-[#03101c]">{label}{required ? " *" : ""}</span>
+      <span className="mb-2 block text-sm font-semibold text-[#03101c]">{t(label)}{t(required ? " *" : "")}</span>
       <input
         type={type}
         name={name}
@@ -76,6 +78,7 @@ function Field({
 }
 
 export function ContactPageContent() {
+  const { t } = useTranslation();
   const { query } = useRouter();
   const [serviceInterest, setServiceInterest] = useState<string | null>(null);
   const selectedService = serviceInterest ?? serviceNavItems.find((item) => item.slug === query.service)?.title ?? "";
@@ -86,13 +89,13 @@ export function ContactPageContent() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const value = (name: string) => String(data.get(name) ?? "").trim();
-    const subject = `Website enquiry: ${value("service")}`;
+    const subject = `${t("Website enquiry")}: ${t(value("service"))}`;
     const body = [
-      `Name: ${value("name")}`,
-      `Email: ${value("email")}`,
-      `Phone: ${value("phone") || "Not provided"}`,
-      `Company: ${value("company") || "Not provided"}`,
-      `Service: ${value("service")}`,
+      `${t("Full name")}: ${value("name")}`,
+      `${t("Email address")}: ${value("email")}`,
+      `${t("Phone number")}: ${value("phone") || t("Not provided")}`,
+      `${t("Company name")}: ${value("company") || t("Not provided")}`,
+      `${t("Service interest")}: ${t(value("service"))}`,
       "",
       value("message"),
     ].join("\n");
@@ -105,38 +108,26 @@ export function ContactPageContent() {
       <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]">
         <div className="mx-auto grid max-w-[1280px] gap-[clamp(3rem,6vw,7rem)] lg:grid-cols-[minmax(0,0.9fr)_minmax(28rem,1fr)] lg:items-center">
           <div>
-            <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">
-              Contact Us
-            </p>
-            <h1 className="mt-7 max-w-[42rem] text-[clamp(2rem,7.2vw,2.4rem)] sm:text-[clamp(2.4rem,3.5vw,4.25rem)] font-medium leading-[1.1] tracking-normal text-[#03101c]">
-              Let&apos;s Talk About Your Business Needs
-            </h1>
-            <p className="mt-7 max-w-[37rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">
-              Whether you need audit, corporate advisory, restructuring,
-              tax, accounting, or payroll support, our team is ready to discuss the
-              appropriate next steps.
-            </p>
+            <p className="text-[clamp(0.82rem,0.72vw,0.9rem)] font-medium uppercase tracking-[0.18em] text-[#091c2f]">{t("Contact Us")}</p>
+            <h1 className="mt-7 max-w-[42rem] text-[clamp(2rem,7.2vw,2.4rem)] sm:text-[clamp(2.4rem,3.5vw,4.25rem)] font-medium leading-[1.1] tracking-normal text-[#03101c]">{t("Let's Talk About Your Business Needs")}</h1>
+            <p className="mt-7 max-w-[37rem] text-[clamp(1rem,0.95vw,1.12rem)] font-medium leading-[1.65] tracking-[0.03em] text-[#3c3d4b]">{t("Whether you need audit, corporate advisory, restructuring, tax, accounting, or payroll support, our team is ready to discuss the appropriate next steps.")}</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="#enquiry"
                 className="inline-flex h-[53px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[0.9rem] font-medium tracking-[0.04em] text-[#03101c] transition hover:bg-[#ffc174]"
-              >
-                Send an enquiry
-                <span aria-hidden="true">↗</span>
+              >{t("Send an enquiry")}<span aria-hidden="true">↗</span>
               </Link>
               <Link
                 href="#career"
                 className="inline-flex h-[53px] items-center justify-center rounded-full bg-[#f3f3f3] px-8 text-[0.9rem] font-medium tracking-[0.04em] text-[#03101c] transition hover:bg-[#e7e7e7]"
-              >
-                Career opportunity
-              </Link>
+              >{t("Career opportunity")}</Link>
             </div>
           </div>
 
           <div className="relative h-48 sm:h-[clamp(17rem,26vw,31rem)] overflow-hidden rounded-[10px]">
             <Image
               src="/images/topics/contact-welcome.webp"
-              alt="Illustrative client coordinator welcoming a visitor for an advisory consultation"
+              alt={t("Illustrative client coordinator welcoming a visitor for an advisory consultation")}
               fill
               priority
               sizes="(min-width: 1024px) 610px, 88vw"
@@ -156,53 +147,40 @@ export function ContactPageContent() {
       >
         <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(18rem,0.82fr)_minmax(28rem,1.18fr)]">
           <div className="order-2 rounded-[8px] bg-white p-5 sm:p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
-            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
-              Get In Touch
-            </p>
-            <h2 className="mt-6 max-w-[28rem] text-[clamp(1.9rem,2vw,2.45rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-              Contact & Office Details
-            </h2>
-            <p className="mt-5 max-w-[28rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
-              Reach our Kuala Lumpur office for consultations, service
-              enquiries, or general assistance.
-            </p>
+            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">{t("Get In Touch")}</p>
+            <h2 className="mt-6 max-w-[28rem] text-[clamp(1.9rem,2vw,2.45rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">{t("Contact & Office Details")}</h2>
+            <p className="mt-5 max-w-[28rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">{t("Reach our Kuala Lumpur office for consultations, service enquiries, or general assistance.")}</p>
 
             <div className="mt-9 grid gap-0">
-              {contactDetails.map((detail) => (
+              {t(contactDetails.map((detail) => (
                 <div
                   key={detail.label}
                   className="border-t border-[#03101c]/15 py-5 first:border-t-0 first:pt-0"
                 >
                   <h3 className="text-[1rem] font-semibold text-[#03101c]">
-                    {detail.label}
+                    {t(detail.label)}
                   </h3>
                   <div className="mt-2 text-[0.95rem] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
-                    {detail.value}
+                    {t(detail.value)}
                   </div>
                 </div>
-              ))}
+              )))}
             </div>
           </div>
 
           <div className="order-1 rounded-[8px] bg-white p-5 sm:p-[clamp(1.5rem,3vw,3rem)] lg:order-none">
-            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
-              Enquiry Form
-            </p>
-            <h2 className="mt-6 text-[clamp(1.9rem,2vw,2.45rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-              How can we help?
-            </h2>
+            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">{t("Enquiry Form")}</p>
+            <h2 className="mt-6 text-[clamp(1.9rem,2vw,2.45rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">{t("How can we help?")}</h2>
 
-            <p id="enquiry-instructions" className="mt-4 text-base leading-relaxed text-[#596575]">
-              Complete the fields below to prepare an email to our team. You can review and send it in your email app. Fields marked * are required.
-            </p>
-            <p className="mt-3 text-sm leading-6 text-[#596575]">Please keep your initial message brief and avoid identity documents, bank or payroll records and other confidential material. Arrange a suitable channel with our team first.</p>
+            <p id="enquiry-instructions" className="mt-4 text-base leading-relaxed text-[#596575]">{t("Complete the fields below to prepare an email to our team. You can review and send it in your email app. Fields marked * are required.")}</p>
+            <p className="mt-3 text-sm leading-6 text-[#596575]">{t("Please keep your initial message brief and avoid identity documents, bank or payroll records and other confidential material. Arrange a suitable channel with our team first.")}</p>
             <form onSubmit={prepareEnquiry} onChange={() => setDraftHref("")} aria-describedby="enquiry-instructions" className="mt-8 grid gap-5 sm:grid-cols-2">
               <Field label="Full name" name="name" autoComplete="name" required />
               <Field label="Email address" name="email" type="email" autoComplete="email" required />
               <Field label="Phone number" name="phone" type="tel" autoComplete="tel" />
               <Field label="Company name" name="company" autoComplete="organization" />
               <label className="sm:col-span-2">
-                <span className="mb-2 block text-sm font-semibold text-[#03101c]">Service interest *</span>
+                <span className="mb-2 block text-sm font-semibold text-[#03101c]">{t("Service interest *")}</span>
                 <select
                   name="service"
                   required
@@ -210,25 +188,23 @@ export function ContactPageContent() {
                   onChange={(event) => setServiceInterest(event.target.value)}
                   className="h-14 w-full rounded-[8px] border border-[#dfe3e7] bg-white px-5 text-base font-medium tracking-[0.02em] text-[#03101c] outline-none transition focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
                 >
-                  <option value="" disabled>
-                    Service interest
-                  </option>
-                  <option>Audit & Assurance</option>
-                  <option>Corporate Advisory</option>
-                  <option>Restructuring & Insolvency</option>
-                  <option>Tax Advisory & Compliance</option>
-                  <option>China-Malaysia Desk</option>
-                  <option>Accounting & Payroll Outsourcing</option>
-                  <option>General enquiry</option>
+                  <option value="" disabled>{t("Service interest")}</option>
+                  <option>{t("Audit & Assurance")}</option>
+                  <option>{t("Corporate Advisory")}</option>
+                  <option>{t("Restructuring & Insolvency")}</option>
+                  <option>{t("Tax Advisory & Compliance")}</option>
+                  <option>{t("China-Malaysia Desk")}</option>
+                  <option>{t("Accounting & Payroll Outsourcing")}</option>
+                  <option>{t("General enquiry")}</option>
                 </select>
               </label>
               <label className="sm:col-span-2">
-                <span className="mb-2 block text-sm font-semibold text-[#03101c]">Message *</span>
+                <span className="mb-2 block text-sm font-semibold text-[#03101c]">{t("Message *")}</span>
                 <textarea
                   name="message"
                   required
                   maxLength={3000}
-                  placeholder="Tell us about your business and the support you need"
+                  placeholder={t("Tell us about your business and the support you need")}
                   className="min-h-36 w-full resize-y rounded-[8px] border border-[#dfe3e7] bg-white px-5 py-4 text-base font-medium tracking-[0.02em] text-[#03101c] outline-none transition placeholder:text-[#747986] focus:border-[#ffad50] focus:ring-4 focus:ring-[#ffad50]/20"
                 />
               </label>
@@ -239,24 +215,22 @@ export function ContactPageContent() {
                   required
                   className="mt-1 size-4 rounded border-[#dfe3e7] accent-[#ffad50]"
                 />
-                <span>I have read the <Link href="/privacy-policy" className="text-[#1f5f9e] underline underline-offset-4">Privacy Policy</Link> (<Link href="/privacy-policy/ms" lang="ms" className="text-[#1f5f9e] underline underline-offset-4">Bahasa Malaysia</Link>) and consent to the relevant firm handling my details and contacting me about this enquiry. This does not opt me into marketing.</span>
+                <span>{t("I have read the")}{" "}<Link href="/privacy-policy" className="text-[#1f5f9e] underline underline-offset-4">{t("Privacy Policy")}</Link> (<Link href="/privacy-policy/ms" lang="ms" className="text-[#1f5f9e] underline underline-offset-4">{t("Bahasa Malaysia")}</Link>{t(") and consent to the relevant firm handling my details and contacting me about this enquiry. This does not opt me into marketing.")}</span>
               </label>
               <div className="sm:col-span-2">
                 <button
                   type="submit"
                   className="inline-flex h-[53px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[0.9rem] font-medium tracking-[0.04em] text-[#03101c] transition hover:bg-[#ffc174]"
-                >
-                  Prepare enquiry
-                  <span aria-hidden="true">↗</span>
+                >{t("Prepare enquiry")}<span aria-hidden="true">↗</span>
                 </button>
               </div>
             </form>
             <div ref={draftRef} tabIndex={-1} role="status" className={draftHref ? "mt-6 rounded-lg border border-[#1f5f9e]/20 bg-[#f0f6fb] p-5" : "sr-only"}>
-              {draftHref ? <>
-                <p className="font-semibold text-[#03101c]">Your enquiry draft is ready</p>
-                <p className="mt-2 text-sm leading-relaxed text-[#596575]">Nothing has been sent yet. Open your email app to review and send the message. If no email app is configured, email info@yta.com.my directly.</p>
-                <a href={draftHref} className="mt-4 inline-flex min-h-11 items-center rounded-full bg-[#091c2f] px-6 text-sm font-semibold text-white">Open email draft</a>
-              </> : null}
+              {t(draftHref ? <>
+                <p className="font-semibold text-[#03101c]">{t("Your enquiry draft is ready")}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#596575]">{t("Nothing has been sent yet. Open your email app to review and send the message. If no email app is configured, email info@yta.com.my directly.")}</p>
+                <a href={draftHref} className="mt-4 inline-flex min-h-11 items-center rounded-full bg-[#091c2f] px-6 text-sm font-semibold text-white">{t("Open email draft")}</a>
+              </> : null)}
             </div>
           </div>
         </div>
@@ -265,24 +239,15 @@ export function ContactPageContent() {
       <section className="bg-white px-[clamp(1.5rem,8vw,12rem)] py-[clamp(4rem,7vw,8rem)]">
         <div className="mx-auto grid max-w-[1280px] gap-[clamp(2rem,5vw,5rem)] lg:grid-cols-[minmax(18rem,0.72fr)_minmax(28rem,1.28fr)] lg:items-center">
           <div>
-            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">
-              Visit Our Office
-            </p>
-            <h2 className="mt-6 max-w-[28rem] text-[clamp(1.9rem,2vw,2.45rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">
-              Located in KL Eco City, Kuala Lumpur
-            </h2>
-            <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
-              Our office is in Menara 1, KL Eco City, close to Mid Valley and
-              Abdullah Hukum LRT station. We welcome meetings by appointment.
-            </p>
+            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">{t("Visit Our Office")}</p>
+            <h2 className="mt-6 max-w-[28rem] text-[clamp(1.9rem,2vw,2.45rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">{t("Located in KL Eco City, Kuala Lumpur")}</h2>
+            <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">{t("Our office is in Menara 1, KL Eco City, close to Mid Valley and Abdullah Hukum LRT station. We welcome meetings by appointment.")}</p>
             <a
               href={officeMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-3 text-[0.95rem] font-semibold tracking-[0.02em] text-[#1f5f9e] transition hover:text-[#03101c]"
-            >
-              Get directions on Google Maps
-              <span aria-hidden="true">↗</span>
+            >{t("Get directions on Google Maps")}<span aria-hidden="true">↗</span>
             </a>
           </div>
 
@@ -298,18 +263,14 @@ export function ContactPageContent() {
         <div className="relative isolate mx-auto max-w-[1800px] overflow-hidden rounded-[6px] bg-[#091c2f] px-[clamp(1.5rem,10.5vw,12rem)] py-[clamp(4rem,6vw,7rem)] text-white">
 
           <div className="relative z-10 max-w-[35rem]">
-            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-white">
-              Professional Services Firm
-            </p>
-            <h2 className="mt-8 max-w-[31rem] text-[clamp(2rem,2.25vw,2.75rem)] font-medium leading-[1.22] tracking-normal">
-              Need reliable accounting support? Get in touch with our team
-            </h2>
+            <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-white">{t("Professional Services Firm")}</p>
+            <h2 className="mt-8 max-w-[31rem] text-[clamp(2rem,2.25vw,2.75rem)] font-medium leading-[1.22] tracking-normal">{t("Need reliable accounting support? Get in touch with our team")}</h2>
 
             <Link
               href="#enquiry"
               className="mt-[clamp(2rem,3vw,3rem)] inline-flex h-[53px] min-w-[230px] items-center justify-center gap-4 rounded-full bg-[#ffad50] px-8 text-[clamp(0.8rem,0.72vw,0.87rem)] font-medium tracking-[0.6px] text-[#03101c] transition hover:bg-[#ffc174]"
             >
-              <span>Schedule a consultation</span>
+              <span>{t("Schedule a consultation")}</span>
               <span aria-hidden="true">↗</span>
             </Link>
           </div>

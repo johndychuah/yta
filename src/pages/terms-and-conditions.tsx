@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/Locale";
 import { LegalPage, type LegalSection } from "@/components/legal/LegalPage";
 
 const sections: LegalSection[] = [
@@ -12,5 +13,6 @@ const sections: LegalSection[] = [
 ];
 
 export default function TermsPage() {
-  return <LegalPage title="Terms & Conditions" intro="The conditions for using this informational website, and how they differ from a professional engagement." sections={sections} />;
+  const { t } = useTranslation();
+  return <LegalPage title={t("Terms & Conditions")} intro="The conditions for using this informational website, and how they differ from a professional engagement." sections={sections} />;
 }
