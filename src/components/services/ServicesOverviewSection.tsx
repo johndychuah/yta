@@ -153,7 +153,7 @@ export function ServicesOverviewSection() {
                   href={service.href}
                   className="mt-4 inline-flex items-center gap-3 text-[clamp(0.92rem,0.82vw,0.98rem)] font-semibold leading-none tracking-normal text-[#1f5f9e] transition hover:text-[#0d365d]"
                 >
-                  <span>{t("Explore")}{t(service.title)}</span>
+                  <span>{t("Explore")}{" "}{t(service.title)}</span>
                   <span aria-hidden="true">→</span>
                 </Link>
               </div>
