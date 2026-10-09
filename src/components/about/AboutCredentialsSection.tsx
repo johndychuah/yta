@@ -27,7 +27,11 @@ const bodies = [
     name: "CPA Australia",
     abbreviation: "CPA",
     logo: "/professional-bodies/cpa-australia.png",
-    wide: true,
+  },
+  {
+    name: "Chartered Institute of Taxation UK",
+    abbreviation: "CIOT",
+    logo: "/professional-bodies/ciot.svg",
   },
 ];
 
@@ -39,12 +43,12 @@ export function AboutCredentialsSection() {
         <div>
           <p className="text-[clamp(0.78rem,0.7vw,0.88rem)] font-medium uppercase tracking-[0.18em] text-[#596575]">{t("Credentials")}</p>
           <h2 className="mt-6 max-w-[27rem] text-[clamp(2rem,2.2vw,2.65rem)] font-medium leading-[1.18] tracking-normal text-[#03101c]">{t("Members of leading professional bodies")}</h2>
-          <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">{t("Our partners and directors are Chartered Accountants of the Malaysian Institute of Accountants and members or Fellows of ACCA, with further memberships of MICPA, CPA Australia, and the Chartered Tax Institute of Malaysia. YT Associates (AF1112) and Peter Tang & Associates (AF1873) are registered audit firms.")}</p>
+          <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">{t("Our partners and directors are Chartered Accountants of the Malaysian Institute of Accountants and members or Fellows of ACCA, with further memberships of MICPA, CPA Australia, Chartered Tax Institute of Malaysia, and the Chartered Institute of Taxation UK. YT Associates (AF1112) and Peter Tang & Associates (AF1873) are registered audit firms.")}</p>
           <p className="mt-5 max-w-[27rem] text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">{t("Licences held by our firms and professionals include:")}</p>
           <ul className="mt-3 max-w-[27rem] list-disc space-y-3 pl-5 text-[clamp(0.95rem,0.85vw,1rem)] font-medium leading-[1.6] tracking-[0.03em] text-[#3c3d4b]">
             <li>{t("Ministry of Finance licences for audit and tax services.")}</li>
             <li>{t("Companies Commission of Malaysia (SSM) licences for corporate secretary services.")}</li>
-            <li>{t("Securities Commission Malaysia Capital Markets Services Representative’s Licence (CMSRL).")}</li>
+            <li>{t("Securities Commission Malaysia for the Capital Markets Services Representative’s Licence (CMSRL).")}</li>
           </ul>
           <p className="mt-4 max-w-[27rem] text-sm leading-6 text-[#596575]">{t("Memberships relate to individual professionals. Names and logos identify the organisations and do not imply their endorsement of our services.")}</p>
           <Link
@@ -58,7 +62,7 @@ export function AboutCredentialsSection() {
           {t(bodies.map((body) => (
             <article
               key={body.abbreviation}
-              className={`${"wide" in body ? "sm:col-span-2 " : ""}flex min-h-[11.5rem] flex-col justify-between rounded-[10px] bg-white p-6 shadow-[0_18px_45px_rgba(9,28,47,0.06)]`}
+              className="flex min-h-[11.5rem] flex-col justify-between rounded-[10px] bg-white p-6 shadow-[0_18px_45px_rgba(9,28,47,0.06)]"
             >
               <div className="flex h-14 items-center">
                 {t(body.logo ? (

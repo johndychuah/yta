@@ -47,7 +47,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex min-h-18 max-w-[1440px] items-center justify-between gap-3 px-4 py-2.5 sm:min-h-20 sm:gap-6 sm:px-[clamp(1.25rem,3vw,3rem)] sm:py-3">
         <Link href="/" aria-label={t("YTA home")} className="shrink-0 rounded-sm" onClick={() => setIsOpen(false)}>
-          <Image src="/yta-logo.png" alt={t("YT Associates")} width={128} height={74} priority className="h-auto w-20 sm:w-24 lg:w-28" />
+          <Image src="/yta-logo.png" alt={t("YT Associates")} width={128} height={74} priority className="h-auto w-16 min-[360px]:w-20 sm:w-24 lg:w-28" />
         </Link>
 
         <nav aria-label={t("Primary navigation")} className="hidden items-center gap-[clamp(0.6rem,1.3vw,1.25rem)] text-base font-semibold lg:flex">
@@ -65,7 +65,7 @@ export function Navbar() {
         </nav>
 
         <Link href="/" aria-label={t("Peter Tang & Associates home")} className="shrink-0 rounded-sm" onClick={() => setIsOpen(false)}>
-          <Image src="/peter-tang-associates-logo.png" alt={t("Peter Tang & Associates")} width={200} height={60} priority className="h-auto w-28 sm:w-36 xl:w-44" />
+          <Image src="/peter-tang-associates-logo.png" alt={t("Peter Tang & Associates")} width={200} height={60} priority className="h-auto w-24 min-[360px]:w-28 sm:w-36 xl:w-44" />
         </Link>
 
         <button
@@ -103,7 +103,7 @@ export function Navbar() {
               {t(item.label)}
             </Link>
           )))}
-          <div className="px-2"><LanguageSwitcher /></div>
+          <div className="mt-2 border-t border-[#03101c]/10 px-4 pt-3"><LanguageSwitcher inline /></div>
         </div>
       </nav>
     </header>

@@ -658,7 +658,7 @@ export const serviceDetails: Record<ServiceSlug, ServiceDetail> = {
     ctaTitle: "Have a tax question or an LHDN query?",
     heroImage: "/images/services/tax.webp",
     intro: [
-      "Tax affects every decision a business makes, from day-to-day pricing to buying a company. Peter Tang & Associates has advised on Malaysian tax since 1992, and the practice is led by a Chartered Tax Adviser and approved tax agent. We also work closely with a tax associate firm to provide quality tax services if needed.",
+      "Tax affects every decision a business makes, from day-to-day pricing to buying a company. Peter Tang & Associates has advised on Malaysian tax since 1992, and the practice is led by a Chartered Tax Adviser and approved tax agent. We also work closely with our tax associate firm, Lumenz Tax Advisory Sdn Bhd to provide quality tax services.",
       "For cross-border matters, the relevant advisers and scope of coordination are agreed with you before work begins.",
     ],
     decisionGuide: {

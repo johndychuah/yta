@@ -12,7 +12,7 @@ type Expert = {
 const experts: Expert[] = [
   {
     name: "Dato' Peter Tang",
-    initials: "PT",
+    initials: "DPT",
     role: "Partner",
     title: "Chartered Accountant · Chartered Tax Adviser",
     credentials: "MBA, CA(M), FCCA, CPA(M), CPA(Aust.), CTA, CTIM",
@@ -31,16 +31,6 @@ const experts: Expert[] = [
     focus: ["Statutory audit", "Due diligence", "Valuations", "IPOs"],
   },
   {
-    name: "Felix Chew Wee Shen",
-    initials: "FC",
-    role: "Assurance Director",
-    title: "Chartered Accountant",
-    credentials: "CA(M), ACCA, MSc Professional Accountancy",
-    description:
-      "Felix Chew Wee Shen has spent over eight years in audit with the firm, specialising in hotels, resorts, retail, construction, and car park operations. He regularly leads non-statutory special audits, including revenue and SOP verification. Clients value his deep sector knowledge and the discretion he brings to confidential engagements.",
-    focus: ["Statutory audit", "Special audits", "Revenue verification", "SOP review"],
-  },
-  {
     name: "Lim Swee Leong",
     initials: "LS",
     role: "Assurance Director",
@@ -49,6 +39,16 @@ const experts: Expert[] = [
     description:
       "Lim Swee Leong has audited investment holding, property, construction, and manufacturing companies for more than a decade. Clients value Lim Swee Leong's depth in auditing, share valuations and financial due diligence and special projects.",
     focus: ["Assurance", "Share valuations", "Due diligence"],
+  },
+  {
+    name: "Felix Chew Wee Shen",
+    initials: "FC",
+    role: "Director",
+    title: "Chartered Accountant",
+    credentials: "CA(M), ACCA, MSc Professional Accountancy",
+    description:
+      "Felix Chew Wee Shen has spent over eight years in audit with the firm, specialising in hotels, resorts, retail, construction, and car park operations. He regularly leads non-statutory special audits, including revenue and SOP verification. Clients value his deep sector knowledge and the discretion he brings to confidential engagements.",
+    focus: ["Statutory audit", "Special audits", "Revenue verification", "SOP review"],
   },
 ];
 
